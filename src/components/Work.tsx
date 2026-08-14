@@ -1,0 +1,53 @@
+import Link from "next/link";
+import type { Dict, Locale } from "@/lib/content";
+import { CONTACT } from "@/lib/content";
+import { Reveal } from "./Reveal";
+import { WorkGrid } from "./WorkGrid";
+
+export function Work({ dict, locale }: { dict: Dict; locale: Locale }) {
+  return (
+    <section id="work" className="px-5 sm:px-8 py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl">
+        <Reveal>
+          <div className="flex flex-wrap items-end justify-between gap-4 mb-14">
+            <div>
+              <p className="font-mono text-[11px] tracking-[0.22em] text-red mb-3">
+                {dict.work.label}
+              </p>
+              <h2 className="font-display font-bold text-3xl sm:text-5xl">
+                {dict.work.heading}
+              </h2>
+            </div>
+            <div className="flex flex-col items-end gap-2 font-mono text-xs">
+              <Link
+                href={`/${locale}/work`}
+                className="text-ink underline decoration-line hover:decoration-red hover:text-red transition-colors"
+              >
+                {dict.work.moreLabel} ↗
+              </Link>
+              <p className="text-ink-dim">
+                {dict.work.note}{" "}
+                <a
+                  href={CONTACT.behance}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-ink underline decoration-line hover:decoration-red hover:text-red transition-colors"
+                >
+                  {dict.work.noteLink} ↗
+                </a>
+              </p>
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal delay={80}>
+          <WorkGrid
+            items={dict.work.items}
+            allLabel={dict.work.all}
+            soonLabel={dict.work.soon}
+          />
+        </Reveal>
+      </div>
+    </section>
+  );
+}
