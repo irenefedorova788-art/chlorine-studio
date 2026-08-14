@@ -40,7 +40,7 @@ export default async function ProcessPage({
       <Grain />
       <Header dict={dict} locale={locale as Locale} path="/process" />
 
-      <main>
+      <main className="page-enter">
         <section className="relative min-h-[70vh] flex items-center px-5 sm:px-8 pt-28 pb-20">
           <div className="relative z-10 mx-auto max-w-7xl w-full">
             <Reveal>

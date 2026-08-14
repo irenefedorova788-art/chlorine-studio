@@ -23,7 +23,7 @@ export default async function LocalePage({
     <>
       <Grain />
       <Header dict={dict} locale={locale as Locale} />
-      <main>
+      <main className="page-enter">
         <Hero dict={dict} />
         <Services dict={dict} locale={locale as Locale} />
         <Process dict={dict} />
