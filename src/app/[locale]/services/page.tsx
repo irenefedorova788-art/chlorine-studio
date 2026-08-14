@@ -74,11 +74,8 @@ export default async function ServicesPage({
               <Reveal key={item.code} delay={i * 60}>
                 <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 py-10 sm:py-14">
                   <div className="lg:col-span-3 flex lg:flex-col items-baseline lg:items-start justify-between gap-4">
-                    <span className="font-mono text-xs text-ink-dim">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
                     <span className="font-display font-bold text-4xl sm:text-5xl text-red">
-                      {item.code}
+                      {String(i + 1).padStart(2, "0")}
                     </span>
                   </div>
 

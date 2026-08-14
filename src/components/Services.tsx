@@ -30,11 +30,8 @@ export function Services({ dict, locale }: { dict: Dict; locale: Locale }) {
             <Reveal key={item.code} delay={i * 60}>
               <div className="group bg-bg/55 backdrop-blur-sm h-full p-7 sm:p-8 hover:bg-bg/75 transition-colors">
                 <div className="flex items-baseline justify-between mb-8">
-                  <span className="font-mono text-sm text-ink-dim">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
                   <span className="font-display font-bold text-3xl text-red group-hover:translate-x-1 transition-transform">
-                    {item.code}
+                    {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
                 <h3 className="font-display font-semibold text-lg sm:text-xl mb-2">
