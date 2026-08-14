@@ -95,7 +95,7 @@ export const content: Record<Locale, Dict> = {
       tagline: "Превращаю идеи амбициозных брендов в",
       tagMark: "отличительные кампании и визуальные миры",
       tagTail: ".",
-      supporting: "Каждый проект — повод попробовать язык, которого у бренда ещё не было. Смотреть на задачу свежим взглядом. Сделать что-то однажды впервые.",
+      supporting: "Каждый проект — повод попробовать язык, которого у бренда ещё не было. Разбираю бриф заново, а не по шаблону. Делаю что-то однажды впервые.",
       metaRight: "WORLDWIDE",
       cta: "Обсудить проект",
       scroll: "ВНИЗ",
@@ -143,7 +143,7 @@ export const content: Record<Locale, Dict> = {
         {
           code: "Ad",
           title: "Арт-дирекция",
-          desc: "Постоянное сопровождение бренда и внутренней команды.",
+          desc: "Внешний арт-директор на месячной основе.",
           long: "Внешний арт-директор без ставки в штате: держу визуальную целостность бренда на дистанции.",
           includes: [
             "Контроль применения системы командой",
@@ -229,7 +229,7 @@ export const content: Record<Locale, Dict> = {
     },
     cta: {
       line1: "НАПИШИТЕ, ЧТО ПРОИСХОДИТ С ВАШИМ БРЕНДОМ.",
-      line2: "ОТВЕЧУ С ВИДЕНИЕМ ЗАДАЧИ В ТОТ ЖЕ ДЕНЬ.",
+      line2: "ОТВЕЧУ С ОЦЕНКОЙ ОБЪЁМА В ТОТ ЖЕ ДЕНЬ.",
       button: "Написать в Telegram",
       emailLabel: "или на почту",
     },
@@ -258,7 +258,7 @@ export const content: Record<Locale, Dict> = {
       tagline: "Helping ambitious brands turn ideas into",
       tagMark: "distinctive campaigns and visual worlds",
       tagTail: ".",
-      supporting: "Every project is a chance to try a language the brand hasn't spoken yet. Look at the brief with a fresh eye. Do something for the first time.",
+      supporting: "Every project is a chance to try a language the brand hasn't spoken yet. I read the brief again, not from a template. And do something for the first time.",
       metaRight: "WORLDWIDE",
       cta: "Start a project",
       scroll: "SCROLL",
@@ -306,7 +306,7 @@ export const content: Record<Locale, Dict> = {
         {
           code: "Ad",
           title: "Art Direction",
-          desc: "Ongoing creative oversight for the brand and in-house team.",
+          desc: "An outside art director, on a monthly basis.",
           long: "An outside art director without the headcount — keeping the brand's visual integrity intact over time.",
           includes: [
             "Oversight of how the system is applied",
@@ -392,7 +392,7 @@ export const content: Record<Locale, Dict> = {
     },
     cta: {
       line1: "TELL ME WHAT'S GOING ON WITH YOUR BRAND.",
-      line2: "I'LL REPLY WITH A READ ON THE PROJECT THE SAME DAY.",
+      line2: "I'LL REPLY WITH A SCOPE ESTIMATE THE SAME DAY.",
       button: "Message on Telegram",
       emailLabel: "or by email",
     },
