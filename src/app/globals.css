@@ -2,11 +2,11 @@
 
 :root {
   --bg: #08070a;
-  --ink: #f1ece2;
+  /* Brand signal red — all text runs in this color. */
+  --ink: #d6402e;
   --ink-dim: #9c968d;
   --line: rgba(241, 236, 226, 0.14);
-  /* Sampled straight from the hero photo (dusty rose accent). */
-  --red: #a5675f;
+  --red: #d6402e;
 }
 
 @theme inline {
