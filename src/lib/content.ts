@@ -51,7 +51,7 @@ export type Dict = {
     back: string;
     moreLabel: string;
   };
-  process: { label: string; heading: string; steps: ProcessStep[] };
+  process: { heading: string; steps: ProcessStep[] };
   processPage: {
     eyebrow: string;
     heading: string;
@@ -172,8 +172,7 @@ export const content: Record<Locale, Dict> = {
       moreLabel: "Подробнее об услугах",
     },
     process: {
-      label: "ПРОЦЕСС",
-      heading: "Как идёт работа",
+      heading: "Процесс",
       steps: [
         { n: "01", title: "Погружение", desc: "Бренд, аудитория, задача. Разбор того, что уже есть." },
         { n: "02", title: "Направление", desc: "Референсы, мудборды, выбор визуального языка." },
@@ -331,8 +330,7 @@ export const content: Record<Locale, Dict> = {
       moreLabel: "More about services",
     },
     process: {
-      label: "PROCESS",
-      heading: "How it runs",
+      heading: "Process",
       steps: [
         { n: "01", title: "Discovery", desc: "Brand, audience, goal. A read on what's already there." },
         { n: "02", title: "Direction", desc: "References, moodboards, choosing the visual language." },
