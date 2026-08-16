@@ -11,9 +11,6 @@ export function Work({ dict, locale }: { dict: Dict; locale: Locale }) {
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-4 mb-14">
             <div>
-              <p className="font-mono text-[11px] tracking-[0.22em] text-red mb-3">
-                {dict.work.label}
-              </p>
               <h2 className="font-display font-bold text-3xl sm:text-5xl">
                 {dict.work.heading}
               </h2>

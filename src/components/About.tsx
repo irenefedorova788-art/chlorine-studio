@@ -6,9 +6,6 @@ export function About({ dict }: { dict: Dict }) {
     <section id="about" className="px-5 sm:px-8 py-24 sm:py-32 border-y border-line">
       <div className="mx-auto max-w-7xl">
         <Reveal>
-          <p className="font-mono text-[11px] tracking-[0.22em] text-red mb-3">
-            {dict.about.label}
-          </p>
           <h2 className="font-display font-bold text-3xl sm:text-5xl mb-14 max-w-2xl">
             {dict.about.heading}
           </h2>

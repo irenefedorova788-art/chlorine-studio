@@ -42,7 +42,7 @@ export type Dict = {
     cta: string;
     scroll: string;
   };
-  services: { label: string; heading: string; items: ServiceItem[] };
+  services: { heading: string; items: ServiceItem[] };
   servicesPage: {
     eyebrow: string;
     heading: string;
@@ -59,7 +59,7 @@ export type Dict = {
     intro: string;
     back: string;
   };
-  work: { label: string; heading: string; note: string; noteLink: string; items: WorkItem[]; soon: string; all: string; moreLabel: string };
+  work: { heading: string; note: string; noteLink: string; items: WorkItem[]; soon: string; all: string; moreLabel: string };
   workPage: {
     eyebrow: string;
     heading: string;
@@ -68,7 +68,6 @@ export type Dict = {
     back: string;
   };
   about: {
-    label: string;
     heading: string;
     bio: string[];
   };
@@ -100,8 +99,7 @@ export const content: Record<Locale, Dict> = {
       scroll: "ВНИЗ",
     },
     services: {
-      label: "УСЛУГИ",
-      heading: "Чем помогаю",
+      heading: "Услуги",
       items: [
         {
           code: "Br",
@@ -193,8 +191,7 @@ export const content: Record<Locale, Dict> = {
       back: "← На главную",
     },
     work: {
-      label: "РАБОТЫ",
-      heading: "Избранное",
+      heading: "Работы",
       note: "Кейсы обновляются. Актуальные работы — в портфолио:",
       noteLink: "Behance",
       soon: "СКОРО",
@@ -214,8 +211,7 @@ export const content: Record<Locale, Dict> = {
       back: "← На главную",
     },
     about: {
-      label: "ОБО МНЕ",
-      heading: "Кто делает",
+      heading: "Обо мне",
       bio: [
         "CHLORINE — работа бренд-менеджера Ирины Фёдоровой.",
         "В переводе с английского — «хлор».",
@@ -262,8 +258,7 @@ export const content: Record<Locale, Dict> = {
       scroll: "SCROLL",
     },
     services: {
-      label: "SERVICES",
-      heading: "How I help",
+      heading: "Services",
       items: [
         {
           code: "Br",
@@ -355,8 +350,7 @@ export const content: Record<Locale, Dict> = {
       back: "← Back home",
     },
     work: {
-      label: "WORK",
-      heading: "Selected work",
+      heading: "Work",
       note: "Case studies in progress. Current work lives on",
       noteLink: "Behance",
       soon: "SOON",
@@ -376,8 +370,7 @@ export const content: Record<Locale, Dict> = {
       back: "← Back home",
     },
     about: {
-      label: "ABOUT",
-      heading: "Who's behind it",
+      heading: "About",
       bio: [
         "CHLORINE is the work of brand manager Irina Fedorova.",
         "Finding the character inside them. Adding tension. Changing how they feel.",
