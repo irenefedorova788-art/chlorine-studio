@@ -20,7 +20,7 @@ export function Services({ dict, locale }: { dict: Dict; locale: Locale }) {
               href={`/${locale}/services`}
               className="font-mono text-xs text-ink underline decoration-line hover:decoration-red hover:text-red transition-colors"
             >
-              {dict.servicesPage.moreLabel} ↗
+              {dict.servicesPage.moreLabel}
             </Link>
           </div>
         </Reveal>

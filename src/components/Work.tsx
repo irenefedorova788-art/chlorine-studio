@@ -23,7 +23,7 @@ export function Work({ dict, locale }: { dict: Dict; locale: Locale }) {
                 href={`/${locale}/work`}
                 className="text-ink underline decoration-line hover:decoration-red hover:text-red transition-colors"
               >
-                {dict.work.moreLabel} ↗
+                {dict.work.moreLabel}
               </Link>
               <p className="text-ink-dim">
                 {dict.work.note}{" "}
@@ -33,7 +33,7 @@ export function Work({ dict, locale }: { dict: Dict; locale: Locale }) {
                   rel="noopener noreferrer"
                   className="text-ink underline decoration-line hover:decoration-red hover:text-red transition-colors"
                 >
-                  {dict.work.noteLink} ↗
+                  {dict.work.noteLink}
                 </a>
               </p>
             </div>
