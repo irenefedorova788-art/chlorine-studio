@@ -80,7 +80,7 @@ export type Dict = {
 export const content: Record<Locale, Dict> = {
   ru: {
     meta: {
-      title: "CHLORINE — Ирина Фёдорова, независимый бренд-стратег и арт-директор",
+      title: "CHLORINE — Ирина Фёдорова, независимый бренд-менеджер и арт-директор",
       description:
         "Превращаю идеи амбициозных брендов в отличительные кампании и визуальные миры.",
     },
@@ -218,8 +218,14 @@ export const content: Record<Locale, Dict> = {
       label: "ОБО МНЕ",
       heading: "Кто делает",
       bio: [
-        "CHLORINE — это я, Ирина Фёдорова: бренд-стратег, арт-директор и моушн-дизайнер. Работаю с брендами, у которых уже есть продукт и амбиция, но визуальная часть отстаёт или собрана разными подрядчиками в разное время.",
-        "До этого управляла премиальным гастропабом с полной ответственностью за P&L, затем выстраивала маркетинговую функцию в сети ресторанов — визуальную систему, контент-команду, регламенты. Стратегия, арт-дирекция и моушн собраны в одних руках: визуальный язык и его движение появляются вместе, а согласование идёт напрямую с тем, кто принимает решения.",
+        "CHLORINE — работа бренд-менеджера Ирины Фёдоровой.",
+        "Почему CHLORINE?",
+        "Есть среды, в которых всё выглядит чисто, аккуратно и одинаково. Стерильный свет, пластиковые поверхности, запах чистоты — и ощущение, что здесь давно ничего не происходит.",
+        "Мне интересна работа с такими средами.",
+        "Находить в них характер, добавлять напряжение, менять ощущение.",
+        "Я пришла в брендинг из бизнеса и увидела, как сильные продукты теряют свою ценность, когда их невозможно отличить от десятков похожих предложений.",
+        "Сегодня продукту мало быть хорошим. Ему нужен характер, который проявляется во всём: в том, что бренд говорит, как выглядит и какое ощущение оставляет.",
+        "CHLORINE помогает бизнесу найти этот характер и занять своё место среди похожих.",
       ],
       principles: [
         { title: "МАСШТАБ", desc: "Решение проверяется тем, выдержит ли оно все каналы и точки контакта, а не только первый слайд презентации." },
@@ -234,7 +240,7 @@ export const content: Record<Locale, Dict> = {
       emailLabel: "или на почту",
     },
     footer: {
-      role: "Бренд-стратегия и арт-дирекция",
+      role: "Бренд-менеджмент и арт-дирекция",
       nav: "Навигация",
       contact: "Контакты",
       work: "Портфолио",
@@ -243,9 +249,9 @@ export const content: Record<Locale, Dict> = {
   },
   en: {
     meta: {
-      title: "CHLORINE — Independent Creative & Brand Strategist",
+      title: "CHLORINE — Irina Fedorova, Independent Brand Manager & Art Director",
       description:
-        "Independent Creative & Brand Strategist helping ambitious brands turn ideas into distinctive campaigns and visual worlds.",
+        "Independent brand manager and art director helping ambitious brands turn ideas into distinctive campaigns and visual worlds.",
     },
     nav: {
       services: "Services",
@@ -381,8 +387,14 @@ export const content: Record<Locale, Dict> = {
       label: "ABOUT",
       heading: "Who's behind it",
       bio: [
-        "CHLORINE is me — Irina Fedorova, brand strategist, art director and motion designer. I work with brands that already have a product and ambition, but whose visual side has fallen behind or been stitched together by different contractors over time.",
-        "Before this, I ran a premium gastropub with full P&L ownership, then built the marketing function for a restaurant group — visual system, content team, guidelines. Strategy, art direction and motion sit in one pair of hands: the visual language and its motion arrive together, and sign-off happens directly with whoever makes the call.",
+        "CHLORINE is the work of brand manager Irina Fedorova.",
+        "Why CHLORINE?",
+        "Some environments look clean, tidy, and identical to every other one. Sterile light, plastic surfaces, the smell of clean — and the sense that nothing has happened here in a long time.",
+        "I'm drawn to working with spaces like that.",
+        "Finding the character inside them. Adding tension. Changing how they feel.",
+        "I came into branding from business, and watched strong products lose their value the moment they became indistinguishable from a dozen similar offers.",
+        "Being good isn't enough for a product today. It needs character — in what the brand says, how it looks, and the feeling it leaves behind.",
+        "CHLORINE helps businesses find that character and claim their place among the similar.",
       ],
       principles: [
         { title: "SCALE", desc: "A decision is only good if it holds up across every channel and touchpoint, not just the first slide." },
@@ -397,7 +409,7 @@ export const content: Record<Locale, Dict> = {
       emailLabel: "or by email",
     },
     footer: {
-      role: "Brand strategy & art direction",
+      role: "Brand management & art direction",
       nav: "Navigation",
       contact: "Contact",
       work: "Portfolio",
