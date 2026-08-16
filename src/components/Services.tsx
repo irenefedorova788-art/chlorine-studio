@@ -22,10 +22,10 @@ export function Services({ dict, locale }: { dict: Dict; locale: Locale }) {
           </div>
         </Reveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-line">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
           {dict.services.items.map((item, i) => (
             <Reveal key={item.code} delay={i * 60}>
-              <div className="group bg-bg/55 backdrop-blur-sm h-full p-7 sm:p-8 hover:bg-bg/75 transition-colors">
+              <div className="group h-full">
                 <div className="flex items-baseline justify-between mb-8">
                   <span className="font-display font-bold text-3xl text-red group-hover:translate-x-1 transition-transform">
                     {String(i + 1).padStart(2, "0")}
