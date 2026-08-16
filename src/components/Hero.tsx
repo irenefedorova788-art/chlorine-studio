@@ -3,7 +3,7 @@ import { CONTACT } from "@/lib/content";
 
 export function Hero({ dict }: { dict: Dict }) {
   return (
-    <section className="relative min-h-screen flex flex-col">
+    <section className="relative min-h-dvh flex flex-col">
       <div className="relative z-10 flex-1 flex flex-col justify-end px-5 sm:px-8 pt-28 pb-8">
         <div className="mx-auto max-w-7xl w-full py-10 sm:py-16">
           <div className="max-w-2xl lg:max-w-xl">

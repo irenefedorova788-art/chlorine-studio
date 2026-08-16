@@ -92,8 +92,8 @@ export const content: Record<Locale, Dict> = {
       contacts: "Контакты",
     },
     hero: {
-      tagline: "Превращаю идеи амбициозных брендов в",
-      tagMark: "отличительные кампании и визуальные миры",
+      tagline: "Направляю ваши смелые идеи в",
+      tagMark: "узнаваемые бренды",
       tagTail: ".",
       supporting: "Каждый проект — повод попробовать язык, которого у бренда ещё не было. Разбираю бриф заново, а не по шаблону. Делаю что-то однажды впервые.",
       metaRight: "WORLDWIDE",
@@ -255,8 +255,8 @@ export const content: Record<Locale, Dict> = {
       contacts: "Contact",
     },
     hero: {
-      tagline: "Helping ambitious brands turn ideas into",
-      tagMark: "distinctive campaigns and visual worlds",
+      tagline: "I turn your bold ideas into",
+      tagMark: "recognizable brands",
       tagTail: ".",
       supporting: "Every project is a chance to try a language the brand hasn't spoken yet. I read the brief again, not from a template. And do something for the first time.",
       metaRight: "WORLDWIDE",
