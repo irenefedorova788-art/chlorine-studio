@@ -71,7 +71,6 @@ export type Dict = {
     label: string;
     heading: string;
     bio: string[];
-    principles: { title: string; desc: string }[];
   };
   cta: { line1: string; line2: string; button: string; emailLabel: string };
   footer: { role: string; nav: string; contact: string; work: string; location: string };
@@ -219,15 +218,11 @@ export const content: Record<Locale, Dict> = {
       heading: "Кто делает",
       bio: [
         "CHLORINE — работа бренд-менеджера Ирины Фёдоровой.",
+        "В переводе с английского — «хлор».",
         "Находить в них характер, добавлять напряжение, менять ощущение.",
         "Я пришла в брендинг из бизнеса и увидела, как сильные продукты теряют свою ценность, когда их невозможно отличить от десятков похожих предложений.",
         "Сегодня продукту мало быть хорошим. Ему нужен характер, который проявляется во всём: в том, что бренд говорит, как выглядит и какое ощущение оставляет.",
         "CHLORINE помогает бизнесу найти этот характер и занять своё место среди похожих.",
-      ],
-      principles: [
-        { title: "МАСШТАБ", desc: "Решение проверяется тем, выдержит ли оно все каналы и точки контакта, а не только первый слайд презентации." },
-        { title: "РЕАЛЬНОСТЬ", desc: "Система обязана работать в реальных условиях: быстро, на бегу, за три секунды внимания." },
-        { title: "СИСТЕМА", desc: "Клиент получает правила и шаблоны, по которым команда работает самостоятельно." },
       ],
     },
     cta: {
@@ -389,11 +384,6 @@ export const content: Record<Locale, Dict> = {
         "I came into branding from business, and watched strong products lose their value the moment they became indistinguishable from a dozen similar offers.",
         "Being good isn't enough for a product today. It needs character — in what the brand says, how it looks, and the feeling it leaves behind.",
         "CHLORINE helps businesses find that character and claim their place among the similar.",
-      ],
-      principles: [
-        { title: "SCALE", desc: "A decision is only good if it holds up across every channel and touchpoint, not just the first slide." },
-        { title: "REALITY", desc: "A system has to work under real conditions: fast, on the move, with three seconds of attention." },
-        { title: "SYSTEM", desc: "You get the rules and templates your team can run on its own." },
       ],
     },
     cta: {
