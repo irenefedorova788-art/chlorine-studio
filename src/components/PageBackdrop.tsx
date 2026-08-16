@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 
 type Variant = { src: string; position: string };
 
-const HOME: Variant = { src: "/hero-photo.jpg", position: "38% 35%" };
+const HOME: Variant = { src: "/bg-home.jpg", position: "50% 35%" };
 const BLUE: Variant = { src: "/bg-blue.jpg", position: "50% 30%" };
 const PURPLE: Variant = { src: "/bg-purple.jpg", position: "50% 25%" };
 
