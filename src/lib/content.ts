@@ -219,9 +219,6 @@ export const content: Record<Locale, Dict> = {
       heading: "Кто делает",
       bio: [
         "CHLORINE — работа бренд-менеджера Ирины Фёдоровой.",
-        "Почему CHLORINE?",
-        "Есть среды, в которых всё выглядит чисто, аккуратно и одинаково. Стерильный свет, пластиковые поверхности, запах чистоты — и ощущение, что здесь давно ничего не происходит.",
-        "Мне интересна работа с такими средами.",
         "Находить в них характер, добавлять напряжение, менять ощущение.",
         "Я пришла в брендинг из бизнеса и увидела, как сильные продукты теряют свою ценность, когда их невозможно отличить от десятков похожих предложений.",
         "Сегодня продукту мало быть хорошим. Ему нужен характер, который проявляется во всём: в том, что бренд говорит, как выглядит и какое ощущение оставляет.",
@@ -388,9 +385,6 @@ export const content: Record<Locale, Dict> = {
       heading: "Who's behind it",
       bio: [
         "CHLORINE is the work of brand manager Irina Fedorova.",
-        "Why CHLORINE?",
-        "Some environments look clean, tidy, and identical to every other one. Sterile light, plastic surfaces, the smell of clean — and the sense that nothing has happened here in a long time.",
-        "I'm drawn to working with spaces like that.",
         "Finding the character inside them. Adding tension. Changing how they feel.",
         "I came into branding from business, and watched strong products lose their value the moment they became indistinguishable from a dozen similar offers.",
         "Being good isn't enough for a product today. It needs character — in what the brand says, how it looks, and the feeling it leaves behind.",
