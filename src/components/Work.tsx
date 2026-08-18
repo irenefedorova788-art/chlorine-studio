@@ -42,6 +42,8 @@ export function Work({ dict, locale }: { dict: Dict; locale: Locale }) {
             items={dict.work.items}
             allLabel={dict.work.all}
             soonLabel={dict.work.soon}
+            viewLabel={dict.work.view}
+            locale={locale}
           />
         </Reveal>
       </div>

@@ -28,6 +28,24 @@ export type WorkItem = {
   category: string;
   title: string;
   year: string;
+  slug?: string;
+};
+
+export type CaseSection = {
+  eyebrow: string;
+  heading: string;
+  body: string[];
+};
+
+export type CaseStudy = {
+  slug: string;
+  category: string;
+  title: string;
+  subtitle: string;
+  year: string;
+  client: string;
+  role: string;
+  sections: CaseSection[];
 };
 
 export type Dict = {
@@ -59,13 +77,19 @@ export type Dict = {
     intro: string;
     back: string;
   };
-  work: { heading: string; note: string; noteLink: string; items: WorkItem[]; soon: string; all: string; moreLabel: string };
+  work: { heading: string; note: string; noteLink: string; items: WorkItem[]; soon: string; view: string; all: string; moreLabel: string };
   workPage: {
     eyebrow: string;
     heading: string;
     headingMark: string;
     intro: string;
     back: string;
+  };
+  cases: CaseStudy[];
+  caseView: {
+    back: string;
+    clientLabel: string;
+    roleLabel: string;
   };
   about: {
     heading: string;
@@ -194,12 +218,12 @@ export const content: Record<Locale, Dict> = {
       note: "Кейсы обновляются. Актуальные работы — в портфолио:",
       noteLink: "Behance",
       soon: "СКОРО",
+      view: "Смотреть кейс",
       all: "Все",
       moreLabel: "Все работы",
       items: [
-        { category: "Визуальная система", title: "Ребрендинг растущего бренда", year: "202X" },
-        { category: "Key visual", title: "Кампания к запуску", year: "202X" },
-        { category: "Моушн-система", title: "Видео и шаблоны", year: "202X" },
+        { category: "Бренд-платформа", title: "CHLORINE", year: "2026", slug: "chlorine" },
+        { category: "Ребрендинг (концепт)", title: "РЯДОМ", year: "2026", slug: "ryadom" },
       ],
     },
     workPage: {
@@ -208,6 +232,120 @@ export const content: Record<Locale, Dict> = {
       headingMark: "успела сделать",
       intro: "Кейсы появляются здесь по мере сдачи — фильтруйте по типу работы или смотрите всё подряд.",
       back: "← На главную",
+    },
+    cases: [
+      {
+        slug: "chlorine",
+        category: "Бренд-платформа",
+        title: "CHLORINE",
+        subtitle: "Бренд независимого арт-директора, сделанный по тем же правилам, что и бренды для клиентов",
+        year: "2026",
+        client: "CHLORINE",
+        role: "Нейминг, бренд-стратегия, визуальная айдентика, сайт",
+        sections: [
+          {
+            eyebrow: "Контекст",
+            heading: "Точка старта",
+            body: [
+              "У независимого специалиста обычно нет бренда — есть резюме, ссылка на Behance и переписка в Telegram.",
+              "Экспертиза при этом может быть сильной. Но клиент видит её только через раздробленные, ничем не связанные фрагменты.",
+            ],
+          },
+          {
+            eyebrow: "Что не работало",
+            heading: "Портфолио без голоса",
+            body: [
+              "PDF с кейсами, страница в соцсети, отдельный файл под каждый запрос — у каждого куска своя подача, ни один не похож на другой.",
+              "Со стороны это выглядит как набор проектов, а не как позиция одного человека.",
+            ],
+          },
+          {
+            eyebrow: "Стратегия",
+            heading: "Имя как метод",
+            body: [
+              "Название CHLORINE — буквальный перевод слова «хлор».",
+              "Хлор наводит порядок там, где до него было тихо и одинаково: в бассейнах, в воде, в стерильных помещениях.",
+              "Так же работает и бренд-менеджмент — находить характер в средах, где всё выглядит чисто, аккуратно и неотличимо друг от друга.",
+            ],
+          },
+          {
+            eyebrow: "Визуальная система",
+            heading: "Один акцент, никакого шума",
+            body: [
+              "Сигнальный красный на почти чёрном тексте — единственный цветовой акцент во всей системе.",
+              "Логотип набран без засечек и вручную растеризован в собственном шрифте, чтобы не зависеть от того, установлен ли он у получателя письма или презентации.",
+              "Вместо студийных мокапов — фотографии на грани абстракции: синий и фиолетовый свет, без предметной привязки.",
+              "Одна и та же система работает на сайте, в письме и в презентации для клиента — это не набор дизайнов, а единый язык.",
+            ],
+          },
+          {
+            eyebrow: "Результат",
+            heading: "Инструмент, а не визитка",
+            body: [
+              "Сайт, шаблон презентации и шаблон письма собраны по одной системе и уже используются в переписке с клиентами.",
+              "Вместо форматирования каждого письма заново — берётся готовый шаблон и заполняется текстом под конкретный проект.",
+            ],
+          },
+        ],
+      },
+      {
+        slug: "ryadom",
+        category: "Ребрендинг (концепт)",
+        title: "РЯДОМ",
+        subtitle: "Несогласованный концепт: как могла бы звучать аптечная сеть, если бы за характер отвечал бренд, а не вывеска",
+        year: "2026",
+        client: "Спекулятивный проект, не связан с реальной компанией",
+        role: "Позиционирование, нейминг, визуальная айдентика — концепт",
+        sections: [
+          {
+            eyebrow: "Контекст",
+            heading: "Категория без лица",
+            body: [
+              "Аптечные сети физически повсюду — в шаговой доступности почти от любой точки города.",
+              "При этом вспомнить, в какую именно аптеку заходил вчера, обычно не может никто.",
+            ],
+          },
+          {
+            eyebrow: "Что не работало",
+            heading: "Одна и та же вывеска",
+            body: [
+              "Белый свет, зелёный крест, ценник крупным шрифтом — во всех сетях одновременно.",
+              "Категория решила, что «медицинский» значит «безликий», а доверие спутала со стерильностью.",
+              "Ценовая борьба стала единственным языком отличия — и убила смысл выбирать по бренду, а не по акции.",
+            ],
+          },
+          {
+            eyebrow: "Стратегия",
+            heading: "«Рядом» в двух смыслах",
+            body: [
+              "Название держится на двойном значении слова: рядом географически — и рядом по ощущению, когда действительно нужна помощь.",
+              "Позиционирование смещается с «мы дешевле» на «мы рядом, когда это важно» — конкурировать не ценой, а присутствием.",
+            ],
+          },
+          {
+            eyebrow: "Визуальная система",
+            heading: "Тепло вместо стерильности",
+            body: [
+              "Клинический зелёно-голубой уходит — вместо него тёплый оттенок чернил и один спокойный акцентный цвет, использованный точечно, а не по всей вывеске.",
+              "Вместо стоковых фото витрин с товаром — фотографии людей и района вокруг аптеки: она часть улицы, а не отдельно стоящий бокс.",
+              "Типографика — спокойная, без медицинских клише вроде крестов и капсул в логотипе.",
+            ],
+          },
+          {
+            eyebrow: "Результат",
+            heading: "Демонстрация подхода",
+            body: [
+              "Это учебный кейс без реального клиента — способ показать, как выглядит работа с категорией, где все выглядят одинаково.",
+              "Если у вас похожая задача — с сетью аптек или другим бизнесом, застрявшим в шаблонах категории — можно обсудить это уже как настоящий проект.",
+            ],
+          },
+        ],
+      },
+    ],
+    caseView: {
+      back: "← Все работы",
+      clientLabel: "Клиент",
+      roleLabel: "Формат работы",
     },
     about: {
       heading: "Обо мне",
@@ -352,12 +490,12 @@ export const content: Record<Locale, Dict> = {
       note: "Case studies in progress. Current work lives on",
       noteLink: "Behance",
       soon: "SOON",
+      view: "View case",
       all: "All",
       moreLabel: "All work",
       items: [
-        { category: "Visual identity", title: "Rebrand for a growing brand", year: "202X" },
-        { category: "Key visual", title: "Launch campaign", year: "202X" },
-        { category: "Motion system", title: "Films and templates", year: "202X" },
+        { category: "Brand platform", title: "CHLORINE", year: "2026", slug: "chlorine" },
+        { category: "Rebrand (concept)", title: "RYADOM", year: "2026", slug: "ryadom" },
       ],
     },
     workPage: {
@@ -366,6 +504,120 @@ export const content: Record<Locale, Dict> = {
       headingMark: "actually made",
       intro: "Case studies land here as they wrap — filter by type or just browse everything.",
       back: "← Back home",
+    },
+    cases: [
+      {
+        slug: "chlorine",
+        category: "Brand platform",
+        title: "CHLORINE",
+        subtitle: "An independent art director's own brand, built by the same rules used for client work",
+        year: "2026",
+        client: "CHLORINE",
+        role: "Naming, brand strategy, visual identity, website",
+        sections: [
+          {
+            eyebrow: "Context",
+            heading: "Starting point",
+            body: [
+              "An independent specialist usually doesn't have a brand — just a résumé, a Behance link, and a Telegram thread.",
+              "The expertise can be real. But a client only sees it through disconnected, differently-formatted fragments.",
+            ],
+          },
+          {
+            eyebrow: "What wasn't working",
+            heading: "A portfolio without a voice",
+            body: [
+              "A PDF of case studies, a social profile, a separate file for every request — each piece pitched differently, none of them looking related.",
+              "From the outside it reads as a pile of projects, not a single point of view.",
+            ],
+          },
+          {
+            eyebrow: "Strategy",
+            heading: "The name as a method",
+            body: [
+              "CHLORINE is a literal translation of the Russian word for chlorine.",
+              "Chlorine brings order to places that were quiet and uniform before it arrived — pools, water, sterile rooms.",
+              "Brand management works the same way: finding character in categories where everything already looks clean, neat, and indistinguishable.",
+            ],
+          },
+          {
+            eyebrow: "Visual system",
+            heading: "One accent, no noise",
+            body: [
+              "Signal red on near-black text — the single color accent across the entire system.",
+              "The logotype is set in a sans face and rasterized by hand into its own font file, so it never depends on whether the recipient has that font installed.",
+              "Instead of studio mockups, photography that sits right at the edge of abstraction: blue and purple light, with no literal subject.",
+              "The same system runs across the site, the email template, and the client deck — not a set of designs, but one language.",
+            ],
+          },
+          {
+            eyebrow: "Result",
+            heading: "A tool, not a business card",
+            body: [
+              "The website, deck template, and email template are built on one system and already used in real client correspondence.",
+              "Instead of formatting every email from scratch, a ready template gets filled in with the specifics of each project.",
+            ],
+          },
+        ],
+      },
+      {
+        slug: "ryadom",
+        category: "Rebrand (concept)",
+        title: "RYADOM",
+        subtitle: "An unsolicited concept: what a pharmacy chain could sound like if the brand carried the character, not the signage",
+        year: "2026",
+        client: "Speculative project, not affiliated with a real company",
+        role: "Positioning, naming, visual identity — concept",
+        sections: [
+          {
+            eyebrow: "Context",
+            heading: "A category with no face",
+            body: [
+              "Pharmacy chains are physically everywhere — a short walk from almost any point in the city.",
+              "Almost nobody can recall which specific pharmacy they walked into yesterday.",
+            ],
+          },
+          {
+            eyebrow: "What wasn't working",
+            heading: "The same sign, everywhere",
+            body: [
+              "White light, a green cross, prices in bold — across every chain at once.",
+              "The category decided that \"medical\" means \"faceless,\" and mistakes trust for sterility.",
+              "Price competition became the only language of difference, killing any reason to choose a brand instead of a promotion.",
+            ],
+          },
+          {
+            eyebrow: "Strategy",
+            heading: "\"Nearby\" in two senses",
+            body: [
+              "The name (Russian for \"nearby\" / \"right beside you\") carries a double meaning: close by, geographically — and close by in feeling, when it actually matters.",
+              "Positioning shifts from \"we're cheaper\" to \"we're right there when it counts\" — competing on presence, not price.",
+            ],
+          },
+          {
+            eyebrow: "Visual system",
+            heading: "Warmth instead of sterility",
+            body: [
+              "The clinical green-blue is gone, replaced with a warm ink tone and a single calm accent color, used sparingly instead of covering the whole sign.",
+              "Instead of stock photos of shelves, photography of people and the block the pharmacy sits on — it's part of the street, not a box dropped onto it.",
+              "Typography stays quiet, without the usual medical clichés — no crosses or capsule shapes built into the logo.",
+            ],
+          },
+          {
+            eyebrow: "Result",
+            heading: "A demonstration of the approach",
+            body: [
+              "This is a spec case with no real client — a way to show what it looks like to take on a category where everyone already looks the same.",
+              "A similar brief — a pharmacy chain or any other business stuck in its category's template — is welcome to become a real project.",
+            ],
+          },
+        ],
+      },
+    ],
+    caseView: {
+      back: "← All work",
+      clientLabel: "Client",
+      roleLabel: "Scope",
     },
     about: {
       heading: "About",
