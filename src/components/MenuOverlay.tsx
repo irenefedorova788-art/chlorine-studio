@@ -36,37 +36,29 @@ export function MenuOverlay({
       }`}
       aria-hidden={!open}
     >
-      <div className="absolute inset-0 overflow-hidden bg-bg">
+      <div
+        className="absolute inset-0 overflow-hidden"
+        style={{ background: "linear-gradient(160deg, #eef5fb 0%, #dbe9f6 55%, #c3daf0 100%)" }}
+      >
         <div
-          className="menu-blob absolute w-[70vmax] h-[70vmax] rounded-full opacity-70"
+          className="menu-blob absolute w-[65vmax] h-[65vmax] rounded-full opacity-90"
           style={{
-            left: "-15%",
-            top: "-20%",
-            background: "radial-gradient(circle, #1657DE 0%, transparent 70%)",
-            filter: "blur(80px)",
-            animation: "menu-blob-a 24s ease-in-out infinite",
-            animationPlayState: playState,
-          }}
-        />
-        <div
-          className="menu-blob absolute w-[60vmax] h-[60vmax] rounded-full opacity-60"
-          style={{
-            right: "-18%",
-            top: "5%",
-            background: "radial-gradient(circle, #7c3fbf 0%, transparent 70%)",
-            filter: "blur(80px)",
-            animation: "menu-blob-b 28s ease-in-out infinite",
-            animationPlayState: playState,
-          }}
-        />
-        <div
-          className="menu-blob absolute w-[55vmax] h-[55vmax] rounded-full opacity-50"
-          style={{
-            left: "18%",
-            bottom: "-25%",
-            background: "radial-gradient(circle, #3a1c6b 0%, transparent 70%)",
+            right: "5%",
+            top: "18%",
+            background: "radial-gradient(circle, #5b93d3 0%, transparent 72%)",
             filter: "blur(90px)",
-            animation: "menu-blob-c 20s ease-in-out infinite",
+            animation: "menu-blob-a 30s ease-in-out infinite",
+            animationPlayState: playState,
+          }}
+        />
+        <div
+          className="menu-blob absolute w-[45vmax] h-[45vmax] rounded-full opacity-60"
+          style={{
+            left: "-10%",
+            bottom: "-15%",
+            background: "radial-gradient(circle, #a9c9ea 0%, transparent 72%)",
+            filter: "blur(90px)",
+            animation: "menu-blob-c 26s ease-in-out infinite",
             animationPlayState: playState,
           }}
         />
