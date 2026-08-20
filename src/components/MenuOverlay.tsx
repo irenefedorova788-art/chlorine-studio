@@ -17,11 +17,41 @@ export function MenuOverlay({
   onNavigate: () => void;
 }) {
   const links = [
-    { href: `/${locale}/services`, label: dict.nav.services },
-    { href: `/${locale}/work`, label: dict.nav.work },
-    { href: `/${locale}/process`, label: dict.nav.process },
-    { href: `/${locale}#about`, label: dict.nav.about },
-    { href: `/${locale}#contact`, label: dict.nav.contacts },
+    {
+      href: `/${locale}/services`,
+      label: dict.nav.services,
+      area: "a",
+      justify: "justify-self-start text-left",
+      size: "text-4xl sm:text-5xl lg:text-6xl",
+    },
+    {
+      href: `/${locale}/work`,
+      label: dict.nav.work,
+      area: "b",
+      justify: "justify-self-end text-right",
+      size: "text-4xl sm:text-5xl lg:text-6xl",
+    },
+    {
+      href: `/${locale}/process`,
+      label: dict.nav.process,
+      area: "c",
+      justify: "justify-self-center text-center",
+      size: "text-6xl sm:text-8xl lg:text-9xl",
+    },
+    {
+      href: `/${locale}#about`,
+      label: dict.nav.about,
+      area: "d",
+      justify: "justify-self-start text-left",
+      size: "text-4xl sm:text-5xl lg:text-6xl",
+    },
+    {
+      href: `/${locale}#contact`,
+      label: dict.nav.contacts,
+      area: "e",
+      justify: "justify-self-end text-right",
+      size: "text-4xl sm:text-5xl lg:text-6xl",
+    },
   ];
 
   const playState = paused ? "paused" : "running";
@@ -69,28 +99,60 @@ export function MenuOverlay({
         />
       </div>
 
-      <nav className="relative z-10 h-full flex flex-col justify-center px-5 sm:px-8">
-        <div className="mx-auto max-w-7xl w-full">
-          <ul>
-            {links.map((l, i) => (
-              <li key={l.href} className="border-b border-line first:border-t">
-                <Link
-                  href={l.href}
-                  onClick={onNavigate}
-                  tabIndex={open ? 0 : -1}
-                  className="group flex items-baseline gap-4 sm:gap-7 py-3 sm:py-4"
-                >
-                  <span className="font-mono text-xs sm:text-sm text-red">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span className="font-display font-bold text-4xl sm:text-6xl lg:text-7xl leading-none group-hover:translate-x-3 transition-transform duration-300 ease-out">
-                    {l.label}
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+      {/* Mobile: simple stacked list — a scattered layout has no room to breathe below ~640px */}
+      <nav className="sm:hidden relative z-10 h-full flex flex-col justify-center px-5">
+        <ul>
+          {links.map((l, i) => (
+            <li key={l.href} className="border-b border-line first:border-t">
+              <Link
+                href={l.href}
+                onClick={onNavigate}
+                tabIndex={open ? 0 : -1}
+                className="group flex items-baseline gap-4 py-3"
+              >
+                <span className="font-mono text-xs text-red">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="font-display font-bold text-4xl leading-none group-hover:translate-x-3 transition-transform duration-300 ease-out">
+                  {l.label}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      {/* Desktop/tablet: links scattered across the screen, one dominant
+          center item — echoes a poster layout rather than a centered list. */}
+      <nav
+        className="hidden sm:grid relative z-10 h-full w-full px-8 lg:px-14 pt-24 pb-28 gap-6"
+        style={{
+          gridTemplateAreas: `"a b" "c c" "d e"`,
+          gridTemplateRows: "1fr 1.2fr 1fr",
+          gridTemplateColumns: "1fr 1fr",
+        }}
+      >
+        {links.map((l, i) => (
+          <Link
+            key={l.href}
+            href={l.href}
+            onClick={onNavigate}
+            tabIndex={open ? 0 : -1}
+            style={{ gridArea: l.area }}
+            className={`group flex flex-col ${l.justify} ${
+              l.area === "c" ? "self-center" : l.area === "a" || l.area === "b" ? "self-start" : "self-end"
+            }`}
+          >
+            <span className="font-mono text-xs text-red mb-1">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <span
+              className={`font-display font-bold leading-none group-hover:text-red/80 group-hover:-translate-y-1 transition-all duration-300 ease-out ${l.size}`}
+            >
+              {l.label}
+            </span>
+          </Link>
+        ))}
       </nav>
 
       <div className="absolute bottom-0 inset-x-0 px-5 sm:px-8 pb-8 sm:pb-10">
