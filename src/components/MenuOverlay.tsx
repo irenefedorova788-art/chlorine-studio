@@ -16,43 +16,16 @@ export function MenuOverlay({
   paused: boolean;
   onNavigate: () => void;
 }) {
-  const links = [
-    {
-      href: `/${locale}/services`,
-      label: dict.nav.services,
-      area: "a",
-      justify: "justify-self-start text-left",
-      size: "text-4xl sm:text-5xl lg:text-6xl",
-    },
-    {
-      href: `/${locale}/work`,
-      label: dict.nav.work,
-      area: "b",
-      justify: "justify-self-end text-right",
-      size: "text-4xl sm:text-5xl lg:text-6xl",
-    },
-    {
-      href: `/${locale}/process`,
-      label: dict.nav.process,
-      area: "c",
-      justify: "justify-self-center text-center",
-      size: "text-6xl sm:text-8xl lg:text-9xl",
-    },
-    {
-      href: `/${locale}#about`,
-      label: dict.nav.about,
-      area: "d",
-      justify: "justify-self-start text-left",
-      size: "text-4xl sm:text-5xl lg:text-6xl",
-    },
-    {
-      href: `/${locale}#contact`,
-      label: dict.nav.contacts,
-      area: "e",
-      justify: "justify-self-end text-right",
-      size: "text-4xl sm:text-5xl lg:text-6xl",
-    },
+  const linksLeft = [
+    { href: `/${locale}/services`, label: dict.nav.services, n: 1 },
+    { href: `/${locale}/work`, label: dict.nav.work, n: 2 },
+    { href: `/${locale}/process`, label: dict.nav.process, n: 3 },
   ];
+  const linksRight = [
+    { href: `/${locale}#about`, label: dict.nav.about, n: 4 },
+    { href: `/${locale}#contact`, label: dict.nav.contacts, n: 5 },
+  ];
+  const allLinks = [...linksLeft, ...linksRight];
 
   const playState = paused ? "paused" : "running";
 
@@ -99,21 +72,21 @@ export function MenuOverlay({
         />
       </div>
 
-      {/* Mobile: simple stacked list — a scattered layout has no room to breathe below ~640px */}
-      <nav className="sm:hidden relative z-10 h-full flex flex-col justify-center px-5">
-        <ul>
-          {links.map((l, i) => (
-            <li key={l.href} className="border-b border-line first:border-t">
+      {/* Mobile: single compact column near the top */}
+      <nav className="sm:hidden relative z-10 px-5 pt-28">
+        <ul className="space-y-1">
+          {allLinks.map((l) => (
+            <li key={l.href}>
               <Link
                 href={l.href}
                 onClick={onNavigate}
                 tabIndex={open ? 0 : -1}
-                className="group flex items-baseline gap-4 py-3"
+                className="group flex items-baseline gap-3 py-1.5"
               >
-                <span className="font-mono text-xs text-red">
-                  {String(i + 1).padStart(2, "0")}
+                <span className="font-mono text-[10px] text-red">
+                  {String(l.n).padStart(2, "0")}
                 </span>
-                <span className="font-display font-bold text-4xl leading-none group-hover:translate-x-3 transition-transform duration-300 ease-out">
+                <span className="font-mono text-xl tracking-tight group-hover:translate-x-2 transition-transform duration-300 ease-out">
                   {l.label}
                 </span>
               </Link>
@@ -122,37 +95,47 @@ export function MenuOverlay({
         </ul>
       </nav>
 
-      {/* Desktop/tablet: links scattered across the screen, one dominant
-          center item — echoes a poster layout rather than a centered list. */}
-      <nav
-        className="hidden sm:grid relative z-10 h-full w-full px-8 lg:px-14 pt-24 pb-28 gap-6"
-        style={{
-          gridTemplateAreas: `"a b" "c c" "d e"`,
-          gridTemplateRows: "1fr 1.2fr 1fr",
-          gridTemplateColumns: "1fr 1fr",
-        }}
-      >
-        {links.map((l, i) => (
-          <Link
-            key={l.href}
-            href={l.href}
-            onClick={onNavigate}
-            tabIndex={open ? 0 : -1}
-            style={{ gridArea: l.area }}
-            className={`group flex flex-col ${l.justify} ${
-              l.area === "c" ? "self-center" : l.area === "a" || l.area === "b" ? "self-start" : "self-end"
-            }`}
-          >
-            <span className="font-mono text-xs text-red mb-1">
-              {String(i + 1).padStart(2, "0")}
-            </span>
-            <span
-              className={`font-display font-bold leading-none group-hover:text-red/80 group-hover:-translate-y-1 transition-all duration-300 ease-out ${l.size}`}
-            >
-              {l.label}
-            </span>
-          </Link>
-        ))}
+      {/* Desktop/tablet: two compact columns near the top, left-aligned —
+          same idea as a classic full-screen takeover nav, just modest in scale. */}
+      <nav className="hidden sm:flex relative z-10 px-8 lg:px-14 pt-28 gap-20 lg:gap-32">
+        <ul className="space-y-2">
+          {linksLeft.map((l) => (
+            <li key={l.href}>
+              <Link
+                href={l.href}
+                onClick={onNavigate}
+                tabIndex={open ? 0 : -1}
+                className="group flex items-baseline gap-3"
+              >
+                <span className="font-mono text-[11px] text-red">
+                  {String(l.n).padStart(2, "0")}
+                </span>
+                <span className="font-mono text-xl lg:text-2xl tracking-tight group-hover:translate-x-2 transition-transform duration-300 ease-out">
+                  {l.label}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <ul className="space-y-2">
+          {linksRight.map((l) => (
+            <li key={l.href}>
+              <Link
+                href={l.href}
+                onClick={onNavigate}
+                tabIndex={open ? 0 : -1}
+                className="group flex items-baseline gap-3"
+              >
+                <span className="font-mono text-[11px] text-red">
+                  {String(l.n).padStart(2, "0")}
+                </span>
+                <span className="font-mono text-xl lg:text-2xl tracking-tight group-hover:translate-x-2 transition-transform duration-300 ease-out">
+                  {l.label}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </nav>
 
       <div className="absolute bottom-0 inset-x-0 px-5 sm:px-8 pb-8 sm:pb-10">
