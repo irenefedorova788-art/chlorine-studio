@@ -96,6 +96,27 @@ body {
   }
 }
 
+/* Menu overlay: slow-drifting blurred color fields behind the nav */
+@keyframes menu-blob-a {
+  0%, 100% { transform: translate(0%, 0%) scale(1); }
+  33% { transform: translate(18%, 12%) scale(1.15); }
+  66% { transform: translate(-6%, 20%) scale(0.9); }
+}
+@keyframes menu-blob-b {
+  0%, 100% { transform: translate(0%, 0%) scale(1); }
+  33% { transform: translate(-16%, -8%) scale(0.85); }
+  66% { transform: translate(10%, -18%) scale(1.2); }
+}
+@keyframes menu-blob-c {
+  0%, 100% { transform: translate(0%, 0%) scale(1); }
+  50% { transform: translate(-14%, -14%) scale(1.25); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu-blob {
+    animation: none !important;
+  }
+}
+
 /* Page-level entrance, replayed on every route change since each page's
    <main> is a fresh DOM node when Next swaps the route. */
 @keyframes page-enter {
