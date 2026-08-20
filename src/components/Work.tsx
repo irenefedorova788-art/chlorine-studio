@@ -11,14 +11,14 @@ export function Work({ dict, locale }: { dict: Dict; locale: Locale }) {
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-4 mb-14">
             <div>
-              <h2 className="font-display font-bold text-3xl sm:text-5xl">
+              <h2 className="font-display font-bold text-3xl sm:text-5xl text-[#f1ece2]">
                 {dict.work.heading}
               </h2>
             </div>
             <div className="flex flex-col items-end gap-2 font-mono text-xs">
               <Link
                 href={`/${locale}/work`}
-                className="text-ink underline decoration-line hover:decoration-red hover:text-red transition-colors"
+                className="text-ink-dim underline decoration-line hover:decoration-red hover:text-red transition-colors"
               >
                 {dict.work.moreLabel}
               </Link>
@@ -28,7 +28,7 @@ export function Work({ dict, locale }: { dict: Dict; locale: Locale }) {
                   href={CONTACT.behance}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-ink underline decoration-line hover:decoration-red hover:text-red transition-colors"
+                  className="text-ink-dim underline decoration-line hover:decoration-red hover:text-red transition-colors"
                 >
                   {dict.work.noteLink}
                 </a>
@@ -44,6 +44,7 @@ export function Work({ dict, locale }: { dict: Dict; locale: Locale }) {
             soonLabel={dict.work.soon}
             viewLabel={dict.work.view}
             locale={locale}
+            mutedTitle
           />
         </Reveal>
       </div>

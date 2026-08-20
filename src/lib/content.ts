@@ -60,6 +60,7 @@ export type Dict = {
     cta: string;
     scroll: string;
   };
+  positioning: { lead: string; leadMark: string; leadTail: string };
   services: { heading: string; items: ServiceItem[] };
   servicesPage: {
     eyebrow: string;
@@ -121,6 +122,11 @@ export const content: Record<Locale, Dict> = {
       metaRight: "WORLDWIDE",
       cta: "Обсудить проект",
       scroll: "ВНИЗ",
+    },
+    positioning: {
+      lead: "Бренд-менеджмент и арт-дирекция для брендов, которым важно ",
+      leadMark: "выделяться",
+      leadTail: ", а не сливаться с рынком.",
     },
     services: {
       heading: "Услуги",
@@ -393,6 +399,11 @@ export const content: Record<Locale, Dict> = {
       metaRight: "WORLDWIDE",
       cta: "Start a project",
       scroll: "SCROLL",
+    },
+    positioning: {
+      lead: "Brand management and art direction for brands that need to ",
+      leadMark: "stand out",
+      leadTail: ", not blend in.",
     },
     services: {
       heading: "Services",

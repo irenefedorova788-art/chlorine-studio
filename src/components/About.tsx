@@ -6,7 +6,7 @@ export function About({ dict }: { dict: Dict }) {
     <section id="about" className="px-5 sm:px-8 py-24 sm:py-32 border-y border-line">
       <div className="mx-auto max-w-7xl">
         <Reveal>
-          <h2 className="font-display font-bold text-3xl sm:text-5xl mb-14 max-w-2xl">
+          <h2 className="font-display font-bold text-3xl sm:text-5xl mb-14 max-w-2xl text-[#f1ece2]">
             {dict.about.heading}
           </h2>
         </Reveal>
@@ -14,7 +14,7 @@ export function About({ dict }: { dict: Dict }) {
         <Reveal delay={80}>
           <div className="space-y-6 max-w-xl">
             {dict.about.bio.map((p, i) => (
-              <p key={i} className="text-base sm:text-lg leading-relaxed text-ink/90">
+              <p key={i} className="text-base sm:text-lg leading-relaxed text-[#f1ece2]/85">
                 {p}
               </p>
             ))}

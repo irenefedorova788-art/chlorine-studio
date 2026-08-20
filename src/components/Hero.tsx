@@ -8,7 +8,7 @@ export function Hero({ dict }: { dict: Dict }) {
         <div className="mx-auto max-w-7xl w-full py-10 sm:py-16">
           <div className="max-w-2xl lg:max-w-xl">
             <h1
-              className="rise-in font-body font-medium leading-[1.1] tracking-tight text-2xl sm:text-3xl lg:text-4xl"
+              className="rise-in font-body font-medium leading-[1.1] tracking-tight text-2xl sm:text-3xl lg:text-4xl text-[#f1ece2]"
               style={{ animationDelay: "0.1s" }}
             >
               {dict.hero.tagline}{" "}

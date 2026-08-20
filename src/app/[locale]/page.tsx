@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { locales, content, type Locale } from "@/lib/content";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { Positioning } from "@/components/Positioning";
 import { Services } from "@/components/Services";
 import { Process } from "@/components/Process";
 import { Work } from "@/components/Work";
@@ -25,6 +26,7 @@ export default async function LocalePage({
       <Header dict={dict} locale={locale as Locale} />
       <main className="page-enter">
         <Hero dict={dict} />
+        <Positioning dict={dict} />
         <Services dict={dict} locale={locale as Locale} />
         <Process dict={dict} />
         <Work dict={dict} locale={locale as Locale} />

@@ -10,12 +10,15 @@ export function WorkGrid({
   soonLabel,
   viewLabel,
   locale,
+  mutedTitle = false,
 }: {
   items: WorkItem[];
   allLabel: string;
   soonLabel: string;
   viewLabel: string;
   locale: Locale;
+  /** Homepage teaser uses a neutral title color; the dedicated /work page keeps the default red. */
+  mutedTitle?: boolean;
 }) {
   const categories = [allLabel, ...Array.from(new Set(items.map((i) => i.category)))];
   const [active, setActive] = useState(allLabel);
@@ -74,7 +77,11 @@ export function WorkGrid({
                   <p className="font-mono text-[10px] tracking-[0.18em] text-red mb-2">
                     {item.category.toUpperCase()}
                   </p>
-                  <h3 className="font-display font-semibold text-xl sm:text-2xl leading-tight">
+                  <h3
+                    className={`font-display font-semibold text-xl sm:text-2xl leading-tight ${
+                      mutedTitle ? "text-[#f1ece2]" : ""
+                    }`}
+                  >
                     {item.title}
                   </h3>
                 </div>
