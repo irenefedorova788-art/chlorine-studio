@@ -78,7 +78,7 @@ export function MenuOverlay({
                 <span className="font-mono text-[10px] text-red">
                   {String(l.n).padStart(2, "0")}
                 </span>
-                <span className="font-mono text-xl tracking-tight text-bg group-hover:text-red group-hover:translate-x-2 transition-all duration-300 ease-out">
+                <span className="font-mono text-xl tracking-tight text-red group-hover:translate-x-2 transition-transform duration-300 ease-out">
                   {l.label}
                 </span>
               </Link>
@@ -102,7 +102,7 @@ export function MenuOverlay({
                 <span className="font-mono text-[11px] text-red">
                   {String(l.n).padStart(2, "0")}
                 </span>
-                <span className="font-mono text-xl lg:text-2xl tracking-tight text-bg group-hover:text-red group-hover:translate-x-2 transition-all duration-300 ease-out">
+                <span className="font-mono text-xl lg:text-2xl tracking-tight text-red group-hover:translate-x-2 transition-transform duration-300 ease-out">
                   {l.label}
                 </span>
               </Link>
@@ -121,7 +121,7 @@ export function MenuOverlay({
                 <span className="font-mono text-[11px] text-red">
                   {String(l.n).padStart(2, "0")}
                 </span>
-                <span className="font-mono text-xl lg:text-2xl tracking-tight text-bg group-hover:text-red group-hover:translate-x-2 transition-all duration-300 ease-out">
+                <span className="font-mono text-xl lg:text-2xl tracking-tight text-red group-hover:translate-x-2 transition-transform duration-300 ease-out">
                   {l.label}
                 </span>
               </Link>
