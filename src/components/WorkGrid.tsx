@@ -10,15 +10,15 @@ export function WorkGrid({
   soonLabel,
   viewLabel,
   locale,
-  mutedTitle = false,
+  light = false,
 }: {
   items: WorkItem[];
   allLabel: string;
   soonLabel: string;
   viewLabel: string;
   locale: Locale;
-  /** Homepage teaser uses a neutral title color; the dedicated /work page keeps the default red. */
-  mutedTitle?: boolean;
+  /** Homepage teaser sits on the light gradient backdrop: neutral dark title, frosted-glass card instead of the dark tile used on /work's photo backdrop. */
+  light?: boolean;
 }) {
   const categories = [allLabel, ...Array.from(new Set(items.map((i) => i.category)))];
   const [active, setActive] = useState(allLabel);
@@ -46,30 +46,40 @@ export function WorkGrid({
         {visible.map((item) => {
           const card = (
             <div
-              className="group relative aspect-[4/3] overflow-hidden border border-line bg-bg/45 backdrop-blur-sm"
+              className={`group relative aspect-[4/3] overflow-hidden border backdrop-blur-sm ${
+                light ? "border-black/10 bg-white/40" : "border-line bg-bg/45"
+              }`}
             >
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out"
-                style={{
-                  backgroundImage:
-                    "repeating-linear-gradient(135deg, rgba(165,103,95,0.16) 0px, rgba(165,103,95,0.16) 1px, transparent 1px, transparent 14px)",
-                }}
-              />
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                style={{
-                  background:
-                    "radial-gradient(120% 100% at 50% 100%, rgba(165,103,95,0.3), transparent 70%)",
-                }}
-              />
+              {!light && (
+                <>
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-0 opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out"
+                    style={{
+                      backgroundImage:
+                        "repeating-linear-gradient(135deg, rgba(165,103,95,0.16) 0px, rgba(165,103,95,0.16) 1px, transparent 1px, transparent 14px)",
+                    }}
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{
+                      background:
+                        "radial-gradient(120% 100% at 50% 100%, rgba(165,103,95,0.3), transparent 70%)",
+                    }}
+                  />
+                </>
+              )}
               <div className="relative h-full flex flex-col justify-between p-6">
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-[10px] tracking-[0.18em] text-ink-dim">
                     {item.year}
                   </span>
-                  <span className="font-mono text-[10px] tracking-[0.18em] border border-line px-2 py-1 text-ink-dim group-hover:border-red group-hover:text-red transition-colors">
+                  <span
+                    className={`font-mono text-[10px] tracking-[0.18em] border px-2 py-1 text-ink-dim group-hover:border-red group-hover:text-red transition-colors ${
+                      light ? "border-black/10" : "border-line"
+                    }`}
+                  >
                     {item.slug ? viewLabel : soonLabel}
                   </span>
                 </div>
@@ -79,7 +89,7 @@ export function WorkGrid({
                   </p>
                   <h3
                     className={`font-display font-semibold text-xl sm:text-2xl leading-tight ${
-                      mutedTitle ? "text-[#f1ece2]" : ""
+                      light ? "text-bg" : ""
                     }`}
                   >
                     {item.title}

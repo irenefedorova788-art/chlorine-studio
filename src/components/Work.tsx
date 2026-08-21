@@ -11,7 +11,7 @@ export function Work({ dict, locale }: { dict: Dict; locale: Locale }) {
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-4 mb-14">
             <div>
-              <h2 className="font-display font-bold text-3xl sm:text-5xl text-[#f1ece2]">
+              <h2 className="font-display font-bold text-3xl sm:text-5xl text-bg">
                 {dict.work.heading}
               </h2>
             </div>
@@ -44,7 +44,7 @@ export function Work({ dict, locale }: { dict: Dict; locale: Locale }) {
             soonLabel={dict.work.soon}
             viewLabel={dict.work.view}
             locale={locale}
-            mutedTitle
+            light
           />
         </Reveal>
       </div>

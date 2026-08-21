@@ -9,7 +9,7 @@ export function Services({ dict, locale }: { dict: Dict; locale: Locale }) {
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-4 mb-14">
             <div>
-              <h2 className="font-display font-bold text-3xl sm:text-5xl max-w-2xl text-[#f1ece2]">
+              <h2 className="font-display font-bold text-3xl sm:text-5xl max-w-2xl text-bg">
                 {dict.services.heading}
               </h2>
             </div>
@@ -31,7 +31,7 @@ export function Services({ dict, locale }: { dict: Dict; locale: Locale }) {
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
-                <h3 className="font-display font-semibold text-lg sm:text-xl mb-2 text-[#f1ece2]">
+                <h3 className="font-display font-semibold text-lg sm:text-xl mb-2 text-bg">
                   {item.title}
                 </h3>
                 <p className="text-sm text-ink-dim leading-relaxed">{item.desc}</p>
