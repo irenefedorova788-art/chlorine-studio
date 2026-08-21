@@ -15,7 +15,7 @@ export function Footer({ dict, locale }: { dict: Dict; locale: Locale }) {
           <p className="font-mono text-[10px] tracking-[0.18em] text-ink-dim mb-3">
             {dict.footer.nav.toUpperCase()}
           </p>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-2 text-sm text-ink-dim">
             <li><Link href={`/${locale}/services`} className="hover:text-red transition-colors">{dict.nav.services}</Link></li>
             <li><Link href={`/${locale}/work`} className="hover:text-red transition-colors">{dict.nav.work}</Link></li>
             <li><Link href={`/${locale}/process`} className="hover:text-red transition-colors">{dict.nav.process}</Link></li>
@@ -27,7 +27,7 @@ export function Footer({ dict, locale }: { dict: Dict; locale: Locale }) {
           <p className="font-mono text-[10px] tracking-[0.18em] text-ink-dim mb-3">
             {dict.footer.contact.toUpperCase()}
           </p>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-2 text-sm text-ink-dim">
             <li>
               <a href={CONTACT.telegram} target="_blank" rel="noopener noreferrer" className="hover:text-red transition-colors">
                 {CONTACT.telegramLabel}
