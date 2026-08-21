@@ -54,7 +54,7 @@ export default async function ServicesPage({
                 <p className="font-mono text-[11px] tracking-[0.22em] text-red mb-4">
                   {dict.servicesPage.eyebrow}
                 </p>
-                <h1 className="font-body font-medium leading-[1.1] tracking-tight text-3xl sm:text-4xl lg:text-5xl">
+                <h1 className="font-body font-medium leading-[1.1] tracking-tight text-3xl sm:text-4xl lg:text-5xl text-[#f1ece2]">
                   {dict.servicesPage.heading}{" "}
                   <span className="font-accent italic text-red">
                     {dict.servicesPage.headingMark}
@@ -80,7 +80,7 @@ export default async function ServicesPage({
                   </div>
 
                   <div className="lg:col-span-5">
-                    <h2 className="font-display font-semibold text-2xl sm:text-3xl mb-3">
+                    <h2 className="font-display font-semibold text-2xl sm:text-3xl mb-3 text-[#f1ece2]">
                       {item.title}
                     </h2>
                     <p className="text-sm sm:text-base text-ink-dim leading-relaxed max-w-md">
