@@ -50,7 +50,7 @@ export function Header({
           <div className="flex items-center gap-4 sm:gap-5">
             <Link
               href={`/${other}${path}`}
-              className="font-mono text-[11px] tracking-[0.14em] text-ink-dim hover:text-red transition-colors"
+              className="font-mono text-[11px] tracking-[0.14em] text-red hover:opacity-70 transition-opacity"
               aria-label={`Switch to ${other === "ru" ? "Russian" : "English"}`}
             >
               {other.toUpperCase()}
@@ -62,7 +62,7 @@ export function Header({
                 onClick={() => setPaused((p) => !p)}
                 aria-label={paused ? "Play background animation" : "Pause background animation"}
                 aria-pressed={paused}
-                className="w-7 h-7 flex items-center justify-center rounded-full border border-line text-ink-dim hover:text-red hover:border-red transition-colors"
+                className="w-7 h-7 flex items-center justify-center rounded-full border border-red text-red hover:opacity-70 transition-opacity"
               >
                 {paused ? (
                   <svg width="9" height="10" viewBox="0 0 9 10" fill="currentColor" aria-hidden="true">
@@ -81,7 +81,7 @@ export function Header({
               type="button"
               onClick={() => setOpen((o) => !o)}
               aria-expanded={open}
-              className="font-mono text-[11px] tracking-[0.14em] text-ink-dim hover:text-red transition-colors"
+              className="font-mono text-[11px] tracking-[0.14em] text-red hover:opacity-70 transition-opacity"
             >
               {open ? "✕" : "MENU"}
             </button>
