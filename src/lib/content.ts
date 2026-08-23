@@ -52,13 +52,8 @@ export type Dict = {
   meta: { title: string; description: string };
   nav: { services: string; work: string; process: string; about: string; contacts: string };
   hero: {
-    tagline: string;
-    tagMark: string;
-    tagTail: string;
-    supporting: string;
-    metaRight: string;
+    headline: string;
     cta: string;
-    scroll: string;
   };
   positioning: { lead: string; leadMark: string; leadTail: string };
   services: { heading: string; items: ServiceItem[] };
@@ -115,13 +110,8 @@ export const content: Record<Locale, Dict> = {
       contacts: "Контакты",
     },
     hero: {
-      tagline: "Направляю ваши смелые идеи в",
-      tagMark: "узнаваемые бренды",
-      tagTail: ".",
-      supporting: "Когда хорошего продукта недостаточно, бренд становится способом занять своё место среди конкурентов.",
-      metaRight: "WORLDWIDE",
+      headline: "Смелые идеи должны найти свой голос и превратиться в сильный бренд.",
       cta: "Обсудить проект",
-      scroll: "ВНИЗ",
     },
     positioning: {
       lead: "Бренд-менеджмент и арт-дирекция для брендов, которым важно ",
@@ -392,13 +382,8 @@ export const content: Record<Locale, Dict> = {
       contacts: "Contact",
     },
     hero: {
-      tagline: "I turn your bold ideas into",
-      tagMark: "recognizable brands",
-      tagTail: ".",
-      supporting: "When a good product isn't enough on its own, a brand becomes how you claim your place among competitors.",
-      metaRight: "WORLDWIDE",
+      headline: "Bold ideas need to find their voice and become a strong brand.",
       cta: "Start a project",
-      scroll: "SCROLL",
     },
     positioning: {
       lead: "Brand management and art direction for brands that need to ",
