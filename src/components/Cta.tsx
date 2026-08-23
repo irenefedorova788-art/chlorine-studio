@@ -25,9 +25,9 @@ export function Cta({ dict, light = false }: { dict: Dict; light?: boolean }) {
               {dict.cta.button.toUpperCase()}
               <span aria-hidden="true">→</span>
             </a>
-            <span className="font-mono text-xs text-ink-dim">
+            <span className="font-mono text-xs text-red">
               {dict.cta.emailLabel}{" "}
-              <a href={`mailto:${CONTACT.email}`} className="text-ink-dim underline decoration-line hover:decoration-red hover:text-red transition-colors">
+              <a href={`mailto:${CONTACT.email}`} className="underline decoration-line hover:opacity-70 transition-opacity">
                 {CONTACT.email}
               </a>
             </span>
