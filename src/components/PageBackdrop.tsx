@@ -92,9 +92,13 @@ export function PageBackdrop() {
 
   // Keeps the actual body background in sync with the current section, so
   // iOS Safari's rubber-band overscroll (which briefly exposes the body,
-  // not this fixed layer) doesn't flash the wrong color underneath.
+  // not this fixed layer) doesn't flash the wrong color underneath. A flat
+  // color is used rather than the multi-stop gradient: the gradient's
+  // percentage stops would resolve against the full document height (far
+  // taller than one screen), showing mostly the pale top-of-gradient color
+  // instead of matching what's actually on screen.
   useEffect(() => {
-    document.body.style.background = variant.kind === "gradient" ? HOME_GRADIENT_CSS : "";
+    document.body.style.backgroundColor = variant.kind === "gradient" ? "#c3daf0" : "";
   }, [variant.kind]);
 
   useEffect(() => {
