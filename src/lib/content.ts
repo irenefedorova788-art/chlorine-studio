@@ -55,7 +55,6 @@ export type Dict = {
     headline: string;
     cta: string;
   };
-  positioning: { lead: string; leadMark: string; leadTail: string };
   services: { heading: string; items: ServiceItem[] };
   servicesPage: {
     eyebrow: string;
@@ -112,11 +111,6 @@ export const content: Record<Locale, Dict> = {
     hero: {
       headline: "Смелые идеи должны найти свой голос и превратиться в сильный бренд.",
       cta: "Обсудить проект",
-    },
-    positioning: {
-      lead: "Бренд-менеджмент и арт-дирекция для брендов, которым важно ",
-      leadMark: "выделяться",
-      leadTail: ", а не сливаться с рынком.",
     },
     services: {
       heading: "Услуги",
@@ -384,11 +378,6 @@ export const content: Record<Locale, Dict> = {
     hero: {
       headline: "Bold ideas need to find their voice and become a strong brand.",
       cta: "Start a project",
-    },
-    positioning: {
-      lead: "Brand management and art direction for brands that need to ",
-      leadMark: "stand out",
-      leadTail: ", not blend in.",
     },
     services: {
       heading: "Services",
