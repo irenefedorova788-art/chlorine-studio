@@ -6,7 +6,7 @@ export function Hero({ dict }: { dict: Dict }) {
     <section className="relative min-h-dvh flex flex-col items-center justify-center px-5 sm:px-8">
       <div className="max-w-3xl text-center">
         <h1
-          className="rise-in font-display font-light leading-[1.15] tracking-tight text-3xl sm:text-5xl lg:text-6xl text-red"
+          className="rise-in font-display font-light leading-[1.2] tracking-tight text-xl sm:text-4xl lg:text-5xl text-red"
           style={{ animationDelay: "0.1s" }}
         >
           {dict.hero.headline}
