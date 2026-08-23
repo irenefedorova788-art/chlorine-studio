@@ -8,6 +8,8 @@ type PhotoVariant = { kind: "photo"; key: string; src: string; position: string 
 type GradientVariant = { kind: "gradient"; key: string };
 type Variant = PhotoVariant | GradientVariant;
 
+const HOME_GRADIENT_CSS = "linear-gradient(160deg, #eef5fb 0%, #dbe9f6 55%, #c3daf0 100%)";
+
 const HOME: Variant = { kind: "gradient", key: "home-gradient" };
 const BLUE: Variant = { kind: "photo", key: "/bg-blue.jpg", src: "/bg-blue.jpg", position: "50% 30%" };
 const PURPLE: Variant = { kind: "photo", key: "/bg-purple.jpg", src: "/bg-purple.jpg", position: "50% 25%" };
@@ -50,7 +52,7 @@ function BackdropLayer({ variant, priority }: { variant: Variant; priority: bool
   return (
     <div
       className="absolute inset-0 overflow-hidden"
-      style={{ background: "linear-gradient(160deg, #eef5fb 0%, #dbe9f6 55%, #c3daf0 100%)" }}
+      style={{ background: HOME_GRADIENT_CSS }}
     >
       <div
         className="absolute w-[65vmax] h-[65vmax] rounded-full opacity-90"
@@ -87,6 +89,13 @@ export function PageBackdrop() {
   const [layers, setLayers] = useState<Layer[]>(() => [
     { id: nextLayerId++, ...variant, visible: true },
   ]);
+
+  // Keeps the actual body background in sync with the current section, so
+  // iOS Safari's rubber-band overscroll (which briefly exposes the body,
+  // not this fixed layer) doesn't flash the wrong color underneath.
+  useEffect(() => {
+    document.body.style.background = variant.kind === "gradient" ? HOME_GRADIENT_CSS : "";
+  }, [variant.kind]);
 
   useEffect(() => {
     if (variant.key === currentKey.current) return;
