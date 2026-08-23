@@ -47,20 +47,20 @@ export default async function ServicesPage({
               <div className="max-w-2xl lg:max-w-xl">
                 <Link
                   href={`/${locale}`}
-                  className="inline-block font-mono text-xs text-ink-dim hover:text-red transition-colors mb-10"
+                  className="inline-block font-mono text-xs text-red hover:opacity-70 transition-opacity mb-10"
                 >
                   {dict.servicesPage.back}
                 </Link>
                 <p className="font-mono text-[11px] tracking-[0.22em] text-red mb-4">
                   {dict.servicesPage.eyebrow}
                 </p>
-                <h1 className="font-body font-medium leading-[1.1] tracking-tight text-3xl sm:text-4xl lg:text-5xl text-[#f1ece2]">
+                <h1 className="font-body font-medium leading-[1.1] tracking-tight text-3xl sm:text-4xl lg:text-5xl text-red">
                   {dict.servicesPage.heading}{" "}
                   <span className="font-accent italic text-red">
                     {dict.servicesPage.headingMark}
                   </span>
                 </h1>
-                <p className="mt-6 text-sm sm:text-base text-ink-dim leading-relaxed">
+                <p className="mt-6 text-sm sm:text-base text-red leading-relaxed">
                   {dict.servicesPage.intro}
                 </p>
               </div>
@@ -80,10 +80,10 @@ export default async function ServicesPage({
                   </div>
 
                   <div className="lg:col-span-5">
-                    <h2 className="font-display font-semibold text-2xl sm:text-3xl mb-3 text-[#f1ece2]">
+                    <h2 className="font-display font-semibold text-2xl sm:text-3xl mb-3 text-red">
                       {item.title}
                     </h2>
-                    <p className="text-sm sm:text-base text-ink-dim leading-relaxed max-w-md">
+                    <p className="text-sm sm:text-base text-red leading-relaxed max-w-md">
                       {item.long}
                     </p>
                   </div>
@@ -93,7 +93,7 @@ export default async function ServicesPage({
                       {item.includes.map((line) => (
                         <li
                           key={line}
-                          className="flex gap-3 text-sm text-ink-dim leading-relaxed"
+                          className="flex gap-3 text-sm text-red leading-relaxed"
                         >
                           <span className="text-red" aria-hidden="true">
                             —

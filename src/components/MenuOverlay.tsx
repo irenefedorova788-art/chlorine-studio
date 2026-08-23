@@ -131,13 +131,13 @@ export function MenuOverlay({
       </nav>
 
       <div className="absolute bottom-0 inset-x-0 px-5 sm:px-8 pb-8 sm:pb-10">
-        <div className="mx-auto max-w-7xl grid sm:grid-cols-3 gap-3 sm:gap-6 pt-6 border-t border-line font-mono text-[10px] sm:text-[11px] tracking-[0.16em] text-ink-dim">
+        <div className="mx-auto max-w-7xl grid sm:grid-cols-3 gap-3 sm:gap-6 pt-6 border-t border-line font-mono text-[10px] sm:text-[11px] tracking-[0.16em] text-red">
           <span>{dict.footer.location.toUpperCase()}</span>
           <span>{dict.footer.role.toUpperCase()}</span>
           <a
             href={`mailto:${CONTACT.email}`}
             tabIndex={open ? 0 : -1}
-            className="hover:text-red transition-colors sm:text-right"
+            className="hover:opacity-70 transition-opacity sm:text-right"
           >
             {CONTACT.email}
           </a>

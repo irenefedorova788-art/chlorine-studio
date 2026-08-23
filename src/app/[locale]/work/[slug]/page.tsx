@@ -53,7 +53,7 @@ export default async function CasePage({
               <div className="max-w-2xl lg:max-w-xl">
                 <Link
                   href={`/${locale}/work`}
-                  className="inline-block font-mono text-xs text-ink-dim hover:text-red transition-colors mb-10"
+                  className="inline-block font-mono text-xs text-red hover:opacity-70 transition-opacity mb-10"
                 >
                   {dict.caseView.back}
                 </Link>
@@ -63,7 +63,7 @@ export default async function CasePage({
                 <h1 className="font-display font-bold leading-[1.05] tracking-tight text-4xl sm:text-6xl">
                   {item.title}
                 </h1>
-                <p className="mt-6 text-sm sm:text-base text-ink-dim leading-relaxed max-w-lg">
+                <p className="mt-6 text-sm sm:text-base text-red leading-relaxed max-w-lg">
                   {item.subtitle}
                 </p>
               </div>
@@ -75,13 +75,13 @@ export default async function CasePage({
                   <p className="font-mono text-[10px] tracking-[0.18em] text-red mb-2">
                     {dict.caseView.clientLabel.toUpperCase()}
                   </p>
-                  <p className="text-sm text-ink-dim leading-snug">{item.client}</p>
+                  <p className="text-sm text-red leading-snug">{item.client}</p>
                 </div>
                 <div>
                   <p className="font-mono text-[10px] tracking-[0.18em] text-red mb-2">
                     {dict.caseView.roleLabel.toUpperCase()}
                   </p>
-                  <p className="text-sm text-ink-dim leading-snug">{item.role}</p>
+                  <p className="text-sm text-red leading-snug">{item.role}</p>
                 </div>
                 <div>
                   <p className="font-mono text-[10px] tracking-[0.18em] text-red mb-2">
@@ -107,7 +107,7 @@ export default async function CasePage({
                     </h2>
                     <div className="space-y-3">
                       {section.body.map((p) => (
-                        <p key={p} className="text-sm sm:text-base text-ink-dim leading-relaxed">
+                        <p key={p} className="text-sm sm:text-base text-red leading-relaxed">
                           {p}
                         </p>
                       ))}

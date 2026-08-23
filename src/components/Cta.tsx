@@ -2,13 +2,13 @@ import type { Dict } from "@/lib/content";
 import { CONTACT } from "@/lib/content";
 import { Reveal } from "./Reveal";
 
-export function Cta({ dict, light = false }: { dict: Dict; light?: boolean }) {
+export function Cta({ dict }: { dict: Dict }) {
   return (
     <section id="contact" className="relative px-5 sm:px-8 py-28 sm:py-40">
       <div className="relative z-10 mx-auto max-w-7xl">
         <Reveal>
           <h2 className="font-body font-medium leading-[1.1] text-3xl sm:text-5xl lg:text-6xl max-w-4xl">
-            <span className={light ? "text-bg" : "text-[#f1ece2]"}>{dict.cta.line1}</span>
+            <span className="text-red">{dict.cta.line1}</span>
             <br />
             <span className="font-accent italic text-red">{dict.cta.line2}</span>
           </h2>

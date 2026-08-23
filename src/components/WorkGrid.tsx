@@ -34,7 +34,7 @@ export function WorkGrid({
             key={cat}
             onClick={() => setActive(cat)}
             className={`text-left whitespace-nowrap font-mono text-[11px] tracking-[0.16em] transition-colors ${
-              active === cat ? "text-red" : "text-ink-dim hover:text-ink"
+              active === cat ? "text-red" : "text-red/50 hover:text-red"
             }`}
           >
             {cat.toUpperCase()}
@@ -72,11 +72,11 @@ export function WorkGrid({
               )}
               <div className="relative h-full flex flex-col justify-between p-6">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-[10px] tracking-[0.18em] text-ink-dim">
+                  <span className="font-mono text-[10px] tracking-[0.18em] text-red">
                     {item.year}
                   </span>
                   <span
-                    className={`font-mono text-[10px] tracking-[0.18em] border px-2 py-1 text-ink-dim group-hover:border-red group-hover:text-red transition-colors ${
+                    className={`font-mono text-[10px] tracking-[0.18em] border px-2 py-1 text-red transition-colors ${
                       light ? "border-black/10" : "border-line"
                     }`}
                   >
@@ -89,7 +89,7 @@ export function WorkGrid({
                   </p>
                   <h3
                     className={`font-display font-semibold text-xl sm:text-2xl leading-tight ${
-                      light ? "text-bg" : ""
+                      light ? "text-red" : ""
                     }`}
                   >
                     {item.title}

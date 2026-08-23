@@ -11,24 +11,24 @@ export function Work({ dict, locale }: { dict: Dict; locale: Locale }) {
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-4 mb-14">
             <div>
-              <h2 className="font-display font-bold text-3xl sm:text-5xl text-bg">
+              <h2 className="font-display font-bold text-3xl sm:text-5xl text-red">
                 {dict.work.heading}
               </h2>
             </div>
             <div className="flex flex-col items-end gap-2 font-mono text-xs">
               <Link
                 href={`/${locale}/work`}
-                className="text-ink-dim underline decoration-line hover:decoration-red hover:text-red transition-colors"
+                className="text-red underline decoration-line hover:opacity-70 transition-opacity"
               >
                 {dict.work.moreLabel}
               </Link>
-              <p className="text-ink-dim">
+              <p className="text-red">
                 {dict.work.note}{" "}
                 <a
                   href={CONTACT.behance}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-ink-dim underline decoration-line hover:decoration-red hover:text-red transition-colors"
+                  className="text-red underline decoration-line hover:opacity-70 transition-opacity"
                 >
                   {dict.work.noteLink}
                 </a>

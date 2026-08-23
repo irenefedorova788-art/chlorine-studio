@@ -47,7 +47,7 @@ export default async function ProcessPage({
               <div className="max-w-2xl lg:max-w-xl">
                 <Link
                   href={`/${locale}`}
-                  className="inline-block font-mono text-xs text-ink-dim hover:text-red transition-colors mb-10"
+                  className="inline-block font-mono text-xs text-red hover:opacity-70 transition-opacity mb-10"
                 >
                   {dict.processPage.back}
                 </Link>
@@ -60,7 +60,7 @@ export default async function ProcessPage({
                     {dict.processPage.headingMark}
                   </span>
                 </h1>
-                <p className="mt-6 text-sm sm:text-base text-ink-dim leading-relaxed">
+                <p className="mt-6 text-sm sm:text-base text-red leading-relaxed">
                   {dict.processPage.intro}
                 </p>
               </div>
@@ -73,11 +73,11 @@ export default async function ProcessPage({
             {dict.process.steps.map((step, i) => (
               <Reveal key={step.n} delay={i * 60}>
                 <div className="group grid grid-cols-[3rem_1fr] sm:grid-cols-[6rem_16rem_1fr] items-baseline gap-x-4 sm:gap-x-10 py-6 sm:py-7">
-                  <span className="font-mono text-sm text-ink-dim">{step.n}</span>
-                  <h2 className="font-display font-semibold text-lg sm:text-2xl group-hover:text-red transition-colors">
+                  <span className="font-mono text-sm text-red">{step.n}</span>
+                  <h2 className="font-display font-semibold text-lg sm:text-2xl group-hover:opacity-70 transition-opacity">
                     {step.title}
                   </h2>
-                  <p className="col-span-2 sm:col-span-1 mt-2 sm:mt-0 text-sm sm:text-base text-ink-dim leading-relaxed max-w-xl">
+                  <p className="col-span-2 sm:col-span-1 mt-2 sm:mt-0 text-sm sm:text-base text-red leading-relaxed max-w-xl">
                     {step.desc}
                   </p>
                 </div>

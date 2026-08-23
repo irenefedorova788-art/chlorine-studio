@@ -48,7 +48,7 @@ export default async function WorkPage({
               <div className="max-w-2xl lg:max-w-xl">
                 <Link
                   href={`/${locale}`}
-                  className="inline-block font-mono text-xs text-ink-dim hover:text-red transition-colors mb-10"
+                  className="inline-block font-mono text-xs text-red hover:opacity-70 transition-opacity mb-10"
                 >
                   {dict.workPage.back}
                 </Link>
@@ -61,7 +61,7 @@ export default async function WorkPage({
                     {dict.workPage.headingMark}
                   </span>
                 </h1>
-                <p className="mt-6 text-sm sm:text-base text-ink-dim leading-relaxed">
+                <p className="mt-6 text-sm sm:text-base text-red leading-relaxed">
                   {dict.workPage.intro}
                 </p>
               </div>

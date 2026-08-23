@@ -29,7 +29,7 @@ export default async function LocalePage({
         <Process dict={dict} />
         <Work dict={dict} locale={locale as Locale} />
         <About dict={dict} />
-        <Cta dict={dict} light />
+        <Cta dict={dict} />
       </main>
       <Footer dict={dict} locale={locale as Locale} />
     </>

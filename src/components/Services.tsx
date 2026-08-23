@@ -9,13 +9,13 @@ export function Services({ dict, locale }: { dict: Dict; locale: Locale }) {
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-4 mb-14">
             <div>
-              <h2 className="font-display font-bold text-3xl sm:text-5xl max-w-2xl text-bg">
+              <h2 className="font-display font-bold text-3xl sm:text-5xl max-w-2xl text-red">
                 {dict.services.heading}
               </h2>
             </div>
             <Link
               href={`/${locale}/services`}
-              className="font-mono text-xs text-ink-dim underline decoration-line hover:decoration-red hover:text-red transition-colors"
+              className="font-mono text-xs text-red underline decoration-line hover:opacity-70 transition-opacity"
             >
               {dict.servicesPage.moreLabel}
             </Link>
@@ -31,10 +31,10 @@ export function Services({ dict, locale }: { dict: Dict; locale: Locale }) {
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
-                <h3 className="font-display font-semibold text-lg sm:text-xl mb-2 text-bg">
+                <h3 className="font-display font-semibold text-lg sm:text-xl mb-2 text-red">
                   {item.title}
                 </h3>
-                <p className="text-sm text-ink-dim leading-relaxed">{item.desc}</p>
+                <p className="text-sm text-red leading-relaxed">{item.desc}</p>
               </div>
             </Reveal>
           ))}
