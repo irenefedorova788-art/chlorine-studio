@@ -217,6 +217,7 @@ export const content: Record<Locale, Dict> = {
       items: [
         { category: "Бренд-платформа", title: "CHLORINE", year: "2026", slug: "chlorine" },
         { category: "Бренд-менеджмент", title: "СОЙКА НАПЕЛА", year: "~3 года", slug: "soyka-napela" },
+        { category: "Аудит стратегии", title: "ЛЕПИМ И ВАРИМ", year: "2026", slug: "lepim-i-varim" },
         { category: "Ребрендинг (концепт)", title: "РЯДОМ", year: "2026", slug: "ryadom" },
       ],
     },
@@ -349,6 +350,62 @@ export const content: Record<Locale, Dict> = {
             body: [
               "Этот проект окончательно сформировал моё отношение к бренду: не нужно пытаться понравиться всем. Нужно понять, кто твой человек, дать ему достаточно причин узнать себя в бренде и потом последовательно поддерживать эту связь.",
               "«Сойка» стала для меня примером того, как бренд можно строить не вокруг одного визуального решения, а вокруг продукта, культуры, людей, музыки, истории и множества небольших деталей, которые вместе создают ощущение места.",
+            ],
+          },
+        ],
+      },
+      {
+        slug: "lepim-i-varim",
+        category: "Аудит стратегии",
+        title: "ЛЕПИМ И ВАРИМ",
+        subtitle:
+          "Аудит маркетинговой стратегии для сети ресторанов на 76 точек — от архетипа без доказательств до бюджета, оторванного от реальности",
+        year: "2026",
+        client: "Лепим и Варим",
+        role: "Аудит бренд- и маркетинговой стратегии, CJM, бюджет, позиционирование",
+        sections: [
+          {
+            eyebrow: "Контекст",
+            heading: "Аудит вместо готовой стратегии",
+            body: [
+              "Внешнее агентство подготовило маркетинговую стратегию для сети из 76 точек — целевая аудитория, каналы продвижения, рекомендации по бюджету, соцсети, визуальный ряд и брендинг на горизонт в 19 месяцев. Я сопоставила готовый документ с историей бренда, интервью основателя и реальным поведением гостей — не как формальность, а как проверку, выдержит ли стратегия столкновение с реальностью.",
+            ],
+          },
+          {
+            eyebrow: "Проблема 1",
+            heading: "Архетип без доказательств",
+            body: [
+              "Стратегия подробно описывала архетип бренда — «Искатель»: любопытство, свобода, самостоятельность, подлинность, открытость. Но связь этого архетипа с реальной историей бренда и поведением гостей ничем не подтверждалась — он существовал отдельно от данных.",
+            ],
+          },
+          {
+            eyebrow: "Как решала",
+            heading: "От гипотезы к CJM и обратной связи",
+            body: [
+              "Составила полную CJM — таблицу со всеми точками контакта и их POS-материалами. Провела опрос сотрудников. Настроила сбор обратной связи через QR-коды на точках с возможностью писать напрямую. На основе этих данных скорректировала архетип — вместо выборочного чтения отзывов.",
+            ],
+          },
+          {
+            eyebrow: "Проблема 2",
+            heading: "Бюджет не совпадал с реальностью бизнеса",
+            body: [
+              "Бюджеты, заложенные в стратегии, не были согласованы с реальностью компании: суммы не соответствовали тому, что бизнес мог себе позволить. Я пересчитала рекомендацию до 3–5% от выручки — нижней границы нормы для fast casual и retail F&B (стандартный ориентир 5–7%), осознанно сниженной под текущую фазу бренда, где главная задача — не рост любой ценой, а перестройка инфраструктуры: CRM, push, брендбук, сайт.",
+              "При выручке 2,23 млрд ₽ это 67–112 млн ₽ в год на маркетинг группы, с чёткой дисциплиной по статьям: 45% на digital, 20% на PR и контент, 20% на активации в рознице, 15% на CRM, аналитику и агентства — каждая статья закрывает конкретный KPI из таблицы целей, без «брендовых» вложений без измеримого результата.",
+            ],
+          },
+          {
+            eyebrow: "Проблема 3",
+            heading: "Скидки против принципов бренда",
+            body: [
+              "Сама стратегия декларировала уход от акций как принцип бренда — но маркетинговый план при этом строился на постоянных скидках. Это внутреннее противоречие: скидочные механики фактически стали регулярной коммуникацией, и было важно проверить, приводят ли они новых гостей или просто снижают средний чек уже существующих.",
+            ],
+          },
+          {
+            eyebrow: "Решение",
+            heading: "От истории бренда к реальным точкам контакта",
+            body: [
+              "Вместо того чтобы принять готовую стратегию как есть, я предложила пройти путь от начала — с истории бренда, которая в исходном документе не упоминалась вовсе: история бренда → поведение гостей → продукт → коммуникация → реальные точки контакта.",
+              "Если архетип подтверждается этой цепочкой — он становится рабочим инструментом. Если нет — сначала корректируется гипотеза, и только потом вокруг неё выстраивается коммуникация.",
             ],
           },
         ],
@@ -559,6 +616,7 @@ export const content: Record<Locale, Dict> = {
       items: [
         { category: "Brand platform", title: "CHLORINE", year: "2026", slug: "chlorine" },
         { category: "Brand management", title: "SOYKA NAPELA", year: "~3 years", slug: "soyka-napela" },
+        { category: "Strategy audit", title: "LEPIM I VARIM", year: "2026", slug: "lepim-i-varim" },
         { category: "Rebrand (concept)", title: "RYADOM", year: "2026", slug: "ryadom" },
       ],
     },
@@ -691,6 +749,62 @@ export const content: Record<Locale, Dict> = {
             body: [
               "This project shaped how I think about brands for good: you don't need to try to please everyone. You need to understand who your person is, give them enough reasons to recognize themselves in the brand, and then consistently maintain that connection.",
               "Soyka became my example of how a brand can be built not around a single visual solution, but around product, culture, people, music, history, and the many small details that together create the feeling of a place.",
+            ],
+          },
+        ],
+      },
+      {
+        slug: "lepim-i-varim",
+        category: "Strategy audit",
+        title: "LEPIM I VARIM",
+        subtitle:
+          "A marketing-strategy audit for a 76-location restaurant chain — from an archetype with no evidence to a budget disconnected from reality",
+        year: "2026",
+        client: "Lepim i Varim",
+        role: "Brand and marketing strategy audit, CJM, budget, positioning",
+        sections: [
+          {
+            eyebrow: "Context",
+            heading: "An audit instead of a blank slate",
+            body: [
+              "An outside agency had put together a marketing strategy for a 76-location chain — target audience, promotion channels, budget recommendations, social media, visual identity, and branding over a 19-month horizon. I checked the finished document against the brand's history, an interview with the founder, and how guests actually behaved — not as a formality, but as a stress test for whether the strategy would survive contact with reality.",
+            ],
+          },
+          {
+            eyebrow: "Problem 1",
+            heading: "An archetype with no evidence",
+            body: [
+              'The strategy described the brand archetype in detail — "The Explorer": curiosity, freedom, self-sufficiency, authenticity, openness. But the link between that archetype and the brand\'s actual history and guest behavior wasn\'t backed by anything — it existed apart from the data.',
+            ],
+          },
+          {
+            eyebrow: "How I solved it",
+            heading: "From hypothesis to CJM and real feedback",
+            body: [
+              "I built a full customer journey map — a table of every touchpoint and its POS materials. Ran a staff survey. Set up feedback collection through QR codes at each location, letting guests write in directly. Used that data to correct the archetype, instead of reading a handful of reviews at random.",
+            ],
+          },
+          {
+            eyebrow: "Problem 2",
+            heading: "A budget disconnected from the business's reality",
+            body: [
+              "The budgets built into the strategy hadn't been checked against the company's actual reality — the numbers didn't match what the business could afford. I recalculated the recommendation down to 3–5% of revenue — the lower bound of the norm for fast casual and retail F&B (the standard benchmark is 5–7%), deliberately scaled down for the brand's current phase, where the real task isn't growth at any cost but rebuilding infrastructure: CRM, push, brand book, website.",
+              'At 2.23 billion ₽ in revenue, that\'s 67–112 million ₽ a year for group marketing, with clear discipline by line item: 45% to digital, 20% to PR and content, 20% to retail activations, 15% to CRM, analytics, and agencies — every line closes a specific KPI from the goals table, with no "brand" spending that can\'t be measured.',
+            ],
+          },
+          {
+            eyebrow: "Problem 3",
+            heading: "Discounts working against the brand's own principles",
+            body: [
+              "The strategy itself declared moving away from promotions as a brand principle — yet the marketing plan was built on constant discounts. That's an internal contradiction: the discount mechanics had effectively become the regular communication, and it mattered to check whether they were bringing in new guests or simply lowering the average check of guests who were already coming.",
+            ],
+          },
+          {
+            eyebrow: "Solution",
+            heading: "From brand history to real touchpoints",
+            body: [
+              "Instead of accepting the finished strategy as-is, I proposed starting over from the beginning — from the brand's history, which the original document never mentioned at all: brand history → guest behavior → product → communication → real touchpoints.",
+              "If the archetype holds up against that chain, it becomes a working tool. If it doesn't, the hypothesis gets corrected first, and only then does the communication get built around it.",
             ],
           },
         ],
