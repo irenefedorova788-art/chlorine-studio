@@ -72,7 +72,7 @@ export type Dict = {
     intro: string;
     back: string;
   };
-  work: { heading: string; note: string; noteLink: string; items: WorkItem[]; soon: string; view: string; all: string; moreLabel: string };
+  work: { heading: string; note: string; noteLink: string; items: WorkItem[]; soon: string; view: string; all: string; moreLabel: string; projectLabel: string };
   workPage: {
     eyebrow: string;
     heading: string;
@@ -214,10 +214,11 @@ export const content: Record<Locale, Dict> = {
       view: "Смотреть кейс",
       all: "Все",
       moreLabel: "Все работы",
+      projectLabel: "Проект",
       items: [
         { category: "Бренд-платформа", title: "CHLORINE", year: "2026", slug: "chlorine" },
-        { category: "Бренд-менеджмент", title: "СОЙКА НАПЕЛА", year: "~3 года", slug: "soyka-napela" },
-        { category: "Аудит стратегии", title: "ЛЕПИМ И ВАРИМ", year: "2026", slug: "lepim-i-varim" },
+        { category: "Бренд-маркетинг", title: "СОЙКА НАПЕЛА", year: "~3 года", slug: "soyka-napela" },
+        { category: "Ребрендинг", title: "ЛЕПИМ И ВАРИМ", year: "2026", slug: "lepim-i-varim" },
         { category: "Ребрендинг (концепт)", title: "РЯДОМ", year: "2026", slug: "ryadom" },
       ],
     },
@@ -285,7 +286,7 @@ export const content: Record<Locale, Dict> = {
       },
       {
         slug: "soyka-napela",
-        category: "Бренд-менеджмент",
+        category: "Бренд-маркетинг",
         title: "СОЙКА НАПЕЛА",
         subtitle: "Поиск своего гостя через продукт, культуру и среду",
         year: "~3 года",
@@ -356,7 +357,7 @@ export const content: Record<Locale, Dict> = {
       },
       {
         slug: "lepim-i-varim",
-        category: "Аудит стратегии",
+        category: "Ребрендинг",
         title: "ЛЕПИМ И ВАРИМ",
         subtitle:
           "Аудит маркетинговой стратегии для сети ресторанов на 76 точек — от архетипа без доказательств до бюджета, оторванного от реальности",
@@ -613,10 +614,11 @@ export const content: Record<Locale, Dict> = {
       view: "View case",
       all: "All",
       moreLabel: "All work",
+      projectLabel: "Project",
       items: [
         { category: "Brand platform", title: "CHLORINE", year: "2026", slug: "chlorine" },
-        { category: "Brand management", title: "SOYKA NAPELA", year: "~3 years", slug: "soyka-napela" },
-        { category: "Strategy audit", title: "LEPIM I VARIM", year: "2026", slug: "lepim-i-varim" },
+        { category: "Brand marketing", title: "SOYKA NAPELA", year: "~3 years", slug: "soyka-napela" },
+        { category: "Rebrand", title: "LEPIM I VARIM", year: "2026", slug: "lepim-i-varim" },
         { category: "Rebrand (concept)", title: "RYADOM", year: "2026", slug: "ryadom" },
       ],
     },
@@ -684,7 +686,7 @@ export const content: Record<Locale, Dict> = {
       },
       {
         slug: "soyka-napela",
-        category: "Brand management",
+        category: "Brand marketing",
         title: "SOYKA NAPELA",
         subtitle: "Finding your guest through product, culture, and atmosphere",
         year: "~3 years",
@@ -755,7 +757,7 @@ export const content: Record<Locale, Dict> = {
       },
       {
         slug: "lepim-i-varim",
-        category: "Strategy audit",
+        category: "Rebrand",
         title: "LEPIM I VARIM",
         subtitle:
           "A marketing-strategy audit for a 76-location restaurant chain — from an archetype with no evidence to a budget disconnected from reality",

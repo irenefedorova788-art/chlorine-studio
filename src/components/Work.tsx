@@ -43,6 +43,7 @@ export function Work({ dict, locale }: { dict: Dict; locale: Locale }) {
             allLabel={dict.work.all}
             soonLabel={dict.work.soon}
             viewLabel={dict.work.view}
+            projectLabel={dict.work.projectLabel}
             locale={locale}
             light
           />

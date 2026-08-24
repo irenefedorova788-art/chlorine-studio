@@ -77,6 +77,7 @@ export default async function WorkPage({
                 allLabel={dict.work.all}
                 soonLabel={dict.work.soon}
                 viewLabel={dict.work.view}
+                projectLabel={dict.work.projectLabel}
                 locale={locale as Locale}
               />
             </Reveal>

@@ -9,6 +9,7 @@ export function WorkGrid({
   allLabel,
   soonLabel,
   viewLabel,
+  projectLabel,
   locale,
   light = false,
 }: {
@@ -16,6 +17,7 @@ export function WorkGrid({
   allLabel: string;
   soonLabel: string;
   viewLabel: string;
+  projectLabel: string;
   locale: Locale;
   /** Homepage teaser sits on the light gradient backdrop: neutral dark title, frosted-glass card instead of the dark tile used on /work's photo backdrop. */
   light?: boolean;
@@ -87,13 +89,12 @@ export function WorkGrid({
                   <p className="font-mono text-[10px] tracking-[0.18em] text-red mb-2">
                     {item.category.toUpperCase()}
                   </p>
-                  <h3
-                    className={`font-display font-semibold text-xl sm:text-2xl leading-tight ${
-                      light ? "text-red" : ""
-                    }`}
-                  >
+                  <p className="font-mono text-[10px] tracking-[0.18em] text-red/60 mb-1">
+                    {projectLabel.toUpperCase()}
+                  </p>
+                  <p className="text-sm sm:text-base leading-snug text-red">
                     {item.title}
-                  </h3>
+                  </p>
                 </div>
               </div>
             </div>
