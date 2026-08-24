@@ -345,8 +345,7 @@ export const content: Record<Locale, Dict> = {
         slug: "lepim-i-varim",
         category: "Ребрендинг сети",
         title: "ЛЕПИМ И ВАРИМ",
-        subtitle:
-          "Аудит маркетинговой стратегии для сети ресторанов на 76 точек — от архетипа без доказательств до бюджета, оторванного от реальности",
+        subtitle: "Аудит маркетинговой стратегии для сети ресторанов на 76 точек",
         year: "2026",
         role: "Аудит бренд- и маркетинговой стратегии, CJM, бюджет, позиционирование",
         sections: [
@@ -728,8 +727,7 @@ export const content: Record<Locale, Dict> = {
         slug: "lepim-i-varim",
         category: "Chain rebrand",
         title: "LEPIM I VARIM",
-        subtitle:
-          "A marketing-strategy audit for a 76-location restaurant chain — from an archetype with no evidence to a budget disconnected from reality",
+        subtitle: "A marketing-strategy audit for a 76-location restaurant chain",
         year: "2026",
         role: "Brand and marketing strategy audit, CJM, budget, positioning",
         sections: [
