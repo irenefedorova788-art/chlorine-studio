@@ -29,6 +29,8 @@ export type WorkItem = {
   title: string;
   year: string;
   slug?: string;
+  /** Hide the project name on the card — used for CHLORINE itself, since the header logo already names it. */
+  hideProjectName?: boolean;
 };
 
 export type CaseSection = {
@@ -202,7 +204,7 @@ export const content: Record<Locale, Dict> = {
       moreLabel: "Все работы",
       projectLabel: "Проект",
       items: [
-        { category: "Бренд-платформа", title: "CHLORINE", year: "2026", slug: "chlorine" },
+        { category: "Бренд-платформа", title: "CHLORINE", year: "2026", slug: "chlorine", hideProjectName: true },
         { category: "Бренд-маркетинг", title: "СОЙКА НАПЕЛА", year: "~3 года", slug: "soyka-napela" },
         { category: "Ребрендинг", title: "ЛЕПИМ И ВАРИМ", year: "2026", slug: "lepim-i-varim" },
         { category: "Ребрендинг (концепт)", title: "РЯДОМ", year: "2026", slug: "ryadom" },
@@ -585,7 +587,7 @@ export const content: Record<Locale, Dict> = {
       moreLabel: "All work",
       projectLabel: "Project",
       items: [
-        { category: "Brand platform", title: "CHLORINE", year: "2026", slug: "chlorine" },
+        { category: "Brand platform", title: "CHLORINE", year: "2026", slug: "chlorine", hideProjectName: true },
         { category: "Brand marketing", title: "SOYKA NAPELA", year: "~3 years", slug: "soyka-napela" },
         { category: "Rebrand", title: "LEPIM I VARIM", year: "2026", slug: "lepim-i-varim" },
         { category: "Rebrand (concept)", title: "RYADOM", year: "2026", slug: "ryadom" },

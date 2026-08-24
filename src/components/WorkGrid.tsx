@@ -89,12 +89,16 @@ export function WorkGrid({
                   <p className="font-mono text-[10px] tracking-[0.18em] text-red mb-2">
                     {item.category.toUpperCase()}
                   </p>
-                  <p className="font-mono text-[10px] tracking-[0.18em] text-red/60 mb-1">
-                    {projectLabel.toUpperCase()}
-                  </p>
-                  <p className="text-sm sm:text-base leading-snug text-red">
-                    {item.title}
-                  </p>
+                  {!item.hideProjectName && (
+                    <>
+                      <p className="font-mono text-[10px] tracking-[0.18em] text-red/60 mb-1">
+                        {projectLabel.toUpperCase()}
+                      </p>
+                      <p className="text-sm sm:text-base leading-snug text-red">
+                        {item.title}
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
