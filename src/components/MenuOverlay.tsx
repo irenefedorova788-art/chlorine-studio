@@ -7,13 +7,11 @@ export function MenuOverlay({
   dict,
   locale,
   open,
-  paused,
   onNavigate,
 }: {
   dict: Dict;
   locale: Locale;
   open: boolean;
-  paused: boolean;
   onNavigate: () => void;
 }) {
   const linksLeft = [
@@ -26,8 +24,6 @@ export function MenuOverlay({
     { href: `/${locale}#contact`, label: dict.nav.contacts, n: 5 },
   ];
   const allLinks = [...linksLeft, ...linksRight];
-
-  const playState = paused ? "paused" : "running";
 
   return (
     <div
@@ -48,7 +44,6 @@ export function MenuOverlay({
             background: "radial-gradient(circle, #5b93d3 0%, transparent 72%)",
             filter: "blur(90px)",
             animation: "menu-blob-a 30s ease-in-out infinite",
-            animationPlayState: playState,
           }}
         />
         <div
@@ -59,7 +54,6 @@ export function MenuOverlay({
             background: "radial-gradient(circle, #a9c9ea 0%, transparent 72%)",
             filter: "blur(90px)",
             animation: "menu-blob-c 26s ease-in-out infinite",
-            animationPlayState: playState,
           }}
         />
       </div>

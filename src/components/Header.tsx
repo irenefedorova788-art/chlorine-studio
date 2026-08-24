@@ -17,7 +17,6 @@ export function Header({
 }) {
   const other: Locale = locale === "ru" ? "en" : "ru";
   const [open, setOpen] = useState(false);
-  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -56,27 +55,6 @@ export function Header({
               {other.toUpperCase()}
             </Link>
 
-            {open && (
-              <button
-                type="button"
-                onClick={() => setPaused((p) => !p)}
-                aria-label={paused ? "Play background animation" : "Pause background animation"}
-                aria-pressed={paused}
-                className="w-7 h-7 flex items-center justify-center rounded-full border border-red text-red hover:opacity-70 transition-opacity"
-              >
-                {paused ? (
-                  <svg width="9" height="10" viewBox="0 0 9 10" fill="currentColor" aria-hidden="true">
-                    <path d="M0 0L9 5L0 10V0Z" />
-                  </svg>
-                ) : (
-                  <svg width="8" height="10" viewBox="0 0 8 10" fill="currentColor" aria-hidden="true">
-                    <rect width="2.5" height="10" />
-                    <rect x="5.5" width="2.5" height="10" />
-                  </svg>
-                )}
-              </button>
-            )}
-
             <button
               type="button"
               onClick={() => setOpen((o) => !o)}
@@ -93,7 +71,6 @@ export function Header({
         dict={dict}
         locale={locale}
         open={open}
-        paused={paused}
         onNavigate={() => setOpen(false)}
       />
     </>
