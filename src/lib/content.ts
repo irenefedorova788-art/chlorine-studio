@@ -216,6 +216,7 @@ export const content: Record<Locale, Dict> = {
       moreLabel: "Все работы",
       items: [
         { category: "Бренд-платформа", title: "CHLORINE", year: "2026", slug: "chlorine" },
+        { category: "Бренд-менеджмент", title: "СОЙКА НАПЕЛА", year: "~3 года", slug: "soyka-napela" },
         { category: "Ребрендинг (концепт)", title: "РЯДОМ", year: "2026", slug: "ryadom" },
       ],
     },
@@ -277,6 +278,77 @@ export const content: Record<Locale, Dict> = {
             body: [
               "Сайт, шаблон презентации и шаблон письма собраны по одной системе и уже используются в переписке с клиентами.",
               "Вместо форматирования каждого письма заново — берётся готовый шаблон и заполняется текстом под конкретный проект.",
+            ],
+          },
+        ],
+      },
+      {
+        slug: "soyka-napela",
+        category: "Бренд-менеджмент",
+        title: "СОЙКА НАПЕЛА",
+        subtitle: "Поиск своего гостя через продукт, культуру и среду",
+        year: "~3 года",
+        client: "Сойка Напела",
+        role: "Управление заведением: операционные процессы, команда, финансы, бренд и его развитие",
+        sections: [
+          {
+            eyebrow: "О проекте",
+            heading: "Гастрокофейня на стыке кофе, музыки и искусства",
+            body: [
+              "«Сойка Напела» — гастрокофейня, где кофе и миксология соединяются с искусством, музыкой и экспериментами со вкусами. Здесь можно было попробовать напиток, который отсылает к фильму, выставке или определённой эпохе, увидеть работы художника, услышать музыку, которую редко встретишь в заведениях, и просто провести время среди людей со схожим вкусом.",
+              "Я работала с проектом около трёх лет. Формально роль была связана с управлением заведением, но в зоне ответственности одновременно находились операционные процессы, команда, финансовые показатели, бренд и его развитие. В портфолио рассматриваю этот проект прежде всего как опыт бренд-менеджмента.",
+            ],
+          },
+          {
+            eyebrow: "Проблема",
+            heading: "Заведение на грани закрытия",
+            body: [
+              "Когда мы пришли в проект, заведение находилось в состоянии, близком к закрытию: не было стабильного потока гостей, команда только формировалась, шёл ремонт, а существующая аудитория была небольшой и преимущественно старше 50 лет.",
+              "Нужно было не просто увеличить посещаемость, а понять, кто такая «Сойка», для кого она может быть интересна и почему человек должен захотеть сюда вернуться.",
+            ],
+          },
+          {
+            eyebrow: "Исследование",
+            heading: "Что заставляет людей возвращаться",
+            body: [
+              "Начала с аудитории и наблюдения за тем, почему люди вообще приходят в заведение и что заставляет их возвращаться. Постепенно стало понятно, что сильная сторона «Сойки» находится не только в кофе: людям нравилась возможность прийти в обычный день и получить неожиданное впечатление — необычный вкус, знакомую музыку, интересный разговор, новую выставку или напиток, который отсылает к совершенно другому культурному контексту.",
+              "Мы не стали пытаться создавать искусственные «фишки» в обслуживании. Было важнее сохранить простое человеческое общение и честно показывать, что происходит внутри проекта.",
+            ],
+          },
+          {
+            eyebrow: "Стратегия",
+            heading: "Найти своего гостя и стать ему другом",
+            body: [
+              "Мы сформулировали простую идею: найти своего гостя и стать для него хорошим другом — настолько, насколько это вообще возможно для заведения. Таким гостем мы видели активного, любопытного человека со своим вкусом: людей из творческих индустрий, кино, искусства и других культурных сфер, которым интересно пробовать новое и замечать детали.",
+              "Дальше мы начали строить вокруг этого характера саму среду: меняли музыку, экспериментировали с напитками, работали с художниками, запускали коллаборации и постепенно выстраивали коммуникацию вокруг продукта и людей, которые его создают.",
+            ],
+          },
+          {
+            eyebrow: "Что я сделала",
+            heading: "Продукт, культура и коммуникация",
+            body: [
+              "Продукт как часть бренда. Мы постоянно экспериментировали с напитками и использовали их как способ рассказывать истории. Для коллаборации с Центром «Зотов» создали напиток «Дзига», вдохновлённый режиссёром Дзигой Вертовым и эстетикой 1920-х: строгая вишня, кофе и розмарин, выдержка с ароматом старых книг, подача с сахарной бумагой с интертитром из фильма.",
+              "Культура и коллаборации. Я инициировала сотрудничество с Центром «Зотов», увидев культурное и визуальное совпадение между проектами. Вместе с внутренним маркетологом сделали кросс-промо: билеты на выставку со стороны «Сойки», купоны на напитки со стороны «Зотова», совместная коммуникация в digital и офлайне, плюс «фотосушка» художников, связанная с выставкой. Также сотрудничали с музыкантами, барами, сидрерией и художниками — одна из художниц выставляла работы в заведении и подбирала цветовую палитру под пространство.",
+              "Музыка как часть характера. Полностью пересобрали музыкальную среду: soft rock 70–80-х, Placebo и менее очевидные исполнители. Музыка стала не фоном, а частью того самого ощущения «своего места».",
+              "Работа с блогерами и сообществами. Самостоятельно искала авторов и проекты, близкие нам по вкусу, писала им и приглашала знакомиться с новыми продуктами — сначала бартерные интеграции, позже часть аудитории пришла органически. Отдельное направление — вечера алкоголя и запуски коктейлей с приглашёнными блогерами.",
+              "Контент изнутри. Начали показывать не только готовый продукт, но и то, как он появляется: откуда возникает идея напитка, кто над ним работает, какие эксперименты происходят внутри. Это сделало коммуникацию более человеческой и дало аудитории почувствовать себя частью проекта.",
+              "Digital-точки контакта. Сайт до этого практически не выполнял функцию продукта — перенесла туда электронное меню и разместила QR-коды на столиках, чтобы гость мог посмотреть меню с фотографиями и описанием. В чекбуках добавили ссылки на отзывы, другие заведения проекта и прямую обратную связь с управляющей.",
+            ],
+          },
+          {
+            eyebrow: "Результат",
+            heading: "Выручка выросла на ~250%",
+            body: [
+              "За период работы над проектом выручка выросла примерно на 250% относительно исходного состояния. Но главным результатом стало изменение самой аудитории: в «Сойку» начали приходить молодые люди из творческих индустрий, в том числе представители кино. Они активно интересовались продуктом, замечали детали, давали обратную связь, фотографировали пространство и напитки и начали приводить своих людей.",
+              "Сформировалось сообщество людей, которым действительно был близок характер проекта. Коллаборации с культурными площадками и художниками помогли закрепить это позиционирование, а часть сотрудничеств планировалось продолжать на постоянной основе.",
+            ],
+          },
+          {
+            eyebrow: "Итог",
+            heading: "Бренд строится не вокруг картинки",
+            body: [
+              "Этот проект окончательно сформировал моё отношение к бренду: не нужно пытаться понравиться всем. Нужно понять, кто твой человек, дать ему достаточно причин узнать себя в бренде и потом последовательно поддерживать эту связь.",
+              "«Сойка» стала для меня примером того, как бренд можно строить не вокруг одного визуального решения, а вокруг продукта, культуры, людей, музыки, истории и множества небольших деталей, которые вместе создают ощущение места.",
             ],
           },
         ],
@@ -486,6 +558,7 @@ export const content: Record<Locale, Dict> = {
       moreLabel: "All work",
       items: [
         { category: "Brand platform", title: "CHLORINE", year: "2026", slug: "chlorine" },
+        { category: "Brand management", title: "SOYKA NAPELA", year: "~3 years", slug: "soyka-napela" },
         { category: "Rebrand (concept)", title: "RYADOM", year: "2026", slug: "ryadom" },
       ],
     },
@@ -547,6 +620,77 @@ export const content: Record<Locale, Dict> = {
             body: [
               "The website, deck template, and email template are built on one system and already used in real client correspondence.",
               "Instead of formatting every email from scratch, a ready template gets filled in with the specifics of each project.",
+            ],
+          },
+        ],
+      },
+      {
+        slug: "soyka-napela",
+        category: "Brand management",
+        title: "SOYKA NAPELA",
+        subtitle: "Finding your guest through product, culture, and atmosphere",
+        year: "~3 years",
+        client: "Soyka Napela",
+        role: "Running the venue: operations, team, finances, brand and its development",
+        sections: [
+          {
+            eyebrow: "About the project",
+            heading: "A gastro-café at the crossroads of coffee, music, and art",
+            body: [
+              "Soyka Napela is a gastro-café where coffee and mixology meet art, music, and flavor experiments. You could try a drink that referenced a film, an exhibition, or a specific era, see an artist's work, hear music you'd rarely encounter in a café, and simply spend time among people with a similar sensibility.",
+              "I worked on the project for about three years. Formally, my role was running the venue, but I was responsible for operations, the team, financial performance, and the brand's development all at once. In this portfolio, I treat it above all as a brand management case.",
+            ],
+          },
+          {
+            eyebrow: "The problem",
+            heading: "A venue on the edge of closing",
+            body: [
+              "When we came into the project, the venue was close to shutting down: no stable flow of guests, a team that was still forming, renovation underway, and a small existing audience mostly over 50.",
+              "The task wasn't just to increase footfall — it was to understand who \"Soyka\" actually was, who it could matter to, and why someone would want to come back.",
+            ],
+          },
+          {
+            eyebrow: "Research",
+            heading: "What actually brings people back",
+            body: [
+              "I started with the audience — watching why people came in at all and what made them return. It gradually became clear that Soyka's strength wasn't just the coffee: people liked the chance to walk in on an ordinary day and get an unexpected experience — an unusual flavor, familiar music, an interesting conversation, a new exhibition, or a drink referencing a completely different cultural context.",
+              "We didn't try to invent artificial service \"tricks.\" It mattered more to keep plain human conversation and be honest about what was actually happening inside the project.",
+            ],
+          },
+          {
+            eyebrow: "Strategy",
+            heading: "Find your guest, become their friend",
+            body: [
+              "We landed on a simple idea: find your guest and become a good friend to them — as much as a venue possibly can. We saw that guest as an active, curious person with their own taste: people from creative industries, film, art, and other cultural fields who enjoyed trying new things and noticing details.",
+              "From there we built the environment itself around that character: changed the music, experimented with drinks, worked with artists, launched collaborations, and gradually built communication around the product and the people making it.",
+            ],
+          },
+          {
+            eyebrow: "What I did",
+            heading: "Product, culture, and communication",
+            body: [
+              "Product as part of the brand. We constantly experimented with drinks and used them as a way to tell stories. For a collaboration with the Zotov Center, we created a drink called \"Dziga,\" inspired by director Dziga Vertov and 1920s aesthetics: tart cherry, coffee, and rosemary, aged to smell like old books, served with a sugar paper printed with an intertitle from one of his films.",
+              "Culture and collaborations. I initiated the partnership with the Zotov Center after noticing a cultural and visual overlap between the two projects. Together with the in-house marketer, we ran a cross-promo: exhibition tickets from Soyka's side, drink coupons from Zotov's side, joint communication online and offline, plus an artists' \"photo dry-out\" tied to the exhibition. We also worked with musicians, bars, a cidery, and artists — one artist exhibited her work at the venue and helped choose the space's color palette.",
+              "Music as part of the character. We rebuilt the musical environment from scratch: 70s–80s soft rock, Placebo, and less obvious names. Music stopped being background and became part of that specific feeling of \"your place.\"",
+              "Working with creators and communities. I personally sought out authors and projects that matched our taste, reached out to them, and invited them to discover new products — mostly barter collaborations at first, with part of the audience arriving organically later on. A separate track was alcohol evenings and cocktail launches with invited creators.",
+              "Content from the inside. We started showing not just the finished product but how it came together: where a drink's idea came from, who worked on it, what experiments were happening behind the scenes. That made the communication feel more human and let the audience feel part of the project.",
+              "Digital touchpoints. The website barely functioned as a product before this — I moved the menu there and added QR codes on tables so guests could see it with photos and descriptions. Receipts got links to reviews, the project's other venues, and direct feedback to the manager.",
+            ],
+          },
+          {
+            eyebrow: "Result",
+            heading: "Revenue grew by roughly 250%",
+            body: [
+              "Over the time I worked on the project, revenue grew by roughly 250% relative to where it started. But the main result, to me, was the shift in the audience itself: young people from creative industries, including film, started coming to Soyka. They engaged with the product, noticed details, gave feedback, photographed the space and the drinks, and started bringing their own people.",
+              "It wasn't just more guests — a community formed around people who genuinely connected with the project's character. Collaborations with cultural venues and artists helped cement that positioning, and some partnerships were planned to continue on an ongoing basis.",
+            ],
+          },
+          {
+            eyebrow: "Takeaway",
+            heading: "A brand isn't built around one picture",
+            body: [
+              "This project shaped how I think about brands for good: you don't need to try to please everyone. You need to understand who your person is, give them enough reasons to recognize themselves in the brand, and then consistently maintain that connection.",
+              "Soyka became my example of how a brand can be built not around a single visual solution, but around product, culture, people, music, history, and the many small details that together create the feeling of a place.",
             ],
           },
         ],
