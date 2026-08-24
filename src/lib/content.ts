@@ -345,7 +345,7 @@ export const content: Record<Locale, Dict> = {
         slug: "lepim-i-varim",
         category: "Ребрендинг сети",
         title: "ЛЕПИМ И ВАРИМ",
-        subtitle: "Аудит маркетинговой стратегии для сети ресторанов на 76 точек",
+        subtitle: "Аудит маркетинговой стратегии для сети ресторанов",
         year: "2026",
         role: "Аудит бренд- и маркетинговой стратегии, CJM, бюджет, позиционирование",
         sections: [
@@ -353,7 +353,7 @@ export const content: Record<Locale, Dict> = {
             eyebrow: "Контекст",
             heading: "Аудит вместо готовой стратегии",
             body: [
-              "Внешнее агентство подготовило маркетинговую стратегию для сети из 76 точек — целевая аудитория, каналы продвижения, рекомендации по бюджету, соцсети, визуальный ряд и брендинг на горизонт в 19 месяцев. Я сопоставила готовый документ с историей бренда, интервью основателя и реальным поведением гостей — не как формальность, а как проверку, выдержит ли стратегия столкновение с реальностью.",
+              "Внешнее агентство подготовило маркетинговую стратегию для сети ресторанов — целевая аудитория, каналы продвижения, рекомендации по бюджету, соцсети, визуальный ряд и брендинг на горизонт в 19 месяцев. Я сопоставила готовый документ с историей бренда, интервью основателя и реальным поведением гостей — не как формальность, а как проверку, выдержит ли стратегия столкновение с реальностью.",
             ],
           },
           {
@@ -727,7 +727,7 @@ export const content: Record<Locale, Dict> = {
         slug: "lepim-i-varim",
         category: "Chain rebrand",
         title: "LEPIM I VARIM",
-        subtitle: "A marketing-strategy audit for a 76-location restaurant chain",
+        subtitle: "A marketing-strategy audit for a restaurant chain",
         year: "2026",
         role: "Brand and marketing strategy audit, CJM, budget, positioning",
         sections: [
@@ -735,7 +735,7 @@ export const content: Record<Locale, Dict> = {
             eyebrow: "Context",
             heading: "An audit instead of a blank slate",
             body: [
-              "An outside agency had put together a marketing strategy for a 76-location chain — target audience, promotion channels, budget recommendations, social media, visual identity, and branding over a 19-month horizon. I checked the finished document against the brand's history, an interview with the founder, and how guests actually behaved — not as a formality, but as a stress test for whether the strategy would survive contact with reality.",
+              "An outside agency had put together a marketing strategy for a restaurant chain — target audience, promotion channels, budget recommendations, social media, visual identity, and branding over a 19-month horizon. I checked the finished document against the brand's history, an interview with the founder, and how guests actually behaved — not as a formality, but as a stress test for whether the strategy would survive contact with reality.",
             ],
           },
           {
