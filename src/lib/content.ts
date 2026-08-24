@@ -206,7 +206,7 @@ export const content: Record<Locale, Dict> = {
       items: [
         { category: "Бренд-платформа", title: "CHLORINE", year: "2026", slug: "chlorine", hideProjectName: true },
         { category: "Бренд-маркетинг", title: "СОЙКА НАПЕЛА", year: "~3 года", slug: "soyka-napela" },
-        { category: "Ребрендинг", title: "ЛЕПИМ И ВАРИМ", year: "2026", slug: "lepim-i-varim" },
+        { category: "Ребрендинг и аудит стратегии", title: "ЛЕПИМ И ВАРИМ", year: "2026", slug: "lepim-i-varim" },
         { category: "Ребрендинг (концепт)", title: "РЯДОМ", year: "2026", slug: "ryadom" },
       ],
     },
@@ -343,7 +343,7 @@ export const content: Record<Locale, Dict> = {
       },
       {
         slug: "lepim-i-varim",
-        category: "Ребрендинг",
+        category: "Ребрендинг и аудит стратегии",
         title: "ЛЕПИМ И ВАРИМ",
         subtitle:
           "Аудит маркетинговой стратегии для сети ресторанов на 76 точек — от архетипа без доказательств до бюджета, оторванного от реальности",
@@ -589,7 +589,7 @@ export const content: Record<Locale, Dict> = {
       items: [
         { category: "Brand platform", title: "CHLORINE", year: "2026", slug: "chlorine", hideProjectName: true },
         { category: "Brand marketing", title: "SOYKA NAPELA", year: "~3 years", slug: "soyka-napela" },
-        { category: "Rebrand", title: "LEPIM I VARIM", year: "2026", slug: "lepim-i-varim" },
+        { category: "Rebrand & strategy audit", title: "LEPIM I VARIM", year: "2026", slug: "lepim-i-varim" },
         { category: "Rebrand (concept)", title: "RYADOM", year: "2026", slug: "ryadom" },
       ],
     },
@@ -726,7 +726,7 @@ export const content: Record<Locale, Dict> = {
       },
       {
         slug: "lepim-i-varim",
-        category: "Rebrand",
+        category: "Rebrand & strategy audit",
         title: "LEPIM I VARIM",
         subtitle:
           "A marketing-strategy audit for a 76-location restaurant chain — from an archetype with no evidence to a budget disconnected from reality",
