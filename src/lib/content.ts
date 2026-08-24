@@ -43,7 +43,6 @@ export type CaseStudy = {
   title: string;
   subtitle: string;
   year: string;
-  client: string;
   role: string;
   sections: CaseSection[];
 };
@@ -83,7 +82,6 @@ export type Dict = {
   cases: CaseStudy[];
   caseView: {
     back: string;
-    clientLabel: string;
     roleLabel: string;
   };
   about: {
@@ -236,7 +234,6 @@ export const content: Record<Locale, Dict> = {
         title: "CHLORINE",
         subtitle: "Бренд независимого арт-директора, сделанный по тем же правилам, что и бренды для клиентов",
         year: "2026",
-        client: "CHLORINE",
         role: "Нейминг, бренд-стратегия, визуальная айдентика, сайт",
         sections: [
           {
@@ -290,7 +287,6 @@ export const content: Record<Locale, Dict> = {
         title: "СОЙКА НАПЕЛА",
         subtitle: "Поиск своего гостя через продукт, культуру и среду",
         year: "~3 года",
-        client: "Сойка Напела",
         role: "Управление заведением: операционные процессы, команда, финансы, бренд и его развитие",
         sections: [
           {
@@ -362,7 +358,6 @@ export const content: Record<Locale, Dict> = {
         subtitle:
           "Аудит маркетинговой стратегии для сети ресторанов на 76 точек — от архетипа без доказательств до бюджета, оторванного от реальности",
         year: "2026",
-        client: "Лепим и Варим",
         role: "Аудит бренд- и маркетинговой стратегии, CJM, бюджет, позиционирование",
         sections: [
           {
@@ -417,7 +412,6 @@ export const content: Record<Locale, Dict> = {
         title: "РЯДОМ",
         subtitle: "Несогласованный концепт: как могла бы звучать аптечная сеть, если бы за характер отвечал бренд, а не вывеска",
         year: "2026",
-        client: "Спекулятивный проект, не связан с реальной компанией",
         role: "Позиционирование, нейминг, визуальная айдентика — концепт",
         sections: [
           {
@@ -467,7 +461,6 @@ export const content: Record<Locale, Dict> = {
     ],
     caseView: {
       back: "← Все работы",
-      clientLabel: "Клиент",
       roleLabel: "Формат работы",
     },
     about: {
@@ -636,7 +629,6 @@ export const content: Record<Locale, Dict> = {
         title: "CHLORINE",
         subtitle: "An independent art director's own brand, built by the same rules used for client work",
         year: "2026",
-        client: "CHLORINE",
         role: "Naming, brand strategy, visual identity, website",
         sections: [
           {
@@ -690,7 +682,6 @@ export const content: Record<Locale, Dict> = {
         title: "SOYKA NAPELA",
         subtitle: "Finding your guest through product, culture, and atmosphere",
         year: "~3 years",
-        client: "Soyka Napela",
         role: "Running the venue: operations, team, finances, brand and its development",
         sections: [
           {
@@ -762,7 +753,6 @@ export const content: Record<Locale, Dict> = {
         subtitle:
           "A marketing-strategy audit for a 76-location restaurant chain — from an archetype with no evidence to a budget disconnected from reality",
         year: "2026",
-        client: "Lepim i Varim",
         role: "Brand and marketing strategy audit, CJM, budget, positioning",
         sections: [
           {
@@ -817,7 +807,6 @@ export const content: Record<Locale, Dict> = {
         title: "RYADOM",
         subtitle: "An unsolicited concept: what a pharmacy chain could sound like if the brand carried the character, not the signage",
         year: "2026",
-        client: "Speculative project, not affiliated with a real company",
         role: "Positioning, naming, visual identity — concept",
         sections: [
           {
@@ -867,7 +856,6 @@ export const content: Record<Locale, Dict> = {
     ],
     caseView: {
       back: "← All work",
-      clientLabel: "Client",
       roleLabel: "Scope",
     },
     about: {

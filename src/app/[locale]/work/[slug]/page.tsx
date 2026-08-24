@@ -60,23 +60,14 @@ export default async function CasePage({
                 <p className="font-mono text-[11px] tracking-[0.22em] text-red mb-4">
                   {item.category.toUpperCase()}
                 </p>
-                <h1 className="font-display font-bold leading-[1.05] tracking-tight text-4xl sm:text-6xl">
-                  {item.title}
-                </h1>
-                <p className="mt-6 text-sm sm:text-base text-red leading-relaxed max-w-lg">
+                <p className="font-display font-bold leading-[1.15] tracking-tight text-2xl sm:text-3xl max-w-lg">
                   {item.subtitle}
                 </p>
               </div>
             </Reveal>
 
             <Reveal delay={80}>
-              <div className="mt-14 grid sm:grid-cols-3 gap-8 max-w-3xl border-t border-line pt-8">
-                <div>
-                  <p className="font-mono text-[10px] tracking-[0.18em] text-red mb-2">
-                    {dict.caseView.clientLabel.toUpperCase()}
-                  </p>
-                  <p className="text-sm text-red leading-snug">{item.client}</p>
-                </div>
+              <div className="mt-14 grid sm:grid-cols-2 gap-8 max-w-3xl border-t border-line pt-8">
                 <div>
                   <p className="font-mono text-[10px] tracking-[0.18em] text-red mb-2">
                     {dict.caseView.roleLabel.toUpperCase()}
