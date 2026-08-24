@@ -179,12 +179,12 @@ export const content: Record<Locale, Dict> = {
     process: {
       heading: "Процесс",
       steps: [
-        { n: "01", title: "Погружение", desc: "Бренд, аудитория, задача. Разбор того, что уже есть." },
-        { n: "02", title: "Направление", desc: "Референсы, мудборды, выбор визуального языка." },
-        { n: "03", title: "Ядро", desc: "Знак, палитра, типографика — основа системы." },
-        { n: "04", title: "Материалы", desc: "Кампания, соцсети, сайт, печать — под конкретную задачу." },
-        { n: "05", title: "Движение", desc: "Моушн-система: ролики, переходы, шаблоны для команды." },
-        { n: "06", title: "Передача", desc: "Гайдлайны, шаблоны, обучение команды." },
+        { n: "01", title: "Погружение", desc: "Бренд, бизнес, аудитория и задача. Разбираем, что уже есть, как бренд выглядит и воспринимается сейчас." },
+        { n: "02", title: "Аудит", desc: "Находим разрывы: где бренд теряет характер, где визуальная система не работает, что мешает ему двигаться дальше. Формируем точки роста." },
+        { n: "03", title: "Направление", desc: "Определяем, куда бренд должен двигаться. Референсы, визуальная территория, moodboard, принципы и характер будущей системы." },
+        { n: "04", title: "Система", desc: "Переводим направление в работающую визуальную систему: айдентика, типографика, цвет, графические приёмы, motion и правила их использования." },
+        { n: "05", title: "Реализация", desc: "Воплощаем систему в конкретных задачах: кампании, key visual, сайт, соцсети, съёмки, печатные материалы и другие точки контакта." },
+        { n: "06", title: "Арт-дирекция", desc: "Следим за тем, чтобы визуальное направление сохранялось в реализации. Работаем с дизайнерами, фотографами, продакшеном и другими участниками проекта." },
       ],
     },
     processPage: {
@@ -561,12 +561,12 @@ export const content: Record<Locale, Dict> = {
     process: {
       heading: "Process",
       steps: [
-        { n: "01", title: "Discovery", desc: "Brand, audience, goal. A read on what's already there." },
-        { n: "02", title: "Direction", desc: "References, moodboards, choosing the visual language." },
-        { n: "03", title: "Core", desc: "Mark, palette, typography — the foundation of the system." },
-        { n: "04", title: "Assets", desc: "Campaign, social, web, print — whatever the brief needs." },
-        { n: "05", title: "Motion", desc: "Motion system: films, transitions, templates for the team." },
-        { n: "06", title: "Handover", desc: "Guidelines, templates, training for the team." },
+        { n: "01", title: "Discovery", desc: "Brand, business, audience, and goal. We break down what's already there — how the brand looks and is perceived today." },
+        { n: "02", title: "Audit", desc: "We find the gaps: where the brand loses its character, where the visual system isn't working, what's holding it back. We shape the growth points." },
+        { n: "03", title: "Direction", desc: "We define where the brand should go. References, visual territory, moodboard, principles, and the character of the future system." },
+        { n: "04", title: "System", desc: "We translate the direction into a working visual system: identity, typography, color, graphic devices, motion, and the rules for using them." },
+        { n: "05", title: "Execution", desc: "We bring the system into real tasks: campaigns, key visuals, website, social, shoots, print materials, and other touchpoints." },
+        { n: "06", title: "Art Direction", desc: "We make sure the visual direction holds through execution. Working with designers, photographers, production, and everyone else on the project." },
       ],
     },
     processPage: {
