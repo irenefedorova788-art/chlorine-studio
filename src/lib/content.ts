@@ -52,7 +52,7 @@ export type Dict = {
   meta: { title: string; description: string };
   nav: { services: string; work: string; process: string; about: string; contacts: string };
   hero: {
-    headline: string;
+    paragraphs: string[];
     cta: string;
   };
   services: { heading: string; items: ServiceItem[] };
@@ -109,7 +109,10 @@ export const content: Record<Locale, Dict> = {
       contacts: "Контакты",
     },
     hero: {
-      headline: "Смелые идеи должны найти свой голос и превратиться в сильный бренд.",
+      paragraphs: [
+        "Мы живём в момент, когда бренды соревнуются не только за внимание, но и за громкость. Цвета становятся ярче, контент — быстрее, визуальные решения — сложнее, а попытки выделиться иногда доходят до абсурда. В этом избытке легко потерять самое важное — собственный характер.",
+        "Пора сделать уборку. Найти свой стиль, свой голос и собрать бренд вокруг того, что действительно принадлежит ему.",
+      ],
       cta: "Обсудить проект",
     },
     services: {
@@ -376,7 +379,10 @@ export const content: Record<Locale, Dict> = {
       contacts: "Contact",
     },
     hero: {
-      headline: "Bold ideas need to find their voice and become a strong brand.",
+      paragraphs: [
+        "We're living in a moment when brands compete not just for attention, but for volume. Colors get brighter, content gets faster, visual solutions get more complex — and the attempts to stand out sometimes tip into absurdity. In all that excess, it's easy to lose the one thing that matters most: your own character.",
+        "It's time for a clean-up. To find your style, your voice, and build the brand around what actually belongs to it.",
+      ],
       cta: "Start a project",
     },
     services: {

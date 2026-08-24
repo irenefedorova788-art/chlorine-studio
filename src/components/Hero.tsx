@@ -4,12 +4,16 @@ import { CONTACT } from "@/lib/content";
 export function Hero({ dict }: { dict: Dict }) {
   return (
     <section className="relative min-h-dvh flex flex-col items-center justify-center px-5 sm:px-8">
-      <div className="max-w-3xl text-center">
+      <div className="max-w-2xl text-center">
         <h1
-          className="rise-in font-display font-light leading-[1.2] tracking-tight text-xl sm:text-4xl lg:text-5xl text-red"
+          className="rise-in font-display font-light leading-[1.4] tracking-tight text-sm sm:text-lg lg:text-xl text-red space-y-4"
           style={{ animationDelay: "0.1s" }}
         >
-          {dict.hero.headline}
+          {dict.hero.paragraphs.map((p) => (
+            <span key={p} className="block">
+              {p}
+            </span>
+          ))}
         </h1>
 
         <a
