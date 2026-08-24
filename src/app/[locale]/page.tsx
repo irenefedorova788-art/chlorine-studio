@@ -3,7 +3,6 @@ import { locales, content, type Locale } from "@/lib/content";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
-import { Process } from "@/components/Process";
 import { Work } from "@/components/Work";
 import { About } from "@/components/About";
 import { Cta } from "@/components/Cta";
@@ -26,7 +25,6 @@ export default async function LocalePage({
       <main className="page-enter">
         <Hero dict={dict} />
         <Services dict={dict} locale={locale as Locale} />
-        <Process dict={dict} />
         <Work dict={dict} locale={locale as Locale} />
         <About dict={dict} />
         <Cta dict={dict} />
