@@ -7,7 +7,7 @@ export function Cta({ dict }: { dict: Dict }) {
     <section id="contact" className="relative px-5 sm:px-8 py-28 sm:py-40">
       <div className="relative z-10 mx-auto max-w-7xl">
         <Reveal>
-          <h2 className="font-body font-medium leading-[1.1] text-3xl sm:text-5xl lg:text-6xl max-w-4xl">
+          <h2 className="font-body font-medium leading-[1.3] text-sm sm:text-base lg:text-lg max-w-4xl">
             <span className="text-red">{dict.cta.line1}</span>
             <br />
             <span className="font-accent italic text-red">{dict.cta.line2}</span>
