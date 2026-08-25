@@ -3,8 +3,8 @@ export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = "ru";
 
 export const CONTACT = {
-  telegram: "https://t.me/cherepublica",
-  telegramLabel: "@cherepublica",
+  telegram: "https://t.me/chlorine_marketing",
+  telegramLabel: "@chlorine_marketing",
   behance: "https://behance.net/cherepubica",
   behanceLabel: "behance.net/cherepubica",
   email: "hello@chlorine.studio",
