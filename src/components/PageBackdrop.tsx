@@ -16,7 +16,7 @@ const PURPLE: Variant = { kind: "photo", key: "/bg-purple.jpg", src: "/bg-purple
 
 function variantForPath(pathname: string): Variant {
   const section = pathname.split("/").filter(Boolean)[1] ?? "";
-  if (section === "services" || section === "process") return BLUE;
+  if (section === "process") return BLUE;
   if (section === "work") return PURPLE;
   return HOME;
 }
