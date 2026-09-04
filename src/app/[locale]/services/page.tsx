@@ -53,15 +53,12 @@ export default async function ServicesPage({
             </Reveal>
 
             <Reveal delay={60}>
-              <div className="border border-red/25 bg-[#f1ece2] px-6 sm:px-10 lg:px-14 py-10 sm:py-14">
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-6 pb-10 sm:pb-16">
+              <div className="border border-red/25 px-6 sm:px-10 lg:px-14 py-10 sm:py-14">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 gap-y-6 pb-10 sm:pb-16">
                   <p className="font-mono text-[10px] tracking-[0.18em] text-red">
                     CHLORINE.STUDIO
                   </p>
-                  <p className="font-mono text-[10px] tracking-[0.18em] text-red">
-                    (2026)
-                  </p>
-                  <p className="col-span-2 sm:col-span-1 text-xs sm:text-sm text-red/70 leading-snug">
+                  <p className="text-xs sm:text-sm text-red/70 leading-snug">
                     {dict.servicesPage.tagline}
                   </p>
                   <p className="font-mono text-[10px] tracking-[0.18em] text-red sm:text-right">
@@ -76,10 +73,7 @@ export default async function ServicesPage({
                   </span>
                 </h1>
 
-                <div className="mt-14 sm:mt-20 grid sm:grid-cols-[6rem_1fr_10rem] gap-6 sm:gap-10 items-end">
-                  <p className="font-mono text-[10px] tracking-[0.18em] text-red">
-                    (2026)
-                  </p>
+                <div className="mt-14 sm:mt-20 grid sm:grid-cols-[1fr_10rem] gap-6 sm:gap-10 items-end">
                   <div>
                     <p className="text-sm sm:text-base text-red/70 leading-relaxed max-w-lg">
                       {dict.servicesPage.intro}
@@ -88,12 +82,7 @@ export default async function ServicesPage({
                       CHLORINE.STUDIO
                     </p>
                   </div>
-                  <div className="flex sm:flex-col sm:items-end gap-3">
-                    <p className="font-mono text-[10px] tracking-[0.18em] text-red">
-                      (2026)
-                    </p>
-                    <div className="w-full sm:w-32 h-16 sm:h-20 bg-red" />
-                  </div>
+                  <div className="w-full sm:w-32 h-16 sm:h-20 bg-red" />
                 </div>
               </div>
             </Reveal>
