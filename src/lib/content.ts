@@ -458,7 +458,7 @@ export const content: Record<Locale, Dict> = {
       emailLabel: "или на почту",
     },
     footer: {
-      role: "Бренд-менеджмент и арт-дирекция",
+      role: "Бренд-маркетинг / продукт / маркетинг",
       nav: "Навигация",
       contact: "Контакты",
       work: "Портфолио",
@@ -827,7 +827,7 @@ export const content: Record<Locale, Dict> = {
       emailLabel: "or by email",
     },
     footer: {
-      role: "Brand management & art direction",
+      role: "Brand marketing / product / marketing",
       nav: "Navigation",
       contact: "Contact",
       work: "Portfolio",
