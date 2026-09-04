@@ -61,6 +61,7 @@ export type Dict = {
     eyebrow: string;
     heading: string;
     headingMark: string;
+    tagline: string;
     intro: string;
     back: string;
     moreLabel: string;
@@ -160,6 +161,7 @@ export const content: Record<Locale, Dict> = {
       eyebrow: "УСЛУГИ",
       heading: "Чем именно я",
       headingMark: "помогаю",
+      tagline: "Формат работы с брендом — под конкретную задачу.",
       intro: "Три формата, с которых можно начать, — от короткого разбора до полной работы над брендом. Комплексная стратегия — не отправная точка, а следующий шаг, если он действительно нужен.",
       back: "← На главную",
       moreLabel: "Подробнее об услугах",
@@ -530,6 +532,7 @@ export const content: Record<Locale, Dict> = {
       eyebrow: "SERVICES",
       heading: "What I actually",
       headingMark: "do",
+      tagline: "A way of working with your brand — built around one specific task.",
       intro: "Three formats to start with — from a quick read to full brand work. Full strategy isn't the starting point, it's the next step, when it's actually needed.",
       back: "← Back home",
       moreLabel: "More about services",

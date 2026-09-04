@@ -41,28 +41,60 @@ export default async function ServicesPage({
       <Header dict={dict} locale={locale as Locale} path="/services" />
 
       <main className="page-enter">
-        <section className="relative min-h-[70vh] flex items-center px-5 sm:px-8 pt-28 pb-20">
+        <section className="relative px-5 sm:px-8 pt-28 pb-20">
           <div className="relative z-10 mx-auto max-w-7xl w-full">
             <Reveal>
-              <div className="max-w-2xl lg:max-w-xl">
-                <Link
-                  href={`/${locale}`}
-                  className="inline-block font-mono text-xs text-red hover:opacity-70 transition-opacity mb-10"
-                >
-                  {dict.servicesPage.back}
-                </Link>
-                <p className="font-mono text-[11px] tracking-[0.22em] text-red mb-4">
-                  {dict.servicesPage.eyebrow}
-                </p>
-                <h1 className="font-body font-medium leading-[1.1] tracking-tight text-3xl sm:text-4xl lg:text-5xl text-red">
+              <Link
+                href={`/${locale}`}
+                className="inline-block font-mono text-xs text-red hover:opacity-70 transition-opacity mb-8"
+              >
+                {dict.servicesPage.back}
+              </Link>
+            </Reveal>
+
+            <Reveal delay={60}>
+              <div className="border border-red/25 bg-[#f1ece2] px-6 sm:px-10 lg:px-14 py-10 sm:py-14">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-6 pb-10 sm:pb-16">
+                  <p className="font-mono text-[10px] tracking-[0.18em] text-red">
+                    CHLORINE.STUDIO
+                  </p>
+                  <p className="font-mono text-[10px] tracking-[0.18em] text-red">
+                    (2026)
+                  </p>
+                  <p className="col-span-2 sm:col-span-1 text-xs sm:text-sm text-red/70 leading-snug">
+                    {dict.servicesPage.tagline}
+                  </p>
+                  <p className="font-mono text-[10px] tracking-[0.18em] text-red sm:text-right">
+                    ({dict.servicesPage.eyebrow})
+                  </p>
+                </div>
+
+                <h1 className="font-display font-black leading-[0.95] tracking-tight text-5xl sm:text-7xl lg:text-8xl text-red">
                   {dict.servicesPage.heading}{" "}
-                  <span className="font-accent italic text-red">
+                  <span className="font-accent italic">
                     {dict.servicesPage.headingMark}
                   </span>
                 </h1>
-                <p className="mt-6 text-sm sm:text-base text-red leading-relaxed">
-                  {dict.servicesPage.intro}
-                </p>
+
+                <div className="mt-14 sm:mt-20 grid sm:grid-cols-[6rem_1fr_10rem] gap-6 sm:gap-10 items-end">
+                  <p className="font-mono text-[10px] tracking-[0.18em] text-red">
+                    (2026)
+                  </p>
+                  <div>
+                    <p className="text-sm sm:text-base text-red/70 leading-relaxed max-w-lg">
+                      {dict.servicesPage.intro}
+                    </p>
+                    <p className="mt-4 font-mono text-[10px] tracking-[0.18em] text-red">
+                      CHLORINE.STUDIO
+                    </p>
+                  </div>
+                  <div className="flex sm:flex-col sm:items-end gap-3">
+                    <p className="font-mono text-[10px] tracking-[0.18em] text-red">
+                      (2026)
+                    </p>
+                    <div className="w-full sm:w-32 h-16 sm:h-20 bg-red" />
+                  </div>
+                </div>
               </div>
             </Reveal>
           </div>
