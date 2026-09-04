@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { locales, content, type Locale } from "@/lib/content";
+import { locales, content, CONTACT, type Locale } from "@/lib/content";
 import { Header } from "@/components/Header";
 import { Cta } from "@/components/Cta";
 import { Footer } from "@/components/Footer";
@@ -41,51 +41,34 @@ export default async function ServicesPage({
       <Header dict={dict} locale={locale as Locale} path="/services" />
 
       <main className="page-enter">
-        <section className="relative px-5 sm:px-8 pt-28 pb-20">
-          <div className="relative z-10 mx-auto max-w-7xl w-full">
-            <Reveal>
-              <Link
-                href={`/${locale}`}
-                className="inline-block font-mono text-xs text-red hover:opacity-70 transition-opacity mb-8"
-              >
-                {dict.servicesPage.back}
-              </Link>
-            </Reveal>
+        <section className="relative min-h-dvh flex flex-col items-center justify-center px-5 sm:px-8">
+          <Link
+            href={`/${locale}`}
+            className="absolute top-24 left-5 sm:left-8 font-mono text-xs text-red hover:opacity-70 transition-opacity"
+          >
+            {dict.servicesPage.back}
+          </Link>
 
-            <Reveal delay={60}>
-              <div className="border border-red/25 px-6 sm:px-10 lg:px-14 py-10 sm:py-14">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 gap-y-6 pb-10 sm:pb-16">
-                  <p className="font-mono text-[10px] tracking-[0.18em] text-red">
-                    CHLORINE.STUDIO
-                  </p>
-                  <p className="text-xs sm:text-sm text-red/70 leading-snug">
-                    {dict.servicesPage.tagline}
-                  </p>
-                  <p className="font-mono text-[10px] tracking-[0.18em] text-red sm:text-right">
-                    ({dict.servicesPage.eyebrow})
-                  </p>
-                </div>
+          <div className="max-w-2xl text-center">
+            <h1 className="rise-in font-display font-light leading-[1.4] tracking-tight text-sm sm:text-lg lg:text-xl text-red space-y-4">
+              <span className="block">
+                {dict.servicesPage.heading}{" "}
+                <span className="font-accent italic">
+                  {dict.servicesPage.headingMark}
+                </span>
+              </span>
+              <span className="block">{dict.servicesPage.intro}</span>
+            </h1>
 
-                <h1 className="font-display font-black leading-[0.95] tracking-tight text-5xl sm:text-7xl lg:text-8xl text-red">
-                  {dict.servicesPage.heading}{" "}
-                  <span className="font-accent italic">
-                    {dict.servicesPage.headingMark}
-                  </span>
-                </h1>
-
-                <div className="mt-14 sm:mt-20 grid sm:grid-cols-[1fr_10rem] gap-6 sm:gap-10 items-end">
-                  <div>
-                    <p className="text-sm sm:text-base text-red/70 leading-relaxed max-w-lg">
-                      {dict.servicesPage.intro}
-                    </p>
-                    <p className="mt-4 font-mono text-[10px] tracking-[0.18em] text-red">
-                      CHLORINE.STUDIO
-                    </p>
-                  </div>
-                  <div className="w-full sm:w-32 h-16 sm:h-20 bg-red" />
-                </div>
-              </div>
-            </Reveal>
+            <a
+              href={CONTACT.telegram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rise-in mt-10 inline-flex items-center gap-2 font-mono text-xs tracking-[0.14em] text-red hover:opacity-70 transition-opacity"
+            >
+              {dict.hero.cta.toUpperCase()}
+              <span aria-hidden="true">→</span>
+            </a>
           </div>
         </section>
 
