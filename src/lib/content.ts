@@ -109,8 +109,8 @@ export const content: Record<Locale, Dict> = {
     },
     hero: {
       paragraphs: [
-        "Мы живём в момент, когда бренды соревнуются не только за внимание, но и за громкость. Цвета становятся ярче, контент — быстрее, визуальные решения — сложнее, а попытки выделиться иногда доходят до абсурда. В этом избытке легко потерять самое важное — собственный характер.",
-        "Пора сделать уборку. Найти свой стиль, свой голос и собрать бренд вокруг того, что действительно принадлежит ему.",
+        "Мы живём в момент, когда бренды соревнуются не только за внимание, но и за громкость: цвета ярче, информация быстрее, решения сложнее. В этом избытке легко потерять самое важное — собственный характер.",
+        "Пора найти свой стиль, свой голос и собрать бренд вокруг того, что ему действительно принадлежит.",
       ],
       cta: "Обсудить проект",
     },
@@ -477,8 +477,8 @@ export const content: Record<Locale, Dict> = {
     },
     hero: {
       paragraphs: [
-        "We're living in a moment when brands compete not just for attention, but for volume. Colors get brighter, content gets faster, visual solutions get more complex — and the attempts to stand out sometimes tip into absurdity. In all that excess, it's easy to lose the one thing that matters most: your own character.",
-        "It's time for a clean-up. To find your style, your voice, and build the brand around what actually belongs to it.",
+        "We're living in a moment when brands compete not just for attention, but for volume: colors get brighter, information moves faster, solutions get more complex. In all that excess, it's easy to lose the one thing that matters most — your own character.",
+        "It's time to find your style, your voice, and build the brand around what actually belongs to it.",
       ],
       cta: "Start a project",
     },
