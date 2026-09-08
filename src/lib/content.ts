@@ -157,7 +157,7 @@ export const content: Record<Locale, Dict> = {
     servicesPage: {
       heading: "Чем именно я",
       headingMark: "помогаю",
-      intro: "Пять направлений, с которыми я работаю.",
+      intro: "Мир, который требует нового и лучшего, не прощает тех, кто стоит на месте. Характер бренда может стать катализатором перемен — тем, что помогает ему выделиться и продавать увереннее. CHLORINE соединяет точный анализ и творческий подход, чтобы то, каким должен стать ваш бренд, стало ощутимым уже сегодня.",
       back: "← На главную",
       moreLabel: "Подробнее об услугах",
     },
@@ -525,7 +525,7 @@ export const content: Record<Locale, Dict> = {
     servicesPage: {
       heading: "What I actually",
       headingMark: "do",
-      intro: "Five areas I work across.",
+      intro: "In a world that rewards distinction, standing still isn't an option. A brand's character can become a catalyst for change — helping it stand out and sell with more confidence. CHLORINE blends sharp analysis and creative instinct to make what your brand should become something people can feel today.",
       back: "← Back home",
       moreLabel: "More about services",
     },
