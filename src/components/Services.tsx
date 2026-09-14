@@ -22,22 +22,34 @@ export function Services({ dict, locale }: { dict: Dict; locale: Locale }) {
           </div>
         </Reveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
-          {dict.services.items.map((item, i) => (
-            <Reveal key={item.code} delay={i * 60}>
-              <div className="group h-full">
-                <div className="flex items-baseline justify-between mb-8">
-                  <span className="font-display font-bold text-3xl text-red group-hover:translate-x-1 transition-transform">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
+        <div className="grid lg:grid-cols-2 gap-x-16 gap-y-14">
+          <Reveal delay={60}>
+            <div className="space-y-6 max-w-xl">
+              {dict.services.intro.map((p) => (
+                <p key={p} className="text-sm sm:text-base text-red/85 leading-relaxed">
+                  {p}
+                </p>
+              ))}
+            </div>
+          </Reveal>
+
+          <div className="space-y-10">
+            {dict.services.items.map((item, i) => (
+              <Reveal key={item.code} delay={120 + i * 60}>
+                <div className="group">
+                  <div className="flex items-baseline justify-between mb-4">
+                    <span className="font-display font-bold text-3xl text-red group-hover:translate-x-1 transition-transform">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <h3 className="font-display font-semibold text-lg sm:text-xl mb-2 text-red">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-red leading-relaxed max-w-md">{item.desc}</p>
                 </div>
-                <h3 className="font-display font-semibold text-lg sm:text-xl mb-2 text-red">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-red leading-relaxed">{item.desc}</p>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -56,7 +56,7 @@ export type Dict = {
     paragraphs: string[];
     cta: string;
   };
-  services: { heading: string; items: ServiceItem[] };
+  services: { heading: string; intro: string[]; items: ServiceItem[] };
   servicesPage: {
     heading: string;
     headingMark: string;
@@ -116,6 +116,11 @@ export const content: Record<Locale, Dict> = {
     },
     services: {
       heading: "Услуги",
+      intro: [
+        "Люди не покупают у бренда только потому, что знают о его существовании. Между вниманием и покупкой возникает множество сомнений: можно ли бренду доверять, понимает ли он меня, соответствует ли обещание реальности, чего от него ожидать. Если бренд не отвечает на эти вопросы, потенциальный клиент может остаться в воронке или выбрать другого.",
+        "Брендинг помогает уменьшить эту неопределённость: делает позиционирование ясным, формирует узнаваемый характер, последовательно выражает обещание бренда и создаёт систему сигналов, по которым человек понимает, кто перед ним и почему ему можно доверять.",
+        "Поэтому задача брендинга — не просто сделать компанию заметной или привлекательной. Она в том, чтобы сделать её понятной, узнаваемой и предпочтительной для тех людей, которым она действительно подходит.",
+      ],
       items: [
         {
           code: "01",
@@ -485,6 +490,11 @@ export const content: Record<Locale, Dict> = {
     },
     services: {
       heading: "Services",
+      intro: [
+        "People don't buy from a brand just because they know it exists. Between attention and purchase, plenty of doubt creeps in: can this brand be trusted, does it understand me, does the promise match reality, what should I expect from it. If a brand doesn't answer these questions, a potential customer can get stuck in the funnel or simply choose someone else.",
+        "Branding helps reduce that uncertainty: it makes positioning clear, builds a recognizable character, consistently expresses the brand's promise, and creates a system of signals that let a person understand who's in front of them and why they can be trusted.",
+        "So the job of branding isn't just to make a company noticeable or appealing. It's to make it understandable, recognizable, and preferred by the people it's actually right for.",
+      ],
       items: [
         {
           code: "01",
