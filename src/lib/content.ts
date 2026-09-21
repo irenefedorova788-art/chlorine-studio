@@ -237,9 +237,9 @@ export const content: Record<Locale, Dict> = {
             eyebrow: "Стратегия",
             heading: "Имя как метод",
             body: [
-              "Название CHLORINE — буквальный перевод слова «хлор».",
-              "Хлор наводит порядок там, где до него было тихо и одинаково: в бассейнах, в воде, в стерильных помещениях.",
-              "Так же работает и бренд-менеджмент — находить характер в средах, где всё выглядит чисто, аккуратно и неотличимо друг от друга.",
+              "CHLORINE — буквальный перевод слова «хлор». Название родилось из наблюдения на одном из проектов, где я работала: рекламного шума было так много, что это напоминало Москву 2000-х — вывески и баннеры кричали из каждого угла, без всякой системы, и это создавало ощущение мусора и анархии, а не бренда.",
+              "Пришло время убраться. С чистотой прочнее всего ассоциируется хлор — то, чем вымывают всё лишнее. В этом и смысл имени: возможность начать заново, с чистого листа — рестарт.",
+              "На этом чистом листе уже выстраивается настоящий характер — понятный целевой аудитории и рассчитанный на будущее. Когда у компании наступают трудные времена, именно такой ясный бренд её поддерживает, потому что модель полностью прозрачна.",
             ],
           },
           {
@@ -611,9 +611,9 @@ export const content: Record<Locale, Dict> = {
             eyebrow: "Strategy",
             heading: "The name as a method",
             body: [
-              "CHLORINE is a literal translation of the Russian word for chlorine.",
-              "Chlorine brings order to places that were quiet and uniform before it arrived — pools, water, sterile rooms.",
-              "Brand management works the same way: finding character in categories where everything already looks clean, neat, and indistinguishable.",
+              "CHLORINE is a literal translation of the Russian word for chlorine. The name came from something I noticed at one of the companies I worked at: so much advertising noise that it felt like Moscow in the 2000s — signs and banners shouting from every corner, with no system to any of it. It read as clutter and anarchy, not a brand.",
+              "It was time to clean up. Nothing reads as \"clean\" quite like chlorine — the thing you use to wash everything else away. That's the meaning behind the name: a chance to start over, with a blank page — a restart.",
+              "Real character gets built on that blank page — legible to the target audience and built to last. When a company hits hard times, a brand like that is what holds it up, because the model behind it is completely clear.",
             ],
           },
           {
