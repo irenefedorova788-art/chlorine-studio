@@ -117,9 +117,9 @@ export const content: Record<Locale, Dict> = {
     services: {
       heading: "Услуги",
       intro: [
-        "Люди не покупают у бренда только потому, что знают о его существовании. Между вниманием и покупкой возникает множество сомнений: можно ли бренду доверять, понимает ли он меня, соответствует ли обещание реальности, чего от него ожидать. Если бренд не отвечает на эти вопросы, потенциальный клиент может остаться в воронке или выбрать другого.",
-        "Брендинг помогает уменьшить эту неопределённость: делает позиционирование ясным, формирует узнаваемый характер, последовательно выражает обещание бренда и создаёт систему сигналов, по которым человек понимает, кто перед ним и почему ему можно доверять.",
-        "Поэтому задача брендинга — не просто сделать компанию заметной или привлекательной. Она в том, чтобы сделать её понятной, узнаваемой и предпочтительной для тех людей, которым она действительно подходит.",
+        "Бренд работает вдолгую: он копит узнаваемость, доверие и характер компании — то, что не создать за одну кампанию и не купить одним рекламным бюджетом.",
+        "Мы выстраиваем позиционирование и визуальную систему так, чтобы бренд было легко узнать, понять и выбрать. Со временем это превращается в накопленный капитал: людям проще возвращаться и рекомендовать, а компании — не объяснять заново, кто она и почему ей можно доверять.",
+        "Этот капитал особенно важен в тяжёлые для бизнеса времена. Когда рынок штормит или доходы падают, именно выстроенный бренд прикрывает спину: люди продолжают выбирать компанию по накопленному доверию, а не по свежей рекламе.",
       ],
       items: [
         {
@@ -499,9 +499,9 @@ export const content: Record<Locale, Dict> = {
     services: {
       heading: "Services",
       intro: [
-        "People don't buy from a brand just because they know it exists. Between attention and purchase, plenty of doubt creeps in: can this brand be trusted, does it understand me, does the promise match reality, what should I expect from it. If a brand doesn't answer these questions, a potential customer can get stuck in the funnel or simply choose someone else.",
-        "Branding helps reduce that uncertainty: it makes positioning clear, builds a recognizable character, consistently expresses the brand's promise, and creates a system of signals that let a person understand who's in front of them and why they can be trusted.",
-        "So the job of branding isn't just to make a company noticeable or appealing. It's to make it understandable, recognizable, and preferred by the people it's actually right for.",
+        "A brand plays the long game: it builds up recognition, trust, and character — things no single campaign or ad budget can buy overnight.",
+        "We build positioning and a visual system so the brand is easy to recognize, understand, and choose. Over time that turns into accumulated capital: it's easier for people to come back and recommend you, and the company stops having to re-explain who it is and why it can be trusted.",
+        "That capital matters most when times get hard. When the market shakes or revenue dips, a brand that's been properly built is what has your back — people keep choosing the company on accumulated trust, not on whatever ad they saw last.",
       ],
       items: [
         {
