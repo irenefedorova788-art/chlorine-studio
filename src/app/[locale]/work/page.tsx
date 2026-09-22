@@ -52,9 +52,6 @@ export default async function WorkPage({
                 >
                   {dict.workPage.back}
                 </Link>
-                <p className="font-mono text-[11px] tracking-[0.22em] text-red mb-4">
-                  {dict.workPage.eyebrow}
-                </p>
                 <h1 className="font-body font-medium leading-[1.1] tracking-tight text-3xl sm:text-4xl lg:text-5xl">
                   {dict.workPage.heading}{" "}
                   <span className="font-accent italic text-red">

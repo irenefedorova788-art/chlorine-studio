@@ -74,7 +74,6 @@ export type Dict = {
   };
   work: { heading: string; note: string; noteLink: string; items: WorkItem[]; soon: string; view: string; all: string; moreLabel: string; projectLabel: string };
   workPage: {
-    eyebrow: string;
     heading: string;
     headingMark: string;
     intro: string;
@@ -202,8 +201,7 @@ export const content: Record<Locale, Dict> = {
       ],
     },
     workPage: {
-      eyebrow: "РАБОТЫ",
-      heading: "Портфолио",
+      heading: "Работы",
       headingMark: "",
       intro: "Кейсы появляются здесь по мере сдачи — фильтруйте по типу работы или смотрите всё подряд.",
       back: "← На главную",
@@ -612,8 +610,7 @@ export const content: Record<Locale, Dict> = {
       ],
     },
     workPage: {
-      eyebrow: "WORK",
-      heading: "Portfolio",
+      heading: "Work",
       headingMark: "",
       intro: "Case studies land here as they wrap — filter by type or just browse everything.",
       back: "← Back home",
