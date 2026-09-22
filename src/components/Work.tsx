@@ -45,7 +45,6 @@ export function Work({ dict, locale }: { dict: Dict; locale: Locale }) {
             viewLabel={dict.work.view}
             projectLabel={dict.work.projectLabel}
             locale={locale}
-            light
           />
         </Reveal>
       </div>
