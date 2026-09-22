@@ -203,8 +203,8 @@ export const content: Record<Locale, Dict> = {
     },
     workPage: {
       eyebrow: "РАБОТЫ",
-      heading: "Что я",
-      headingMark: "успела сделать",
+      heading: "Портфолио",
+      headingMark: "",
       intro: "Кейсы появляются здесь по мере сдачи — фильтруйте по типу работы или смотрите всё подряд.",
       back: "← На главную",
     },
@@ -613,8 +613,8 @@ export const content: Record<Locale, Dict> = {
     },
     workPage: {
       eyebrow: "WORK",
-      heading: "What I've",
-      headingMark: "actually made",
+      heading: "Portfolio",
+      headingMark: "",
       intro: "Case studies land here as they wrap — filter by type or just browse everything.",
       back: "← Back home",
     },
