@@ -392,6 +392,34 @@ export const content: Record<Locale, Dict> = {
               "Если архетип подтверждается этой цепочкой — он становится рабочим инструментом. Если нет — сначала корректируется гипотеза, и только потом вокруг неё выстраивается коммуникация.",
             ],
           },
+          {
+            eyebrow: "Новый этап",
+            heading: "Новый запрос: система вместо разрозненных точек",
+            body: [
+              "Клиент вернулся с более широкой задачей — выстроить новую систему бренд-коммуникаций, навести порядок во всех заведениях и подготовить бренд к дальнейшему расширению. К этому моменту сеть выросла до 70+ точек не только в России, но и в Казахстане, Беларуси и нескольких заведениях в Дубае — и все они выглядели по-разному. Нужно было привести их к единому брендбуку и определить вектор развития.",
+            ],
+          },
+          {
+            eyebrow: "Что не работало",
+            heading: "Хаос вместо системы",
+            body: [
+              "Визуальная айдентика на точках не контролировалась — на части заведений вывески стояли ещё с 2015 года. Коммуникация строилась на постоянных акциях без единой системы. Из-за этого выручка проседала во всех заведениях сети, а у бренда не было показателей, которые убедили бы новых франчайзи-партнёров зайти в проект.",
+            ],
+          },
+          {
+            eyebrow: "Решение",
+            heading: "Зафиксировать брендбук и привести точки к одному стилю",
+            body: [
+              "Первым шагом было зафиксировать новый брендбук и провести ребрендинг всех точек под единый стиль — вместо того чтобы точечно латать отдельные вывески и материалы.",
+            ],
+          },
+          {
+            eyebrow: "Что сделали",
+            heading: "Система POS-материалов и новых коммуникаций",
+            body: [
+              "Разработала систему POS-материалов и новые бренд-коммуникации, которые можно было тиражировать на любую точку сети — от Москвы до Дубая — без потери единого стиля.",
+            ],
+          },
         ],
       },
       {
@@ -772,6 +800,34 @@ export const content: Record<Locale, Dict> = {
             body: [
               "Instead of accepting the finished strategy as-is, I proposed starting over from the beginning — from the brand's history, which the original document never mentioned at all: brand history → guest behavior → product → communication → real touchpoints.",
               "If the archetype holds up against that chain, it becomes a working tool. If it doesn't, the hypothesis gets corrected first, and only then does the communication get built around it.",
+            ],
+          },
+          {
+            eyebrow: "New phase",
+            heading: "A new request: a system instead of scattered locations",
+            body: [
+              "The client came back with a broader task — build a new brand-communications system, bring order to every location, and get the brand ready to keep expanding. By this point the chain had grown to 70+ locations, not just in Russia but in Kazakhstan, Belarus, and a few spots in Dubai — and all of them looked different. They needed to be brought under one brandbook, with a clear direction going forward.",
+            ],
+          },
+          {
+            eyebrow: "What wasn't working",
+            heading: "Chaos instead of a system",
+            body: [
+              "Visual identity across locations went unchecked — some signage had been up since 2015. Communication ran on constant discounts with no unified system behind it. Revenue was sagging across every location in the chain, and the brand had no metrics that could convince new franchise partners to come on board.",
+            ],
+          },
+          {
+            eyebrow: "Solution",
+            heading: "Lock down a brandbook and bring every location to one style",
+            body: [
+              "The first step was to lock down a new brandbook and rebrand every location under one consistent style — instead of patching individual signs and materials one at a time.",
+            ],
+          },
+          {
+            eyebrow: "What we built",
+            heading: "A POS-material system and new brand communications",
+            body: [
+              "Developed a system of POS materials and new brand communications that could be rolled out to any location in the chain — from Moscow to Dubai — without losing the consistent style.",
             ],
           },
         ],
