@@ -290,7 +290,7 @@ export const content: Record<Locale, Dict> = {
             eyebrow: "Проблема",
             heading: "Заведение на грани закрытия",
             body: [
-              "Когда мы пришли в проект, заведение находилось в состоянии, близком к закрытию: не было стабильного потока гостей, команда только формировалась, шёл ремонт, а существующая аудитория была небольшой и преимущественно старше 50 лет.",
+              "Когда пришла в проект, заведение находилось в состоянии, близком к закрытию: не было стабильного потока гостей, команда только формировалась, шёл ремонт, а существующая аудитория была небольшой и преимущественно старше 50 лет.",
               "Нужно было не просто увеличить посещаемость, а понять, кто такая «Сойка», для кого она может быть интересна и почему человек должен захотеть сюда вернуться.",
             ],
           },
@@ -299,27 +299,27 @@ export const content: Record<Locale, Dict> = {
             heading: "Что заставляет людей возвращаться",
             body: [
               "Начала с аудитории и наблюдения за тем, почему люди вообще приходят в заведение и что заставляет их возвращаться. Постепенно стало понятно, что сильная сторона «Сойки» находится не только в кофе: людям нравилась возможность прийти в обычный день и получить неожиданное впечатление — необычный вкус, знакомую музыку, интересный разговор, новую выставку или напиток, который отсылает к совершенно другому культурному контексту.",
-              "Мы не стали пытаться создавать искусственные «фишки» в обслуживании. Было важнее сохранить простое человеческое общение и честно показывать, что происходит внутри проекта.",
+              "Не стала пытаться создавать искусственные «фишки» в обслуживании. Было важнее сохранить простое человеческое общение и честно показывать, что происходит внутри проекта.",
             ],
           },
           {
             eyebrow: "Стратегия",
             heading: "Найти своего гостя и стать ему другом",
             body: [
-              "Мы сформулировали простую идею: найти своего гостя и стать для него хорошим другом — настолько, насколько это вообще возможно для заведения. Таким гостем мы видели активного, любопытного человека со своим вкусом: людей из творческих индустрий, кино, искусства и других культурных сфер, которым интересно пробовать новое и замечать детали.",
-              "Дальше мы начали строить вокруг этого характера саму среду: меняли музыку, экспериментировали с напитками, работали с художниками, запускали коллаборации и постепенно выстраивали коммуникацию вокруг продукта и людей, которые его создают.",
+              "Сформулировала простую идею: найти своего гостя и стать для него хорошим другом — настолько, насколько это вообще возможно для заведения. Таким гостем считала активного, любопытного человека со своим вкусом: людей из творческих индустрий, кино, искусства и других культурных сфер, которым интересно пробовать новое и замечать детали.",
+              "Дальше начала строить вокруг этого характера саму среду: меняла музыку, экспериментировала с напитками, работала с художниками, запускала коллаборации и постепенно выстраивала коммуникацию вокруг продукта и людей, которые его создают.",
             ],
           },
           {
-            eyebrow: "Что я сделала",
+            eyebrow: "Что сделала",
             heading: "Продукт, культура и коммуникация",
             body: [
-              "Продукт как часть бренда. Мы постоянно экспериментировали с напитками и использовали их как способ рассказывать истории. Для коллаборации с Центром «Зотов» создали напиток «Дзига», вдохновлённый режиссёром Дзигой Вертовым и эстетикой 1920-х: строгая вишня, кофе и розмарин, выдержка с ароматом старых книг, подача с сахарной бумагой с интертитром из фильма.",
-              "Культура и коллаборации. Я инициировала сотрудничество с Центром «Зотов», увидев культурное и визуальное совпадение между проектами. Вместе с внутренним маркетологом сделали кросс-промо: билеты на выставку со стороны «Сойки», купоны на напитки со стороны «Зотова», совместная коммуникация в digital и офлайне, плюс «фотосушка» художников, связанная с выставкой. Также сотрудничали с музыкантами, барами, сидрерией и художниками — одна из художниц выставляла работы в заведении и подбирала цветовую палитру под пространство.",
-              "Музыка как часть характера. Полностью пересобрали музыкальную среду: soft rock 70–80-х, Placebo и менее очевидные исполнители. Музыка стала не фоном, а частью того самого ощущения «своего места».",
-              "Работа с блогерами и сообществами. Самостоятельно искала авторов и проекты, близкие нам по вкусу, писала им и приглашала знакомиться с новыми продуктами — сначала бартерные интеграции, позже часть аудитории пришла органически. Отдельное направление — вечера алкоголя и запуски коктейлей с приглашёнными блогерами.",
-              "Контент изнутри. Начали показывать не только готовый продукт, но и то, как он появляется: откуда возникает идея напитка, кто над ним работает, какие эксперименты происходят внутри. Это сделало коммуникацию более человеческой и дало аудитории почувствовать себя частью проекта.",
-              "Digital-точки контакта. Сайт до этого практически не выполнял функцию продукта — перенесла туда электронное меню и разместила QR-коды на столиках, чтобы гость мог посмотреть меню с фотографиями и описанием. В чекбуках добавили ссылки на отзывы, другие заведения проекта и прямую обратную связь с управляющей.",
+              "Продукт как часть бренда. Постоянно экспериментировала с напитками и использовала их как способ рассказывать истории. Для коллаборации с Центром «Зотов» создала напиток «Дзига», вдохновлённый режиссёром Дзигой Вертовым и эстетикой 1920-х: строгая вишня, кофе и розмарин, выдержка с ароматом старых книг, подача с сахарной бумагой с интертитром из фильма.",
+              "Культура и коллаборации. Инициировала сотрудничество с Центром «Зотов», увидев культурное и визуальное совпадение между проектами. Вместе с внутренним маркетологом организовала кросс-промо: билеты на выставку со стороны «Сойки», купоны на напитки со стороны «Зотова», совместная коммуникация в digital и офлайне, плюс «фотосушка» художников, связанная с выставкой. Также сотрудничала с музыкантами, барами, сидрерией и художниками — одна из художниц выставляла работы в заведении и подбирала цветовую палитру под пространство.",
+              "Музыка как часть характера. Полностью пересобрала музыкальную среду: soft rock 70–80-х, Placebo и менее очевидные исполнители. Музыка стала не фоном, а частью того самого ощущения «своего места».",
+              "Работа с блогерами и сообществами. Самостоятельно искала авторов и проекты, близкие по вкусу, писала им и приглашала знакомиться с новыми продуктами — сначала бартерные интеграции, позже часть аудитории пришла органически. Отдельное направление — вечера алкоголя и запуски коктейлей с приглашёнными блогерами.",
+              "Контент изнутри. Начала показывать не только готовый продукт, но и то, как он появляется: откуда возникает идея напитка, кто над ним работает, какие эксперименты происходят внутри. Это сделало коммуникацию более человеческой и дало аудитории почувствовать себя частью проекта.",
+              "Digital-точки контакта. Сайт до этого практически не выполнял функцию продукта — перенесла туда электронное меню и разместила QR-коды на столиках, чтобы гость мог посмотреть меню с фотографиями и описанием. В чекбуках добавила ссылки на отзывы, другие заведения проекта и прямую обратную связь с управляющей.",
             ],
           },
           {
@@ -414,7 +414,7 @@ export const content: Record<Locale, Dict> = {
             ],
           },
           {
-            eyebrow: "Что сделали",
+            eyebrow: "Что сделала",
             heading: "Система POS-материалов и новых коммуникаций",
             body: [
               "Разработала систему POS-материалов и новые бренд-коммуникации, которые можно было тиражировать на любую точку сети — от Москвы до Дубая — без потери единого стиля.",
@@ -700,7 +700,7 @@ export const content: Record<Locale, Dict> = {
             eyebrow: "The problem",
             heading: "A venue on the edge of closing",
             body: [
-              "When we came into the project, the venue was close to shutting down: no stable flow of guests, a team that was still forming, renovation underway, and a small existing audience mostly over 50.",
+              "When I came into the project, the venue was close to shutting down: no stable flow of guests, a team that was still forming, renovation underway, and a small existing audience mostly over 50.",
               "The task wasn't just to increase footfall — it was to understand who \"Soyka\" actually was, who it could matter to, and why someone would want to come back.",
             ],
           },
@@ -709,26 +709,26 @@ export const content: Record<Locale, Dict> = {
             heading: "What actually brings people back",
             body: [
               "I started with the audience — watching why people came in at all and what made them return. It gradually became clear that Soyka's strength wasn't just the coffee: people liked the chance to walk in on an ordinary day and get an unexpected experience — an unusual flavor, familiar music, an interesting conversation, a new exhibition, or a drink referencing a completely different cultural context.",
-              "We didn't try to invent artificial service \"tricks.\" It mattered more to keep plain human conversation and be honest about what was actually happening inside the project.",
+              "I didn't try to invent artificial service \"tricks.\" It mattered more to keep plain human conversation and be honest about what was actually happening inside the project.",
             ],
           },
           {
             eyebrow: "Strategy",
             heading: "Find your guest, become their friend",
             body: [
-              "We landed on a simple idea: find your guest and become a good friend to them — as much as a venue possibly can. We saw that guest as an active, curious person with their own taste: people from creative industries, film, art, and other cultural fields who enjoyed trying new things and noticing details.",
-              "From there we built the environment itself around that character: changed the music, experimented with drinks, worked with artists, launched collaborations, and gradually built communication around the product and the people making it.",
+              "I landed on a simple idea: find your guest and become a good friend to them — as much as a venue possibly can. That guest was an active, curious person with their own taste: people from creative industries, film, art, and other cultural fields who enjoyed trying new things and noticing details.",
+              "From there, built the environment itself around that character: changed the music, experimented with drinks, worked with artists, launched collaborations, and gradually built communication around the product and the people making it.",
             ],
           },
           {
             eyebrow: "What I did",
             heading: "Product, culture, and communication",
             body: [
-              "Product as part of the brand. We constantly experimented with drinks and used them as a way to tell stories. For a collaboration with the Zotov Center, we created a drink called \"Dziga,\" inspired by director Dziga Vertov and 1920s aesthetics: tart cherry, coffee, and rosemary, aged to smell like old books, served with a sugar paper printed with an intertitle from one of his films.",
-              "Culture and collaborations. I initiated the partnership with the Zotov Center after noticing a cultural and visual overlap between the two projects. Together with the in-house marketer, we ran a cross-promo: exhibition tickets from Soyka's side, drink coupons from Zotov's side, joint communication online and offline, plus an artists' \"photo dry-out\" tied to the exhibition. We also worked with musicians, bars, a cidery, and artists — one artist exhibited her work at the venue and helped choose the space's color palette.",
-              "Music as part of the character. We rebuilt the musical environment from scratch: 70s–80s soft rock, Placebo, and less obvious names. Music stopped being background and became part of that specific feeling of \"your place.\"",
-              "Working with creators and communities. I personally sought out authors and projects that matched our taste, reached out to them, and invited them to discover new products — mostly barter collaborations at first, with part of the audience arriving organically later on. A separate track was alcohol evenings and cocktail launches with invited creators.",
-              "Content from the inside. We started showing not just the finished product but how it came together: where a drink's idea came from, who worked on it, what experiments were happening behind the scenes. That made the communication feel more human and let the audience feel part of the project.",
+              "Product as part of the brand. Constantly experimented with drinks and used them as a way to tell stories. For a collaboration with the Zotov Center, created a drink called \"Dziga,\" inspired by director Dziga Vertov and 1920s aesthetics: tart cherry, coffee, and rosemary, aged to smell like old books, served with a sugar paper printed with an intertitle from one of his films.",
+              "Culture and collaborations. I initiated the partnership with the Zotov Center after noticing a cultural and visual overlap between the two projects. Together with the in-house marketer, organized a cross-promo: exhibition tickets from Soyka's side, drink coupons from Zotov's side, joint communication online and offline, plus an artists' \"photo dry-out\" tied to the exhibition. Also worked with musicians, bars, a cidery, and artists — one artist exhibited her work at the venue and helped choose the space's color palette.",
+              "Music as part of the character. Rebuilt the musical environment from scratch: 70s–80s soft rock, Placebo, and less obvious names. Music stopped being background and became part of that specific feeling of \"your place.\"",
+              "Working with creators and communities. Personally sought out authors and projects with a similar sensibility, reached out to them, and invited them to discover new products — mostly barter collaborations at first, with part of the audience arriving organically later on. A separate track was alcohol evenings and cocktail launches with invited creators.",
+              "Content from the inside. Started showing not just the finished product but how it came together: where a drink's idea came from, who worked on it, what experiments were happening behind the scenes. That made the communication feel more human and let the audience feel part of the project.",
               "Digital touchpoints. The website barely functioned as a product before this — I moved the menu there and added QR codes on tables so guests could see it with photos and descriptions. Receipts got links to reviews, the project's other venues, and direct feedback to the manager.",
             ],
           },
@@ -824,7 +824,7 @@ export const content: Record<Locale, Dict> = {
             ],
           },
           {
-            eyebrow: "What we built",
+            eyebrow: "What I built",
             heading: "A POS-material system and new brand communications",
             body: [
               "Developed a system of POS materials and new brand communications that could be rolled out to any location in the chain — from Moscow to Dubai — without losing the consistent style.",
