@@ -57,9 +57,11 @@ export default async function CasePage({
                 >
                   {dict.caseView.back}
                 </Link>
-                <p className="font-mono text-[11px] tracking-[0.22em] text-red mb-4">
-                  {item.category.toUpperCase()}
-                </p>
+                {!item.hideCategoryEyebrow && (
+                  <p className="font-mono text-[11px] tracking-[0.22em] text-red mb-4">
+                    {item.category.toUpperCase()}
+                  </p>
+                )}
                 <p className="font-display font-bold leading-[1.15] tracking-tight text-2xl sm:text-3xl max-w-lg">
                   {item.subtitle}
                 </p>

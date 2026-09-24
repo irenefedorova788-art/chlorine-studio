@@ -47,6 +47,8 @@ export type CaseStudy = {
   year: string;
   role: string;
   sections: CaseSection[];
+  /** Skip the category eyebrow on the case page — used when the role field already says the same thing. */
+  hideCategoryEyebrow?: boolean;
 };
 
 export type Dict = {
@@ -197,7 +199,7 @@ export const content: Record<Locale, Dict> = {
         { category: "Бренд-платформа", title: "CHLORINE", year: "2026", slug: "chlorine", hideProjectName: true },
         { category: "Гастрокофейня", title: "СОЙКА НАПЕЛА", year: "~3 года", slug: "soyka-napela", hideProjectName: true },
         { category: "Ребрендинг сети", title: "ЛЕПИМ И ВАРИМ", year: "2026", slug: "lepim-i-varim", hideProjectName: true },
-        { category: "Бренд-стратегия", title: "КОФЕЙНЯ В СПАЛЬНОМ РАЙОНЕ", year: "2026", slug: "kofeynya-spalny-rayon", hideProjectName: true },
+        { category: "Бренд-стратегия", title: "БИСТРО В СПАЛЬНОМ РАЙОНЕ (КОНЦЕПТ)", year: "2026", slug: "bistro-spalny-rayon" },
         { category: "Ребрендинг (концепт)", title: "РЯДОМ", year: "2026", slug: "ryadom" },
       ],
     },
@@ -422,18 +424,19 @@ export const content: Record<Locale, Dict> = {
         ],
       },
       {
-        slug: "kofeynya-spalny-rayon",
+        slug: "bistro-spalny-rayon",
         category: "Бренд-стратегия",
-        title: "КОФЕЙНЯ В СПАЛЬНОМ РАЙОНЕ",
-        subtitle: "Бренд-стратегия и визуальный язык для кофейни в спальном районе, подготовленные до открытия",
+        title: "БИСТРО В СПАЛЬНОМ РАЙОНЕ (КОНЦЕПТ)",
+        subtitle: "Бренд-стратегия и визуальный язык для бистро в спальном районе, подготовленные до открытия",
         year: "2026",
         role: "Бренд-стратегия, позиционирование на основе исследования, визуальный язык для соцсетей до запуска",
+        hideCategoryEyebrow: true,
         sections: [
           {
             eyebrow: "Сигнал",
-            heading: "Работа до открытия, не после",
+            heading: "Работа только до открытия",
             body: [
-              "Клиент решил открыть кофейню в спальном районе — решение уже принято, отказаться от идеи нельзя. Задача агентства — та часть работы, что предшествует открытию: не «придумать концепцию» абстрактно, а построить её на данных и подготовить визуальный язык, с которым заведение выйдет в соцсети ещё до запуска. Всё, что происходит после открытия — сама стройка, операционка, дальнейшая судьба заведения — уже не зона агентства.",
+              "Клиент уже принял решение открыть бистро в спальном районе. Задача агентства — построить концепцию на данных и подготовить визуальный язык, с которым заведение выйдет в соцсети ещё до запуска. Стройка, операционка и дальнейшая судьба заведения остаются за периметром агентства.",
               "Ограничения: густонаселённый район, слабая транспортная развязка, доход аудитории — рабочий и средний класс, бюджет на ремонт ограничен.",
             ],
           },
@@ -448,15 +451,15 @@ export const content: Record<Locale, Dict> = {
             eyebrow: "Инсайт 1",
             heading: "Транспортная изоляция как преимущество",
             body: [
-              "В спальных районах структурно нет «третьего места» — сети закрывают скорость, супермаркеты — близость, но ни одно из этого не даёт места, где можно остаться. Плохая транспортная развязка усиливает, а не ослабляет этот спрос: жителям сложно ехать в центр за качеством — значит, качественное место рядом получает спрос без альтернативы.",
-              "Отклонено: позиционирование «мы не хуже центра» — в пользу «тебе не нужно ехать в центр».",
+              "Сети дают спальным районам скорость, супермаркеты — близость. Дефицит — именно «третье место», точка, где можно остаться. Плохая транспортная развязка только усиливает этот спрос: жителям сложно ехать в центр за качеством — значит, качественное место рядом получает спрос без альтернативы.",
+              "Отклонено: позиционирование «мы на уровне центра» — в пользу «центр теперь рядом».",
             ],
           },
           {
             eyebrow: "Инсайт 2",
             heading: "Дешёвый ремонт как честность бренда",
             body: [
-              "Доход аудитории и архетип Everyman потребовали отказаться от полированного дизайна — он читается как «не для своих». Видимая бережливость — залатанные места, разномастная плитка, переиспользование — доказательство честности бренда, а не следствие нехватки денег.",
+              "Доход аудитории и архетип Everyman потребовали отказаться от полированного дизайна — он читается как «для чужих». Видимая бережливость — залатанные места, разномастная плитка, переиспользование — читается как честность бренда, осознанный выбор дизайна.",
               "Отклонено: дорогие реплики винтажной мебели — в пользу настоящего б/у винтажа, перетянутого своими руками.",
             ],
           },
@@ -464,7 +467,7 @@ export const content: Record<Locale, Dict> = {
             eyebrow: "Инсайт 3",
             heading: "Здание диктует эстетику",
             body: [
-              "Район дал богатый исторический материал — трамвайный павильон 1886 года, академия, дендрарий, — но само здание, где будет кофейня, типовое советское (5–9 этажей). Честность архитектуре — часть того же принципа, что и бюджет ремонта.",
+              "Район дал богатый исторический материал — трамвайный павильон 1886 года, академия, дендрарий, — но само здание, где будет бистро, типовое советское (5–9 этажей). Честность архитектуре — часть того же принципа, что и бюджет ремонта.",
               "Отклонено: дореволюционная/ар-нуво эстетика как основа интерьера — в пользу советской, честной зданию; история осталась как содержательная ботаническая нить, поданная через советский агрономический язык.",
             ],
           },
@@ -472,7 +475,7 @@ export const content: Record<Locale, Dict> = {
             eyebrow: "Инсайт 4",
             heading: "Магазин-корнер снимает реальный барьер рынка",
             body: [
-              "Мелкие производители не проходят на полки сетей из-за операционных, а не качественных барьеров — реальная, подтверждённая проблема. Формат «курируемая полка при кофейне» решает её без чужого прецедента.",
+              "Мелких производителей сдерживают операционные барьеры сетей, а их продукт при этом соответствует всем требованиям качества — реальная, подтверждённая проблема. Формат «курируемая полка при бистро» решает её без чужого прецедента.",
               "Отклонено: чистый ритейл-минимаркет в стиле wellness-стартапа — слишком дорого и чисто для архетипа и аудитории.",
             ],
           },
@@ -490,15 +493,15 @@ export const content: Record<Locale, Dict> = {
             eyebrow: "Визуал",
             heading: "Библиотека промптов готова",
             body: [
-              "Стиль переведён в готовую к генерации библиотеку промптов по каждой детали — мебель, плитка, вывеска, керамика, гастроном-холодильник, туалет, фурнитура. Статус: промпты готовы, визуалы ещё не сгенерированы.",
+              "Стиль переведён в готовую к генерации библиотеку промптов по каждой детали — мебель, плитка, вывеска, керамика, гастроном-холодильник, туалет, фурнитура. Статус: промпты готовы, генерация визуалов — следующий шаг.",
             ],
           },
           {
             eyebrow: "Итог",
-            heading: "Пока не открылась",
+            heading: "Стадия подготовки к открытию",
             body: [
-              "Итог этой стадии — не открытое заведение (это вне периметра агентства), а готовый пакет: бренд-стратегия и визуальный язык, с которым можно выходить в соцсети до открытия.",
-              "Кофейня пока не открылась — проект на стадии подготовки к запуску.",
+              "Итог этой стадии — готовый пакет: бренд-стратегия и визуальный язык, с которым можно выходить в соцсети до открытия. Само открытие остаётся за периметром агентства.",
+              "Бистро остаётся в стадии подготовки к запуску — открытие ещё впереди.",
             ],
           },
         ],
@@ -689,7 +692,7 @@ export const content: Record<Locale, Dict> = {
         { category: "Brand platform", title: "CHLORINE", year: "2026", slug: "chlorine", hideProjectName: true },
         { category: "Gastro café", title: "SOYKA NAPELA", year: "~3 years", slug: "soyka-napela", hideProjectName: true },
         { category: "Chain rebrand", title: "LEPIM I VARIM", year: "2026", slug: "lepim-i-varim", hideProjectName: true },
-        { category: "Brand strategy", title: "COFFEE SHOP IN A SLEEPER DISTRICT", year: "2026", slug: "kofeynya-spalny-rayon", hideProjectName: true },
+        { category: "Brand strategy", title: "BISTRO IN A SLEEPER DISTRICT (CONCEPT)", year: "2026", slug: "bistro-spalny-rayon" },
         { category: "Rebrand (concept)", title: "RYADOM", year: "2026", slug: "ryadom" },
       ],
     },
@@ -914,18 +917,19 @@ export const content: Record<Locale, Dict> = {
         ],
       },
       {
-        slug: "kofeynya-spalny-rayon",
+        slug: "bistro-spalny-rayon",
         category: "Brand strategy",
-        title: "COFFEE SHOP IN A SLEEPER DISTRICT",
-        subtitle: "Brand strategy and visual language for a coffee shop in a sleeper district, built before it opens",
+        title: "BISTRO IN A SLEEPER DISTRICT (CONCEPT)",
+        subtitle: "Brand strategy and visual language for a bistro in a sleeper district, built before it opens",
         year: "2026",
         role: "Brand strategy, research-based positioning, visual language for social media pre-launch",
+        hideCategoryEyebrow: true,
         sections: [
           {
             eyebrow: "Signal",
-            heading: "Work before the opening, not after",
+            heading: "Work up to the opening, and only that far",
             body: [
-              "The client already decided to open a coffee shop in a sleeper district — the decision is made, there's no walking it back. The agency's job is the part of the work that comes before opening: not inventing a concept in the abstract, but building it on data, and preparing the visual language the venue will launch on social media with, before it even opens. Everything that happens after opening — construction, day-to-day operations, the venue's future — is outside the agency's scope.",
+              "The client already made the call to open a bistro in a sleeper district. The agency's job is to build the concept on data and prepare the visual language the venue will launch on social media with, ahead of opening. Construction, day-to-day operations, and the venue's future stay outside the agency's scope.",
               "Constraints: a dense district, weak transit access, a working- and middle-class audience, a limited renovation budget.",
             ],
           },
@@ -940,15 +944,15 @@ export const content: Record<Locale, Dict> = {
             eyebrow: "Insight 1",
             heading: "Transit isolation as an advantage",
             body: [
-              "Sleeper districts structurally lack a \"third place\": chains cover speed, supermarkets cover proximity, but neither gives people somewhere to stay. Poor transit access strengthens this demand rather than weakening it — it's hard for residents to travel downtown for quality, so a good place nearby gets that demand with no real alternative.",
-              "Rejected: positioning as \"we're just as good as downtown\" — in favor of \"you don't need to go downtown.\"",
+              "Chains give sleeper districts speed, supermarkets give them proximity. What's missing is the \"third place\" — somewhere worth staying. Poor transit access only sharpens that demand: it's hard for residents to travel downtown for quality, so a good place nearby captures that demand with no real alternative.",
+              "Rejected: positioning as \"we're on par with downtown\" — in favor of \"downtown just moved next door.\"",
             ],
           },
           {
             eyebrow: "Insight 2",
             heading: "Cheap renovation as brand honesty",
             body: [
-              "The audience's income and the Everyman archetype ruled out a polished design — it reads as \"not for us.\" Visible frugality — patched spots, mismatched tile, reused materials — is proof of the brand's honesty, not a sign of a tight budget.",
+              "The audience's income and the Everyman archetype ruled out a polished design — it reads as built for outsiders. Visible frugality — patched spots, mismatched tile, reused materials — reads as the brand's honesty, a deliberate design choice.",
               "Rejected: expensive vintage-furniture replicas — in favor of real secondhand vintage, reupholstered by hand.",
             ],
           },
@@ -956,7 +960,7 @@ export const content: Record<Locale, Dict> = {
             eyebrow: "Insight 3",
             heading: "The building dictates the aesthetic",
             body: [
-              "The district offered rich historical material — an 1886 tram pavilion, an academy, an arboretum — but the actual building the coffee shop will occupy is a standard Soviet block (5–9 stories). Being honest to the architecture is part of the same principle as the renovation budget.",
+              "The district offered rich historical material — an 1886 tram pavilion, an academy, an arboretum — but the actual building the bistro will occupy is a standard Soviet block (5–9 stories). Being honest to the architecture is part of the same principle as the renovation budget.",
               "Rejected: a pre-revolutionary / art nouveau aesthetic as the interior's basis — in favor of one honest to the Soviet building; the history stayed on as a botanical thread, told through Soviet agronomic language.",
             ],
           },
@@ -964,7 +968,7 @@ export const content: Record<Locale, Dict> = {
             eyebrow: "Insight 4",
             heading: "A corner shop solves a real market barrier",
             body: [
-              "Small producers don't make it onto chain shelves because of operational barriers, not quality ones — a real, documented problem. A \"curated shelf inside the coffee shop\" format solves it without borrowing someone else's precedent.",
+              "Small producers run into chains' operational barriers, while their product already meets every quality bar — a real, documented problem. A \"curated shelf inside the bistro\" format solves it without borrowing someone else's precedent.",
               "Rejected: a clean retail mini-market in a wellness-startup style — too expensive and too polished for the archetype and the audience.",
             ],
           },
@@ -982,15 +986,15 @@ export const content: Record<Locale, Dict> = {
             eyebrow: "Visual",
             heading: "A prompt library, ready to go",
             body: [
-              "The style has been translated into a generation-ready prompt library covering every detail — furniture, tile, signage, ceramics, the deli fridge, the bathroom, hardware. Status: prompts are ready, visuals haven't been generated yet.",
+              "The style has been translated into a generation-ready prompt library covering every detail — furniture, tile, signage, ceramics, the deli fridge, the bathroom, hardware. Status: prompts are ready, generating the visuals is next.",
             ],
           },
           {
             eyebrow: "Result",
-            heading: "Not open yet",
+            heading: "Preparing for launch",
             body: [
-              "The result of this stage isn't an open venue — that's outside the agency's scope — it's a finished package: a brand strategy and visual language ready to launch on social media before opening.",
-              "The coffee shop hasn't opened yet — the project is still in pre-launch preparation.",
+              "The result of this stage is a finished package: a brand strategy and visual language ready to launch on social media before opening. The opening itself stays outside the agency's scope.",
+              "The bistro is still in pre-launch preparation — opening is still ahead.",
             ],
           },
         ],
