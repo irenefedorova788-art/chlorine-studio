@@ -197,6 +197,7 @@ export const content: Record<Locale, Dict> = {
         { category: "Бренд-платформа", title: "CHLORINE", year: "2026", slug: "chlorine", hideProjectName: true },
         { category: "Гастрокофейня", title: "СОЙКА НАПЕЛА", year: "~3 года", slug: "soyka-napela", hideProjectName: true },
         { category: "Ребрендинг сети", title: "ЛЕПИМ И ВАРИМ", year: "2026", slug: "lepim-i-varim", hideProjectName: true },
+        { category: "Бренд-стратегия", title: "КОФЕЙНЯ В СПАЛЬНОМ РАЙОНЕ", year: "2026", slug: "kofeynya-spalny-rayon", hideProjectName: true },
         { category: "Ребрендинг (концепт)", title: "РЯДОМ", year: "2026", slug: "ryadom" },
       ],
     },
@@ -421,6 +422,88 @@ export const content: Record<Locale, Dict> = {
         ],
       },
       {
+        slug: "kofeynya-spalny-rayon",
+        category: "Бренд-стратегия",
+        title: "КОФЕЙНЯ В СПАЛЬНОМ РАЙОНЕ",
+        subtitle: "Бренд-стратегия и визуальный язык для кофейни в спальном районе, подготовленные до открытия",
+        year: "2026",
+        role: "Бренд-стратегия, позиционирование на основе исследования, визуальный язык для соцсетей до запуска",
+        sections: [
+          {
+            eyebrow: "Сигнал",
+            heading: "Работа до открытия, не после",
+            body: [
+              "Клиент решил открыть кофейню в спальном районе — решение уже принято, отказаться от идеи нельзя. Задача агентства — та часть работы, что предшествует открытию: не «придумать концепцию» абстрактно, а построить её на данных и подготовить визуальный язык, с которым заведение выйдет в соцсети ещё до запуска. Всё, что происходит после открытия — сама стройка, операционка, дальнейшая судьба заведения — уже не зона агентства.",
+              "Ограничения: густонаселённый район, слабая транспортная развязка, доход аудитории — рабочий и средний класс, бюджет на ремонт ограничен.",
+            ],
+          },
+          {
+            eyebrow: "Инсайт",
+            heading: "Исследование как ядро кейса",
+            body: [
+              "Исследование велось по пяти блокам — аудитория, конкуренция, паттерны поведения, экономика формата, тренды — каждый с источниками. Ниже — только те выводы, которые реально повернули решение.",
+            ],
+          },
+          {
+            eyebrow: "Инсайт 1",
+            heading: "Транспортная изоляция как преимущество",
+            body: [
+              "В спальных районах структурно нет «третьего места» — сети закрывают скорость, супермаркеты — близость, но ни одно из этого не даёт места, где можно остаться. Плохая транспортная развязка усиливает, а не ослабляет этот спрос: жителям сложно ехать в центр за качеством — значит, качественное место рядом получает спрос без альтернативы.",
+              "Отклонено: позиционирование «мы не хуже центра» — в пользу «тебе не нужно ехать в центр».",
+            ],
+          },
+          {
+            eyebrow: "Инсайт 2",
+            heading: "Дешёвый ремонт как честность бренда",
+            body: [
+              "Доход аудитории и архетип Everyman потребовали отказаться от полированного дизайна — он читается как «не для своих». Видимая бережливость — залатанные места, разномастная плитка, переиспользование — доказательство честности бренда, а не следствие нехватки денег.",
+              "Отклонено: дорогие реплики винтажной мебели — в пользу настоящего б/у винтажа, перетянутого своими руками.",
+            ],
+          },
+          {
+            eyebrow: "Инсайт 3",
+            heading: "Здание диктует эстетику",
+            body: [
+              "Район дал богатый исторический материал — трамвайный павильон 1886 года, академия, дендрарий, — но само здание, где будет кофейня, типовое советское (5–9 этажей). Честность архитектуре — часть того же принципа, что и бюджет ремонта.",
+              "Отклонено: дореволюционная/ар-нуво эстетика как основа интерьера — в пользу советской, честной зданию; история осталась как содержательная ботаническая нить, поданная через советский агрономический язык.",
+            ],
+          },
+          {
+            eyebrow: "Инсайт 4",
+            heading: "Магазин-корнер снимает реальный барьер рынка",
+            body: [
+              "Мелкие производители не проходят на полки сетей из-за операционных, а не качественных барьеров — реальная, подтверждённая проблема. Формат «курируемая полка при кофейне» решает её без чужого прецедента.",
+              "Отклонено: чистый ритейл-минимаркет в стиле wellness-стартапа — слишком дорого и чисто для архетипа и аудитории.",
+            ],
+          },
+          {
+            eyebrow: "Концепция",
+            heading: "От инсайтов к позиционированию",
+            body: [
+              "Purpose: жители спального района заслуживают то же внимание, что и центр, без необходимости туда ехать.",
+              "Архетип: Everyman + Caregiver.",
+              "Positioning: «Место рядом с домом, где можно остаться — по цене навыноса, но качеством как в центре».",
+              "Зонирование: гастроном + семейная зона + уголок для дедушек + рабочая зона — одно место для всех поколений района.",
+            ],
+          },
+          {
+            eyebrow: "Визуал",
+            heading: "Библиотека промптов готова",
+            body: [
+              "Стиль переведён в готовую к генерации библиотеку промптов по каждой детали — мебель, плитка, вывеска, керамика, гастроном-холодильник, туалет, фурнитура. Статус: промпты готовы, визуалы ещё не сгенерированы.",
+            ],
+          },
+          {
+            eyebrow: "Итог",
+            heading: "Пока не открылась",
+            body: [
+              "Итог этой стадии — не открытое заведение (это вне периметра агентства), а готовый пакет: бренд-стратегия и визуальный язык, с которым можно выходить в соцсети до открытия.",
+              "Кофейня пока не открылась — проект на стадии подготовки к запуску.",
+            ],
+          },
+        ],
+      },
+      {
         slug: "ryadom",
         category: "Ребрендинг (концепт)",
         title: "РЯДОМ",
@@ -606,6 +689,7 @@ export const content: Record<Locale, Dict> = {
         { category: "Brand platform", title: "CHLORINE", year: "2026", slug: "chlorine", hideProjectName: true },
         { category: "Gastro café", title: "SOYKA NAPELA", year: "~3 years", slug: "soyka-napela", hideProjectName: true },
         { category: "Chain rebrand", title: "LEPIM I VARIM", year: "2026", slug: "lepim-i-varim", hideProjectName: true },
+        { category: "Brand strategy", title: "COFFEE SHOP IN A SLEEPER DISTRICT", year: "2026", slug: "kofeynya-spalny-rayon", hideProjectName: true },
         { category: "Rebrand (concept)", title: "RYADOM", year: "2026", slug: "ryadom" },
       ],
     },
@@ -825,6 +909,88 @@ export const content: Record<Locale, Dict> = {
             heading: "A POS-material system and new brand communications",
             body: [
               "Developed a system of POS materials and new brand communications that could be rolled out to any location in the chain — from Moscow to Dubai — without losing the consistent style.",
+            ],
+          },
+        ],
+      },
+      {
+        slug: "kofeynya-spalny-rayon",
+        category: "Brand strategy",
+        title: "COFFEE SHOP IN A SLEEPER DISTRICT",
+        subtitle: "Brand strategy and visual language for a coffee shop in a sleeper district, built before it opens",
+        year: "2026",
+        role: "Brand strategy, research-based positioning, visual language for social media pre-launch",
+        sections: [
+          {
+            eyebrow: "Signal",
+            heading: "Work before the opening, not after",
+            body: [
+              "The client already decided to open a coffee shop in a sleeper district — the decision is made, there's no walking it back. The agency's job is the part of the work that comes before opening: not inventing a concept in the abstract, but building it on data, and preparing the visual language the venue will launch on social media with, before it even opens. Everything that happens after opening — construction, day-to-day operations, the venue's future — is outside the agency's scope.",
+              "Constraints: a dense district, weak transit access, a working- and middle-class audience, a limited renovation budget.",
+            ],
+          },
+          {
+            eyebrow: "Insight",
+            heading: "Research as the core of the case",
+            body: [
+              "Research ran across five blocks — audience, competition, behavior patterns, format economics, trends — each backed by sources. Below are only the findings that actually changed a decision.",
+            ],
+          },
+          {
+            eyebrow: "Insight 1",
+            heading: "Transit isolation as an advantage",
+            body: [
+              "Sleeper districts structurally lack a \"third place\": chains cover speed, supermarkets cover proximity, but neither gives people somewhere to stay. Poor transit access strengthens this demand rather than weakening it — it's hard for residents to travel downtown for quality, so a good place nearby gets that demand with no real alternative.",
+              "Rejected: positioning as \"we're just as good as downtown\" — in favor of \"you don't need to go downtown.\"",
+            ],
+          },
+          {
+            eyebrow: "Insight 2",
+            heading: "Cheap renovation as brand honesty",
+            body: [
+              "The audience's income and the Everyman archetype ruled out a polished design — it reads as \"not for us.\" Visible frugality — patched spots, mismatched tile, reused materials — is proof of the brand's honesty, not a sign of a tight budget.",
+              "Rejected: expensive vintage-furniture replicas — in favor of real secondhand vintage, reupholstered by hand.",
+            ],
+          },
+          {
+            eyebrow: "Insight 3",
+            heading: "The building dictates the aesthetic",
+            body: [
+              "The district offered rich historical material — an 1886 tram pavilion, an academy, an arboretum — but the actual building the coffee shop will occupy is a standard Soviet block (5–9 stories). Being honest to the architecture is part of the same principle as the renovation budget.",
+              "Rejected: a pre-revolutionary / art nouveau aesthetic as the interior's basis — in favor of one honest to the Soviet building; the history stayed on as a botanical thread, told through Soviet agronomic language.",
+            ],
+          },
+          {
+            eyebrow: "Insight 4",
+            heading: "A corner shop solves a real market barrier",
+            body: [
+              "Small producers don't make it onto chain shelves because of operational barriers, not quality ones — a real, documented problem. A \"curated shelf inside the coffee shop\" format solves it without borrowing someone else's precedent.",
+              "Rejected: a clean retail mini-market in a wellness-startup style — too expensive and too polished for the archetype and the audience.",
+            ],
+          },
+          {
+            eyebrow: "Concept",
+            heading: "From insights to positioning",
+            body: [
+              "Purpose: residents of a sleeper district deserve the same attention as downtown, without having to go there.",
+              "Archetype: Everyman + Caregiver.",
+              "Positioning: \"A place near home worth staying in — priced like takeout, quality like downtown.\"",
+              "Zoning: a small grocery corner + a family zone + a corner for grandparents + a work zone — one place for every generation in the district.",
+            ],
+          },
+          {
+            eyebrow: "Visual",
+            heading: "A prompt library, ready to go",
+            body: [
+              "The style has been translated into a generation-ready prompt library covering every detail — furniture, tile, signage, ceramics, the deli fridge, the bathroom, hardware. Status: prompts are ready, visuals haven't been generated yet.",
+            ],
+          },
+          {
+            eyebrow: "Result",
+            heading: "Not open yet",
+            body: [
+              "The result of this stage isn't an open venue — that's outside the agency's scope — it's a finished package: a brand strategy and visual language ready to launch on social media before opening.",
+              "The coffee shop hasn't opened yet — the project is still in pre-launch preparation.",
             ],
           },
         ],
