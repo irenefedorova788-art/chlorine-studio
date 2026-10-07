@@ -281,7 +281,7 @@ export const content: Record<Locale, Dict> = {
         sections: [
           {
             eyebrow: "Бренд",
-            heading: "От кофейни к гастропроекту",
+            heading: "Бренд",
             body: [
               "«Сойка Напела» — гастрокофейня на Красной Пресне. Проект прошёл через закрытие в 2020 году и смену первоначального формата.",
               "Перед брендом стояла задача перейти от привычного образа кофейни к более цельному гастрономическому проекту.",
@@ -289,7 +289,7 @@ export const content: Record<Locale, Dict> = {
           },
           {
             eyebrow: "Проблема",
-            heading: "Нужно было ожить, сохранив имя",
+            heading: "Проблема",
             body: [
               "Проект постепенно терял актуальность и продолжал существовать в рамках концепции, которая уже не соответствовала его развитию. Основная аудитория была преимущественно возрастной, а бренду нужно было привлечь более молодую аудиторию и заново стать для неё актуальным и привлекательным местом.",
               "Задача: оживить бренд, сохранив его узнаваемое название, но полностью переосмыслив то, каким он может быть сегодня.",
@@ -297,7 +297,7 @@ export const content: Record<Locale, Dict> = {
           },
           {
             eyebrow: "Инсайт",
-            heading: "Одно место — разные моменты дня",
+            heading: "Инсайт",
             body: [
               "В течение дня меняются настроение, планы и люди рядом — вместе с ними меняется и то, зачем человек приходит в «Сойку». Одно место может сопровождать совершенно разные моменты и сближать людей.",
             ],
@@ -309,7 +309,7 @@ export const content: Record<Locale, Dict> = {
           },
           {
             eyebrow: "Концепт",
-            heading: "Момент вместо птицы",
+            heading: "Концепт",
             body: [
               "Во время ребрендинга убрала образ птицы и ушла от буквального языка старой концепции. Сохранила фразу «сейчас самое время» со старой светодиодной вывески и сделала её основой нового бренда.",
               "Акцент сместился с птицы на момент — на то, что происходит здесь и сейчас. Вокруг этой идеи пересобрала характер и коммуникацию «Сойки».",
@@ -317,7 +317,7 @@ export const content: Record<Locale, Dict> = {
           },
           {
             eyebrow: "Визуал",
-            heading: "Фотографии в разработке",
+            heading: "Визуал",
             body: [
               "Фотографии проекта появятся здесь.",
             ],
@@ -334,7 +334,7 @@ export const content: Record<Locale, Dict> = {
         sections: [
           {
             eyebrow: "Бренд",
-            heading: "От одной точки к сети в четырёх странах",
+            heading: "Бренд",
             body: [
               "«Лепим и Варим» — сеть пельменных, выросшая из одной точки в Столешниковом переулке, открытой 15 ноября 2015 года. Самую дорогую улицу Москвы основатель выбрал намеренно: пельменная от неизвестных молодых людей там, где её не ждали, была заявлением сама по себе.",
               "Отличало проект одно — ручная лепка на виду у гостя. К сегодняшнему дню сеть выросла до 67 точек в России, Беларуси, Казахстане и ОАЭ и с 2018 года развивается по франшизе.",
@@ -342,7 +342,7 @@ export const content: Record<Locale, Dict> = {
           },
           {
             eyebrow: "Проблема",
-            heading: "Бренд оставался там же, откуда начинал",
+            heading: "Проблема",
             body: [
               "Сеть росла, а бренд оставался там же, откуда начинал: идеологического сдвига за эти годы так и не произошло.",
               "Вместе с ростом с точек тихо ушла ручная лепка — то единственное, что делало «Лепим и Варим» собой. Название бренда начинается с глагола, с обещания действия, и это действие перестало происходить.",
@@ -353,7 +353,7 @@ export const content: Record<Locale, Dict> = {
           },
           {
             eyebrow: "Инсайт",
-            heading: "Память — ресурс с исчерпаемым сроком",
+            heading: "Инсайт",
             body: [
               "Бренд дожил до нас на памяти. Через годы случайных вывесок, разного оформления и рекламного шума гостя удерживала мысль о тех самых пельменях — тех, что лепили дома. Память о домашнем работала вместо доказательства, которого на точке больше не показывали. Это ресурс с исчерпаемым сроком.",
             ],
@@ -365,7 +365,7 @@ export const content: Record<Locale, Dict> = {
           },
           {
             eyebrow: "Концепт",
-            heading: "Действие вернулось на точки",
+            heading: "Концепт",
             body: [
               "Вернула ручную лепку на точки и собрала её экономику так, чтобы она работала не как витрина, а как часть производства.",
               "Убрала крик: вместо десятка сообщений, борющихся за внимание, на точке осталось одно — то, что происходит за стеклом.",
@@ -375,7 +375,7 @@ export const content: Record<Locale, Dict> = {
           },
           {
             eyebrow: "Визуал",
-            heading: "Фотографии в разработке",
+            heading: "Визуал",
             body: [
               "Фотографии проекта появятся здесь.",
             ],
@@ -733,7 +733,7 @@ export const content: Record<Locale, Dict> = {
         sections: [
           {
             eyebrow: "Brand",
-            heading: "From coffee shop to gastro project",
+            heading: "Brand",
             body: [
               "Soyka Napela is a gastro-café on Krasnaya Presnya. The project went through a closure in 2020 and a change of its original format.",
               "The brand needed to move from the familiar image of a coffee shop to a more cohesive gastronomic project.",
@@ -741,7 +741,7 @@ export const content: Record<Locale, Dict> = {
           },
           {
             eyebrow: "Problem",
-            heading: "Needed to come back to life, without losing its name",
+            heading: "Problem",
             body: [
               "The project was gradually losing relevance, still living inside a concept that no longer matched where it had grown. Its core audience skewed older, and the brand needed to win over a younger audience and become relevant and appealing to them again.",
               "The task: revive the brand while keeping its recognizable name, but fully rethinking what it could be today.",
@@ -749,7 +749,7 @@ export const content: Record<Locale, Dict> = {
           },
           {
             eyebrow: "Insight",
-            heading: "One place, different moments of the day",
+            heading: "Insight",
             body: [
               "Mood, plans, and the people around you change over the course of a day — and so does the reason someone comes to Soyka. One place can hold completely different moments and bring people together.",
             ],
@@ -761,7 +761,7 @@ export const content: Record<Locale, Dict> = {
           },
           {
             eyebrow: "Concept",
-            heading: "The moment, instead of the bird",
+            heading: "Concept",
             body: [
               "During the rebrand, removed the bird imagery and moved away from the old concept's literal language. Kept the phrase \"now is the time\" from the old neon sign and made it the foundation of the new brand.",
               "The focus shifted from the bird to the moment — to what's happening right here, right now. Rebuilt Soyka's character and communication around that idea.",
@@ -769,7 +769,7 @@ export const content: Record<Locale, Dict> = {
           },
           {
             eyebrow: "Visual",
-            heading: "Photography in progress",
+            heading: "Visual",
             body: [
               "Project photography will go here.",
             ],
@@ -786,7 +786,7 @@ export const content: Record<Locale, Dict> = {
         sections: [
           {
             eyebrow: "Brand",
-            heading: "From one spot to a chain across four countries",
+            heading: "Brand",
             body: [
               "Lepim i Varim is a dumpling chain that grew from a single spot on Stoleshnikov Lane, opened on November 15, 2015. The founder chose Moscow's most expensive street on purpose: a dumpling joint from unknown young people, somewhere nobody expected one, was a statement in itself.",
               "One thing set the project apart — hand-shaping dumplings in full view of the guest. Today the chain has grown to 67 locations across Russia, Belarus, Kazakhstan, and the UAE, and has run as a franchise since 2018.",
@@ -794,7 +794,7 @@ export const content: Record<Locale, Dict> = {
           },
           {
             eyebrow: "Problem",
-            heading: "The brand stayed exactly where it started",
+            heading: "Problem",
             body: [
               "The chain grew, but the brand stayed exactly where it started: no ideological shift happened over all these years.",
               "Hand-shaping quietly disappeared from locations along with the growth — the one thing that made Lepim i Varim itself. The brand's name opens with a verb, a promise of action, and that action stopped happening.",
@@ -805,7 +805,7 @@ export const content: Record<Locale, Dict> = {
           },
           {
             eyebrow: "Insight",
-            heading: "Memory is a resource that runs out",
+            heading: "Insight",
             body: [
               "The brand survived on memory. Through years of random signage, mismatched decor, and promotional noise, what kept the guest was the thought of those dumplings — the kind shaped at home. The memory of home did the work the location no longer proved. That's a resource with a shelf life.",
             ],
@@ -817,7 +817,7 @@ export const content: Record<Locale, Dict> = {
           },
           {
             eyebrow: "Concept",
-            heading: "The action came back to the counter",
+            heading: "Concept",
             body: [
               "Brought hand-shaping back to every location and rebuilt its economics so it worked as part of production, not as a display window.",
               "Cut the noise: instead of a dozen messages competing for attention, one thing remained at each location — what happens behind the glass.",
@@ -827,7 +827,7 @@ export const content: Record<Locale, Dict> = {
           },
           {
             eyebrow: "Visual",
-            heading: "Photography in progress",
+            heading: "Visual",
             body: [
               "Project photography will go here.",
             ],
