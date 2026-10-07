@@ -37,6 +37,8 @@ export type CaseSection = {
   eyebrow: string;
   heading: string;
   body: string[];
+  /** Public paths to images for this section (e.g. a visual collage). */
+  images?: string[];
 };
 
 export type CaseStudy = {
@@ -319,8 +321,9 @@ export const content: Record<Locale, Dict> = {
             eyebrow: "Визуал",
             heading: "Визуал",
             body: [
-              "Фотографии проекта появятся здесь.",
+              "Первая фотография для будущего коллажа.",
             ],
+            images: ["/work/soyka-napela/01.jpg"],
           },
         ],
       },
@@ -771,8 +774,9 @@ export const content: Record<Locale, Dict> = {
             eyebrow: "Visual",
             heading: "Visual",
             body: [
-              "Project photography will go here.",
+              "First photo for the upcoming collage.",
             ],
+            images: ["/work/soyka-napela/01.jpg"],
           },
         ],
       },

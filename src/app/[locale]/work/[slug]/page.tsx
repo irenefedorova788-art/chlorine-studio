@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { locales, content, type Locale } from "@/lib/content";
@@ -96,7 +97,7 @@ export default async function CasePage({
                       {section.eyebrow.toUpperCase()}
                     </p>
                   )}
-                  <div className="max-w-2xl">
+                  <div className="max-w-2xl sm:col-start-2">
                     <h2 className="font-display font-semibold text-xl sm:text-2xl mb-4">
                       {section.heading}
                     </h2>
@@ -108,6 +109,21 @@ export default async function CasePage({
                       ))}
                     </div>
                   </div>
+                  {section.images && section.images.length > 0 && (
+                    <div className="sm:col-start-2 grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-3xl">
+                      {section.images.map((src) => (
+                        <div key={src} className="relative aspect-square overflow-hidden">
+                          <Image
+                            src={src}
+                            alt=""
+                            fill
+                            sizes="(max-width: 640px) 50vw, 300px"
+                            className="object-cover"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </Reveal>
             ))}
