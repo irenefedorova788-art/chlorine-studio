@@ -328,80 +328,56 @@ export const content: Record<Locale, Dict> = {
         slug: "lepim-i-varim",
         category: "Ребрендинг сети",
         title: "ЛЕПИМ И ВАРИМ",
-        subtitle: "Аудит маркетинговой стратегии для сети ресторанов",
+        subtitle: "Ребрендинг сети: возвращение фирменного действия и единого визуального стандарта",
         year: "2026",
-        role: "Аудит бренд- и маркетинговой стратегии, CJM, бюджет, позиционирование",
+        role: "Ребрендинг: бренд-стратегия, визуальная айдентика, стандарт для франшизы",
         sections: [
           {
-            eyebrow: "Контекст",
-            heading: "Аудит вместо готовой стратегии",
+            eyebrow: "Бренд",
+            heading: "От одной точки к сети в четырёх странах",
             body: [
-              "Внешнее агентство подготовило маркетинговую стратегию для сети ресторанов — целевая аудитория, каналы продвижения, рекомендации по бюджету, соцсети, визуальный ряд и брендинг на горизонт в 19 месяцев. Я сопоставила готовый документ с историей бренда, интервью основателя и реальным поведением гостей — не как формальность, а как проверку, выдержит ли стратегия столкновение с реальностью.",
+              "«Лепим и Варим» — сеть пельменных, выросшая из одной точки в Столешниковом переулке, открытой 15 ноября 2015 года. Самую дорогую улицу Москвы основатель выбрал намеренно: пельменная от неизвестных молодых людей там, где её не ждали, была заявлением сама по себе.",
+              "Отличало проект одно — ручная лепка на виду у гостя. К сегодняшнему дню сеть выросла до 67 точек в России, Беларуси, Казахстане и ОАЭ и с 2018 года развивается по франшизе.",
             ],
           },
           {
-            eyebrow: "Проблема 1",
-            heading: "Архетип без доказательств",
+            eyebrow: "Проблема",
+            heading: "Бренд оставался там же, откуда начинал",
             body: [
-              "Стратегия подробно описывала архетип бренда — «Искатель»: любопытство, свобода, самостоятельность, подлинность, открытость. Но связь этого архетипа с реальной историей бренда и поведением гостей ничем не подтверждалась — он существовал отдельно от данных.",
+              "Сеть росла, а бренд оставался там же, откуда начинал: идеологического сдвига за эти годы так и не произошло.",
+              "Вместе с ростом с точек тихо ушла ручная лепка — то единственное, что делало «Лепим и Варим» собой. Название бренда начинается с глагола, с обещания действия, и это действие перестало происходить.",
+              "Параллельно точки перестали быть похожими друг на друга. Дело было не в разных помещениях и районах: единого регламента вывески не существовало, чётких правил тоже. Точки открывали люди, далёкие от дизайна, — они не видели ошибок и не считали их ошибками. Сверху на всё это наслоился десяток рекламных сообщений, кричащих с каждой поверхности.",
+              "В сумме получилось ощущение неаккуратного места. Уют почти исчез, и держалось всё на одной мысли — на тех самых пельменях, которые помнят все.",
+              "Задача: вернуть бренду облик и действие. Поставить ручную лепку обратно на точки так, чтобы она окупалась, убрать визуальный шум и собрать единый стандарт, который сможет повторить любой партнёр.",
             ],
           },
           {
-            eyebrow: "Как решала",
-            heading: "От гипотезы к CJM и обратной связи",
+            eyebrow: "Инсайт",
+            heading: "Память — ресурс с исчерпаемым сроком",
             body: [
-              "Составила полную CJM — таблицу со всеми точками контакта и их POS-материалами. Провела опрос сотрудников. Настроила сбор обратной связи через QR-коды на точках с возможностью писать напрямую. На основе этих данных скорректировала архетип — вместо выборочного чтения отзывов.",
+              "Бренд дожил до нас на памяти. Через годы случайных вывесок, разного оформления и рекламного шума гостя удерживала мысль о тех самых пельменях — тех, что лепили дома. Память о домашнем работала вместо доказательства, которого на точке больше не показывали. Это ресурс с исчерпаемым сроком.",
             ],
           },
           {
-            eyebrow: "Проблема 2",
-            heading: "Бюджет не совпадал с реальностью бизнеса",
+            eyebrow: "Belief",
+            heading: "Лепим. Варим. Как дома.",
+            body: [],
+          },
+          {
+            eyebrow: "Концепт",
+            heading: "Действие вернулось на точки",
             body: [
-              "Бюджеты, заложенные в стратегии, не были согласованы с реальностью компании: суммы не соответствовали тому, что бизнес мог себе позволить. Я пересчитала рекомендацию до 3–5% от выручки — нижней границы нормы для fast casual и retail F&B (стандартный ориентир 5–7%), осознанно сниженной под текущую фазу бренда, где главная задача — не рост любой ценой, а перестройка инфраструктуры: CRM, push, брендбук, сайт.",
-              "При выручке 2,23 млрд ₽ это 67–112 млн ₽ в год на маркетинг группы, с чёткой дисциплиной по статьям: 45% на digital, 20% на PR и контент, 20% на активации в рознице, 15% на CRM, аналитику и агентства — каждая статья закрывает конкретный KPI из таблицы целей, без «брендовых» вложений без измеримого результата.",
+              "Вернула ручную лепку на точки и собрала её экономику так, чтобы она работала не как витрина, а как часть производства.",
+              "Убрала крик: вместо десятка сообщений, борющихся за внимание, на точке осталось одно — то, что происходит за стеклом.",
+              "Закрепила то, чего у сети не было никогда: регламент вывески, правила оформления точки, единый стиль. Теперь партнёр открывает по документу, а не по своему вкусу, и ошибку видно до того, как она станет вывеской.",
+              "Название снова описывает то, что происходит внутри, — а домашнее ощущение, на котором бренд держался все эти годы, перестало быть только воспоминанием.",
             ],
           },
           {
-            eyebrow: "Проблема 3",
-            heading: "Скидки против принципов бренда",
+            eyebrow: "Визуал",
+            heading: "Фотографии в разработке",
             body: [
-              "Сама стратегия декларировала уход от акций как принцип бренда — но маркетинговый план при этом строился на постоянных скидках. Это внутреннее противоречие: скидочные механики фактически стали регулярной коммуникацией, и было важно проверить, приводят ли они новых гостей или просто снижают средний чек уже существующих.",
-            ],
-          },
-          {
-            eyebrow: "Решение",
-            heading: "От истории бренда к реальным точкам контакта",
-            body: [
-              "Вместо того чтобы принять готовую стратегию как есть, я предложила пройти путь от начала — с истории бренда, которая в исходном документе не упоминалась вовсе: история бренда → поведение гостей → продукт → коммуникация → реальные точки контакта.",
-              "Если архетип подтверждается этой цепочкой — он становится рабочим инструментом. Если нет — сначала корректируется гипотеза, и только потом вокруг неё выстраивается коммуникация.",
-            ],
-          },
-          {
-            eyebrow: "Новый этап",
-            heading: "Новый запрос: система вместо разрозненных точек",
-            body: [
-              "Клиент вернулся с более широкой задачей — выстроить новую систему бренд-коммуникаций, навести порядок во всех заведениях и подготовить бренд к дальнейшему расширению. К этому моменту сеть выросла до 70+ точек не только в России, но и в Казахстане, Беларуси и нескольких заведениях в Дубае — и все они выглядели по-разному. Нужно было привести их к единому брендбуку и определить вектор развития.",
-            ],
-          },
-          {
-            eyebrow: "Что не работало",
-            heading: "Хаос вместо системы",
-            body: [
-              "Визуальная айдентика на точках не контролировалась — на части заведений вывески стояли ещё с 2015 года. Коммуникация строилась на постоянных акциях без единой системы. Из-за этого выручка проседала во всех заведениях сети, а у бренда не было показателей, которые убедили бы новых франчайзи-партнёров зайти в проект.",
-            ],
-          },
-          {
-            eyebrow: "Решение",
-            heading: "Зафиксировать брендбук и привести точки к одному стилю",
-            body: [
-              "Первым шагом было зафиксировать новый брендбук и провести ребрендинг всех точек под единый стиль — вместо того чтобы точечно латать отдельные вывески и материалы.",
-            ],
-          },
-          {
-            eyebrow: "Что сделала",
-            heading: "Система POS-материалов и новых коммуникаций",
-            body: [
-              "Разработала систему POS-материалов и новые бренд-коммуникации, которые можно было тиражировать на любую точку сети — от Москвы до Дубая — без потери единого стиля.",
+              "Фотографии проекта появятся здесь.",
             ],
           },
         ],
@@ -804,80 +780,56 @@ export const content: Record<Locale, Dict> = {
         slug: "lepim-i-varim",
         category: "Chain rebrand",
         title: "LEPIM I VARIM",
-        subtitle: "A marketing-strategy audit for a restaurant chain",
+        subtitle: "Rebranding the chain: bringing back its signature action and one visual standard",
         year: "2026",
-        role: "Brand and marketing strategy audit, CJM, budget, positioning",
+        role: "Rebrand: brand strategy, visual identity, franchise standard",
         sections: [
           {
-            eyebrow: "Context",
-            heading: "An audit instead of a blank slate",
+            eyebrow: "Brand",
+            heading: "From one spot to a chain across four countries",
             body: [
-              "An outside agency had put together a marketing strategy for a restaurant chain — target audience, promotion channels, budget recommendations, social media, visual identity, and branding over a 19-month horizon. I checked the finished document against the brand's history, an interview with the founder, and how guests actually behaved — not as a formality, but as a stress test for whether the strategy would survive contact with reality.",
+              "Lepim i Varim is a dumpling chain that grew from a single spot on Stoleshnikov Lane, opened on November 15, 2015. The founder chose Moscow's most expensive street on purpose: a dumpling joint from unknown young people, somewhere nobody expected one, was a statement in itself.",
+              "One thing set the project apart — hand-shaping dumplings in full view of the guest. Today the chain has grown to 67 locations across Russia, Belarus, Kazakhstan, and the UAE, and has run as a franchise since 2018.",
             ],
           },
           {
-            eyebrow: "Problem 1",
-            heading: "An archetype with no evidence",
+            eyebrow: "Problem",
+            heading: "The brand stayed exactly where it started",
             body: [
-              'The strategy described the brand archetype in detail — "The Explorer": curiosity, freedom, self-sufficiency, authenticity, openness. But the link between that archetype and the brand\'s actual history and guest behavior wasn\'t backed by anything — it existed apart from the data.',
+              "The chain grew, but the brand stayed exactly where it started: no ideological shift happened over all these years.",
+              "Hand-shaping quietly disappeared from locations along with the growth — the one thing that made Lepim i Varim itself. The brand's name opens with a verb, a promise of action, and that action stopped happening.",
+              "At the same time, locations stopped resembling each other. It wasn't about different spaces or neighborhoods: there was no unified signage standard, no clear rules at all. Locations were opened by people with no design background — they didn't see the mistakes, or didn't count them as mistakes. On top of that, a dozen promotional messages piled up, shouting from every surface.",
+              "Altogether it read as a careless place. The coziness had nearly vanished, and everything rested on one thing — the dumplings everyone still remembered.",
+              "The task: give the brand back its look and its action. Put hand-shaping back on location in a way that pays for itself, clear out the visual noise, and build one standard any partner could follow.",
             ],
           },
           {
-            eyebrow: "How I solved it",
-            heading: "From hypothesis to CJM and real feedback",
+            eyebrow: "Insight",
+            heading: "Memory is a resource that runs out",
             body: [
-              "I built a full customer journey map — a table of every touchpoint and its POS materials. Ran a staff survey. Set up feedback collection through QR codes at each location, letting guests write in directly. Used that data to correct the archetype, instead of reading a handful of reviews at random.",
+              "The brand survived on memory. Through years of random signage, mismatched decor, and promotional noise, what kept the guest was the thought of those dumplings — the kind shaped at home. The memory of home did the work the location no longer proved. That's a resource with a shelf life.",
             ],
           },
           {
-            eyebrow: "Problem 2",
-            heading: "A budget disconnected from the business's reality",
+            eyebrow: "Belief",
+            heading: "We shape. We cook. Like home.",
+            body: [],
+          },
+          {
+            eyebrow: "Concept",
+            heading: "The action came back to the counter",
             body: [
-              "The budgets built into the strategy hadn't been checked against the company's actual reality — the numbers didn't match what the business could afford. I recalculated the recommendation down to 3–5% of revenue — the lower bound of the norm for fast casual and retail F&B (the standard benchmark is 5–7%), deliberately scaled down for the brand's current phase, where the real task isn't growth at any cost but rebuilding infrastructure: CRM, push, brand book, website.",
-              'At 2.23 billion ₽ in revenue, that\'s 67–112 million ₽ a year for group marketing, with clear discipline by line item: 45% to digital, 20% to PR and content, 20% to retail activations, 15% to CRM, analytics, and agencies — every line closes a specific KPI from the goals table, with no "brand" spending that can\'t be measured.',
+              "Brought hand-shaping back to every location and rebuilt its economics so it worked as part of production, not as a display window.",
+              "Cut the noise: instead of a dozen messages competing for attention, one thing remained at each location — what happens behind the glass.",
+              "Locked down what the chain never had: a signage standard, rules for how a location looks, one consistent style. A partner now opens a location by the book, not by taste, and a mistake gets caught before it becomes signage.",
+              "The name describes what happens inside again — and the feeling of home the brand had run on for all these years stopped being just a memory.",
             ],
           },
           {
-            eyebrow: "Problem 3",
-            heading: "Discounts working against the brand's own principles",
+            eyebrow: "Visual",
+            heading: "Photography in progress",
             body: [
-              "The strategy itself declared moving away from promotions as a brand principle — yet the marketing plan was built on constant discounts. That's an internal contradiction: the discount mechanics had effectively become the regular communication, and it mattered to check whether they were bringing in new guests or simply lowering the average check of guests who were already coming.",
-            ],
-          },
-          {
-            eyebrow: "Solution",
-            heading: "From brand history to real touchpoints",
-            body: [
-              "Instead of accepting the finished strategy as-is, I proposed starting over from the beginning — from the brand's history, which the original document never mentioned at all: brand history → guest behavior → product → communication → real touchpoints.",
-              "If the archetype holds up against that chain, it becomes a working tool. If it doesn't, the hypothesis gets corrected first, and only then does the communication get built around it.",
-            ],
-          },
-          {
-            eyebrow: "New phase",
-            heading: "A new request: a system instead of scattered locations",
-            body: [
-              "The client came back with a broader task — build a new brand-communications system, bring order to every location, and get the brand ready to keep expanding. By this point the chain had grown to 70+ locations, not just in Russia but in Kazakhstan, Belarus, and a few spots in Dubai — and all of them looked different. They needed to be brought under one brandbook, with a clear direction going forward.",
-            ],
-          },
-          {
-            eyebrow: "What wasn't working",
-            heading: "Chaos instead of a system",
-            body: [
-              "Visual identity across locations went unchecked — some signage had been up since 2015. Communication ran on constant discounts with no unified system behind it. Revenue was sagging across every location in the chain, and the brand had no metrics that could convince new franchise partners to come on board.",
-            ],
-          },
-          {
-            eyebrow: "Solution",
-            heading: "Lock down a brandbook and bring every location to one style",
-            body: [
-              "The first step was to lock down a new brandbook and rebrand every location under one consistent style — instead of patching individual signs and materials one at a time.",
-            ],
-          },
-          {
-            eyebrow: "What I built",
-            heading: "A POS-material system and new brand communications",
-            body: [
-              "Developed a system of POS materials and new brand communications that could be rolled out to any location in the chain — from Moscow to Dubai — without losing the consistent style.",
+              "Project photography will go here.",
             ],
           },
         ],
