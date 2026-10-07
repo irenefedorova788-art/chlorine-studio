@@ -277,7 +277,7 @@ export const content: Record<Locale, Dict> = {
         slug: "soyka-napela",
         category: "Гастрокофейня",
         title: "СОЙКА НАПЕЛА",
-        subtitle: "Переход от привычного образа кофейни к цельному гастрономическому проекту",
+        subtitle: "Кейс",
         year: "2026",
         role: "Ребрендинг: бренд-стратегия, визуальная айдентика, коммуникация",
         sections: [
@@ -331,7 +331,7 @@ export const content: Record<Locale, Dict> = {
         slug: "lepim-i-varim",
         category: "Ребрендинг сети",
         title: "ЛЕПИМ И ВАРИМ",
-        subtitle: "Ребрендинг сети: возвращение фирменного действия и единого визуального стандарта",
+        subtitle: "Кейс",
         year: "2026",
         role: "Ребрендинг: бренд-стратегия, визуальная айдентика, стандарт для франшизы",
         sections: [
@@ -730,7 +730,7 @@ export const content: Record<Locale, Dict> = {
         slug: "soyka-napela",
         category: "Gastro café",
         title: "SOYKA NAPELA",
-        subtitle: "Moving from the familiar coffee-shop image to a cohesive gastro project",
+        subtitle: "Case",
         year: "2026",
         role: "Rebrand: brand strategy, visual identity, communication",
         sections: [
@@ -784,7 +784,7 @@ export const content: Record<Locale, Dict> = {
         slug: "lepim-i-varim",
         category: "Chain rebrand",
         title: "LEPIM I VARIM",
-        subtitle: "Rebranding the chain: bringing back its signature action and one visual standard",
+        subtitle: "Case",
         year: "2026",
         role: "Rebrand: brand strategy, visual identity, franchise standard",
         sections: [
