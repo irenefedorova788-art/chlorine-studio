@@ -91,9 +91,11 @@ export default async function CasePage({
             {item.sections.map((section, i) => (
               <Reveal key={section.heading} delay={i * 60}>
                 <div className="grid sm:grid-cols-[10rem_1fr] gap-x-10 gap-y-3 py-10 sm:py-12">
-                  <p className="font-mono text-[11px] tracking-[0.18em] text-red">
-                    {section.eyebrow.toUpperCase()}
-                  </p>
+                  {section.eyebrow.toLowerCase() !== section.heading.toLowerCase() && (
+                    <p className="font-mono text-[11px] tracking-[0.18em] text-red">
+                      {section.eyebrow.toUpperCase()}
+                    </p>
+                  )}
                   <div className="max-w-2xl">
                     <h2 className="font-display font-semibold text-xl sm:text-2xl mb-4">
                       {section.heading}
