@@ -89,44 +89,53 @@ export default async function CasePage({
 
         <section className="px-5 sm:px-8 py-10 sm:py-16">
           <div className="mx-auto max-w-7xl divide-y divide-line border-t border-line">
-            {item.sections.map((section, i) => (
-              <Reveal key={section.heading} delay={i * 60}>
-                <div className="grid sm:grid-cols-[10rem_1fr] gap-x-10 gap-y-3 py-10 sm:py-12">
-                  {section.eyebrow.toLowerCase() !== section.heading.toLowerCase() && (
-                    <p className="font-mono text-[11px] tracking-[0.18em] text-red">
-                      {section.eyebrow.toUpperCase()}
-                    </p>
-                  )}
-                  <div className="max-w-2xl sm:col-start-2">
-                    <h2 className="font-display font-semibold text-xl sm:text-2xl mb-4">
-                      {section.heading}
-                    </h2>
-                    <div className="space-y-3">
-                      {section.body.map((p) => (
-                        <p key={p} className="text-sm sm:text-base text-red leading-relaxed">
-                          {p}
-                        </p>
-                      ))}
+            {item.sections.map((section, i) => {
+              const merged = section.eyebrow.toLowerCase() === section.heading.toLowerCase();
+              return (
+                <Reveal key={section.heading} delay={i * 60}>
+                  <div className="grid sm:grid-cols-[10rem_1fr] gap-x-10 gap-y-3 py-10 sm:py-12">
+                    {merged ? (
+                      <h2 className="font-display font-semibold text-xl sm:text-2xl">
+                        {section.heading}
+                      </h2>
+                    ) : (
+                      <p className="font-mono text-[11px] tracking-[0.18em] text-red">
+                        {section.eyebrow.toUpperCase()}
+                      </p>
+                    )}
+                    <div className="max-w-2xl sm:col-start-2">
+                      {!merged && (
+                        <h2 className="font-display font-semibold text-xl sm:text-2xl mb-4">
+                          {section.heading}
+                        </h2>
+                      )}
+                      <div className="space-y-3">
+                        {section.body.map((p) => (
+                          <p key={p} className="text-sm sm:text-base text-red leading-relaxed">
+                            {p}
+                          </p>
+                        ))}
+                      </div>
                     </div>
+                    {section.images && section.images.length > 0 && (
+                      <div className="sm:col-start-2 grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-3xl">
+                        {section.images.map((src) => (
+                          <div key={src} className="relative aspect-square overflow-hidden">
+                            <Image
+                              src={src}
+                              alt=""
+                              fill
+                              sizes="(max-width: 640px) 50vw, 300px"
+                              className="object-cover"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                  {section.images && section.images.length > 0 && (
-                    <div className="sm:col-start-2 grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-3xl">
-                      {section.images.map((src) => (
-                        <div key={src} className="relative aspect-square overflow-hidden">
-                          <Image
-                            src={src}
-                            alt=""
-                            fill
-                            sizes="(max-width: 640px) 50vw, 300px"
-                            className="object-cover"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </Reveal>
-            ))}
+                </Reveal>
+              );
+            })}
           </div>
         </section>
 
