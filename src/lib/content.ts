@@ -198,11 +198,9 @@ export const content: Record<Locale, Dict> = {
       moreLabel: "Все работы",
       projectLabel: "Проект",
       items: [
-        { category: "Бренд-платформа", title: "CHLORINE", year: "2026", slug: "chlorine", hideProjectName: true },
         { category: "Гастрокофейня", title: "СОЙКА НАПЕЛА", year: "2026", slug: "soyka-napela", hideProjectName: true },
         { category: "Ребрендинг сети", title: "ЛЕПИМ И ВАРИМ", year: "2026", slug: "lepim-i-varim", hideProjectName: true },
         { category: "Бренд-стратегия", title: "БИСТРО В СПАЛЬНОМ РАЙОНЕ (КОНЦЕПТ)", year: "2026", slug: "bistro-spalny-rayon" },
-        { category: "Ребрендинг (концепт)", title: "РЯДОМ", year: "2026", slug: "ryadom" },
       ],
     },
     workPage: {
@@ -212,67 +210,6 @@ export const content: Record<Locale, Dict> = {
       back: "← На главную",
     },
     cases: [
-      {
-        slug: "chlorine",
-        category: "Бренд-платформа",
-        title: "CHLORINE",
-        subtitle: "Бренд независимого арт-директора, сделанный по тем же правилам, что и бренды для клиентов",
-        year: "2026",
-        role: "Нейминг, бренд-стратегия, визуальная айдентика, сайт",
-        sections: [
-          {
-            eyebrow: "Контекст",
-            heading: "Точка старта",
-            body: [
-              "У независимого специалиста обычно нет бренда — есть резюме, ссылка на Behance и переписка в Telegram.",
-              "Экспертиза при этом может быть сильной. Но клиент видит её только через раздробленные, ничем не связанные фрагменты.",
-            ],
-          },
-          {
-            eyebrow: "Что не работало",
-            heading: "Портфолио без голоса",
-            body: [
-              "PDF с кейсами, страница в соцсети, отдельный файл под каждый запрос — у каждого куска своя подача, ни один не похож на другой.",
-              "Со стороны это выглядит как набор проектов, а не как позиция одного человека.",
-            ],
-          },
-          {
-            eyebrow: "Стратегия",
-            heading: "Имя как метод",
-            body: [
-              "CHLORINE — буквальный перевод слова «хлор». Название родилось из наблюдения на одном из проектов, где я работала: рекламного шума было так много, что это напоминало Москву 2000-х — вывески и баннеры кричали из каждого угла, без всякой системы, и это создавало ощущение мусора и анархии, а не бренда.",
-              "Пришло время убраться. С чистотой прочнее всего ассоциируется хлор — то, чем вымывают всё лишнее. В этом и смысл имени: возможность начать заново, с чистого листа — рестарт.",
-              "На этом чистом листе уже выстраивается настоящий характер — понятный целевой аудитории и рассчитанный на будущее. Когда у компании наступают трудные времена, именно такой ясный бренд её поддерживает, потому что модель полностью прозрачна.",
-            ],
-          },
-          {
-            eyebrow: "Визуальная система",
-            heading: "Один акцент, никакого шума",
-            body: [
-              "Белый фон — это чистый лист и момент, когда мы даём себе шанс начать всё с начала. Пространство, в котором ещё ничего не определено и в котором может появиться что угодно. Белое — не обязательно начало. Иногда это то, что стёрлось, было выстирано хлором и оставило после себя чистый лист.",
-              "Но кто знает, что было на нём до этого?",
-              "Синие пятна на этом фоне — след от чего-то пережитого и одновременно сгустки мыслей, которые растеклись по поверхности и остались на ней.",
-              "Красный в типографике — живой, резкий, почти наглый. Он говорит громко и прямо, иногда даже грубо. Это внешний голос, то, что мы позволяем себе показать миру.",
-              "Но за этой красноречивостью остаётся глубина — голубизна всего того, что не было сказано. Всё то сложное, тихое и немного меланхоличное пространство, из которого эти слова появились.",
-              "Эта интерпретация нужна для другого — чтобы за визуальным решением стояло внутреннее ощущение проекта. Когда нужно принимать десятки решений дальше: какой будет типографика, фотография, композиция, материал, движение, какой цвет убрать, а какой оставить, — у нас появляется точка отсчёта.",
-              "Можно просто сказать: «мне нравится голубой с красным». А можно понимать, какое именно напряжение в этом сочетании тебе нравится, и пытаться сохранить его в остальных элементах.",
-              "Поэтому это не попытка доказать, что у каждого пятна есть сакральный смысл. Это способ зафиксировать интуицию и превратить её в систему.",
-              "И если человек вообще ничего этого не считывает — это тоже нормально. Дизайн не обязан передавать весь замысел буквально. Если он работает только после объяснительной записки, значит, проблема уже в самом дизайне. Концепция должна помогать ему быть цельным, а не заменять собой его восприятие.",
-              "Логотип набран без засечек и вручную растеризован в собственном шрифте, чтобы не зависеть от того, установлен ли он у получателя письма или презентации.",
-              "Вместо студийных мокапов — фотографии на грани абстракции: синий и фиолетовый свет, без предметной привязки.",
-              "Одна и та же система работает на сайте, в письме и в презентации для клиента — это не набор дизайнов, а единый язык.",
-            ],
-          },
-          {
-            eyebrow: "Результат",
-            heading: "Инструмент, а не визитка",
-            body: [
-              "Сайт, шаблон презентации и шаблон письма собраны по одной системе и уже используются в переписке с клиентами.",
-              "Вместо форматирования каждого письма заново — берётся готовый шаблон и заполняется текстом под конкретный проект.",
-            ],
-          },
-        ],
-      },
       {
         slug: "soyka-napela",
         category: "Гастрокофейня",
@@ -468,58 +405,6 @@ export const content: Record<Locale, Dict> = {
           },
         ],
       },
-      {
-        slug: "ryadom",
-        category: "Ребрендинг (концепт)",
-        title: "РЯДОМ",
-        subtitle: "Несогласованный концепт: как могла бы звучать аптечная сеть, если бы за характер отвечал бренд, а не вывеска",
-        year: "2026",
-        role: "Позиционирование, нейминг, визуальная айдентика — концепт",
-        sections: [
-          {
-            eyebrow: "Контекст",
-            heading: "Категория без лица",
-            body: [
-              "Аптечные сети физически повсюду — в шаговой доступности почти от любой точки города.",
-              "При этом вспомнить, в какую именно аптеку заходил вчера, обычно не может никто.",
-            ],
-          },
-          {
-            eyebrow: "Что не работало",
-            heading: "Одна и та же вывеска",
-            body: [
-              "Белый свет, зелёный крест, ценник крупным шрифтом — во всех сетях одновременно.",
-              "Категория решила, что «медицинский» значит «безликий», а доверие спутала со стерильностью.",
-              "Ценовая борьба стала единственным языком отличия — и убила смысл выбирать по бренду, а не по акции.",
-            ],
-          },
-          {
-            eyebrow: "Стратегия",
-            heading: "«Рядом» в двух смыслах",
-            body: [
-              "Название держится на двойном значении слова: рядом географически — и рядом по ощущению, когда действительно нужна помощь.",
-              "Позиционирование смещается с «мы дешевле» на «мы рядом, когда это важно» — конкурировать не ценой, а присутствием.",
-            ],
-          },
-          {
-            eyebrow: "Визуальная система",
-            heading: "Тепло вместо стерильности",
-            body: [
-              "Клинический зелёно-голубой уходит — вместо него тёплый оттенок чернил и один спокойный акцентный цвет, использованный точечно, а не по всей вывеске.",
-              "Вместо стоковых фото витрин с товаром — фотографии людей и района вокруг аптеки: она часть улицы, а не отдельно стоящий бокс.",
-              "Типографика — спокойная, без медицинских клише вроде крестов и капсул в логотипе.",
-            ],
-          },
-          {
-            eyebrow: "Результат",
-            heading: "Демонстрация подхода",
-            body: [
-              "Это учебный кейс без реального клиента — способ показать, как выглядит работа с категорией, где все выглядят одинаково.",
-              "Если у вас похожая задача — с сетью аптек или другим бизнесом, застрявшим в шаблонах категории — можно обсудить это уже как настоящий проект.",
-            ],
-          },
-        ],
-      },
     ],
     caseView: {
       back: "← Все работы",
@@ -651,11 +536,9 @@ export const content: Record<Locale, Dict> = {
       moreLabel: "All work",
       projectLabel: "Project",
       items: [
-        { category: "Brand platform", title: "CHLORINE", year: "2026", slug: "chlorine", hideProjectName: true },
         { category: "Gastro café", title: "SOYKA NAPELA", year: "2026", slug: "soyka-napela", hideProjectName: true },
         { category: "Chain rebrand", title: "LEPIM I VARIM", year: "2026", slug: "lepim-i-varim", hideProjectName: true },
         { category: "Brand strategy", title: "BISTRO IN A SLEEPER DISTRICT (CONCEPT)", year: "2026", slug: "bistro-spalny-rayon" },
-        { category: "Rebrand (concept)", title: "RYADOM", year: "2026", slug: "ryadom" },
       ],
     },
     workPage: {
@@ -665,67 +548,6 @@ export const content: Record<Locale, Dict> = {
       back: "← Back home",
     },
     cases: [
-      {
-        slug: "chlorine",
-        category: "Brand platform",
-        title: "CHLORINE",
-        subtitle: "An independent art director's own brand, built by the same rules used for client work",
-        year: "2026",
-        role: "Naming, brand strategy, visual identity, website",
-        sections: [
-          {
-            eyebrow: "Context",
-            heading: "Starting point",
-            body: [
-              "An independent specialist usually doesn't have a brand — just a résumé, a Behance link, and a Telegram thread.",
-              "The expertise can be real. But a client only sees it through disconnected, differently-formatted fragments.",
-            ],
-          },
-          {
-            eyebrow: "What wasn't working",
-            heading: "A portfolio without a voice",
-            body: [
-              "A PDF of case studies, a social profile, a separate file for every request — each piece pitched differently, none of them looking related.",
-              "From the outside it reads as a pile of projects, not a single point of view.",
-            ],
-          },
-          {
-            eyebrow: "Strategy",
-            heading: "The name as a method",
-            body: [
-              "CHLORINE is a literal translation of the Russian word for chlorine. The name came from something I noticed at one of the companies I worked at: so much advertising noise that it felt like Moscow in the 2000s — signs and banners shouting from every corner, with no system to any of it. It read as clutter and anarchy, not a brand.",
-              "It was time to clean up. Nothing reads as \"clean\" quite like chlorine — the thing you use to wash everything else away. That's the meaning behind the name: a chance to start over, with a blank page — a restart.",
-              "Real character gets built on that blank page — legible to the target audience and built to last. When a company hits hard times, a brand like that is what holds it up, because the model behind it is completely clear.",
-            ],
-          },
-          {
-            eyebrow: "Visual system",
-            heading: "One accent, no noise",
-            body: [
-              "The white background is a blank page — the moment we let ourselves start over. A space where nothing is decided yet, where anything can still appear. White isn't necessarily a beginning. Sometimes it's what got erased — washed out by chlorine, leaving a clean page behind.",
-              "But who knows what was on it before?",
-              "The blue marks on that background are traces of something lived through, and at the same time clusters of thought that spread across the surface and stayed there.",
-              "Red in the typography is alive, sharp, almost brazen. It speaks loudly and directly, sometimes even bluntly. It's the outward voice — what we let ourselves show the world.",
-              "But behind that eloquence there's depth — the blue of everything left unsaid. All the complicated, quiet, slightly melancholic space these words came from.",
-              "This reading exists for a different reason — so a felt sense of the project sits behind the visual decision. When dozens of decisions follow — what the typography looks like, the photography, the composition, the material, the motion, which color to drop and which to keep — it gives us a point of reference.",
-              "You can just say: \"I like blue with red.\" Or you can understand exactly what tension in that combination you like, and try to hold onto it across every other element.",
-              "So this isn't an attempt to prove that every mark carries some sacred meaning. It's a way of pinning down intuition and turning it into a system.",
-              "And if someone reads none of this into it — that's fine too. Design doesn't have to spell out the whole idea literally. If it only works with an explanatory note attached, the problem is already in the design. The concept should help it hold together, not stand in for how it's perceived.",
-              "The logotype is set in a sans face and rasterized by hand into its own font file, so it never depends on whether the recipient has that font installed.",
-              "Instead of studio mockups, photography that sits right at the edge of abstraction: blue and purple light, with no literal subject.",
-              "The same system runs across the site, the email template, and the client deck — not a set of designs, but one language.",
-            ],
-          },
-          {
-            eyebrow: "Result",
-            heading: "A tool, not a business card",
-            body: [
-              "The website, deck template, and email template are built on one system and already used in real client correspondence.",
-              "Instead of formatting every email from scratch, a ready template gets filled in with the specifics of each project.",
-            ],
-          },
-        ],
-      },
       {
         slug: "soyka-napela",
         category: "Gastro café",
@@ -917,58 +739,6 @@ export const content: Record<Locale, Dict> = {
             body: [
               "The result of this stage is a finished package: a brand strategy and visual language ready to launch on social media before opening. The opening itself stays outside the agency's scope.",
               "The bistro is still in pre-launch preparation — opening is still ahead.",
-            ],
-          },
-        ],
-      },
-      {
-        slug: "ryadom",
-        category: "Rebrand (concept)",
-        title: "RYADOM",
-        subtitle: "An unsolicited concept: what a pharmacy chain could sound like if the brand carried the character, not the signage",
-        year: "2026",
-        role: "Positioning, naming, visual identity — concept",
-        sections: [
-          {
-            eyebrow: "Context",
-            heading: "A category with no face",
-            body: [
-              "Pharmacy chains are physically everywhere — a short walk from almost any point in the city.",
-              "Almost nobody can recall which specific pharmacy they walked into yesterday.",
-            ],
-          },
-          {
-            eyebrow: "What wasn't working",
-            heading: "The same sign, everywhere",
-            body: [
-              "White light, a green cross, prices in bold — across every chain at once.",
-              "The category decided that \"medical\" means \"faceless,\" and mistakes trust for sterility.",
-              "Price competition became the only language of difference, killing any reason to choose a brand instead of a promotion.",
-            ],
-          },
-          {
-            eyebrow: "Strategy",
-            heading: "\"Nearby\" in two senses",
-            body: [
-              "The name (Russian for \"nearby\" / \"right beside you\") carries a double meaning: close by, geographically — and close by in feeling, when it actually matters.",
-              "Positioning shifts from \"we're cheaper\" to \"we're right there when it counts\" — competing on presence, not price.",
-            ],
-          },
-          {
-            eyebrow: "Visual system",
-            heading: "Warmth instead of sterility",
-            body: [
-              "The clinical green-blue is gone, replaced with a warm ink tone and a single calm accent color, used sparingly instead of covering the whole sign.",
-              "Instead of stock photos of shelves, photography of people and the block the pharmacy sits on — it's part of the street, not a box dropped onto it.",
-              "Typography stays quiet, without the usual medical clichés — no crosses or capsule shapes built into the logo.",
-            ],
-          },
-          {
-            eyebrow: "Result",
-            heading: "A demonstration of the approach",
-            body: [
-              "This is a spec case with no real client — a way to show what it looks like to take on a category where everyone already looks the same.",
-              "A similar brief — a pharmacy chain or any other business stuck in its category's template — is welcome to become a real project.",
             ],
           },
         ],
