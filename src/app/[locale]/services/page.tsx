@@ -8,6 +8,69 @@ import { Footer } from "@/components/Footer";
 import { Grain } from "@/components/Grain";
 import { Reveal } from "@/components/Reveal";
 
+function ServiceDisclosure({
+  detailsLabel,
+  includesLabel,
+  resultLabel,
+  limitationsLabel,
+  includes,
+  result,
+  limitations,
+}: {
+  detailsLabel: string;
+  includesLabel: string;
+  resultLabel: string;
+  limitationsLabel: string;
+  includes: string[];
+  result: string;
+  limitations: string[];
+}) {
+  return (
+    <details className="group mt-5">
+      <summary className="list-none [&::-webkit-details-marker]:hidden cursor-pointer select-none inline-flex items-center gap-2 font-mono text-xs tracking-[0.12em] text-red/80 hover:text-red transition-colors">
+        <span className="inline-flex items-center justify-center w-4 h-4 border border-red/40 text-[10px] leading-none group-open:rotate-45 transition-transform">
+          +
+        </span>
+        {detailsLabel.toUpperCase()}
+      </summary>
+      <div className="mt-6 grid sm:grid-cols-3 gap-6 max-w-3xl">
+        <div>
+          <p className="font-mono text-[10px] tracking-[0.18em] text-red/60 mb-3">
+            {includesLabel.toUpperCase()}
+          </p>
+          <ul className="space-y-2">
+            {includes.map((line) => (
+              <li key={line} className="flex gap-2 text-sm text-red leading-relaxed">
+                <span aria-hidden="true">—</span>
+                {line}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <p className="font-mono text-[10px] tracking-[0.18em] text-red/60 mb-3">
+            {resultLabel.toUpperCase()}
+          </p>
+          <p className="text-sm text-red leading-relaxed">{result}</p>
+        </div>
+        <div>
+          <p className="font-mono text-[10px] tracking-[0.18em] text-red/60 mb-3">
+            {limitationsLabel.toUpperCase()}
+          </p>
+          <ul className="space-y-2">
+            {limitations.map((line) => (
+              <li key={line} className="flex gap-2 text-sm text-red/85 leading-relaxed">
+                <span aria-hidden="true">—</span>
+                {line}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </details>
+  );
+}
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
@@ -76,58 +139,75 @@ export default async function ServicesPage({
           <div className="mx-auto max-w-7xl divide-y divide-line border-t border-line">
             {dict.services.items.map((item, i) => (
               <Reveal key={item.code} delay={i * 60}>
-                <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 py-10 sm:py-14">
-                  <div className="lg:col-span-3 flex lg:flex-col items-baseline lg:items-start justify-between gap-4">
-                    <span className="font-display font-bold text-4xl sm:text-5xl text-red">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
+                <div className="py-10 sm:py-14">
+                  <div className="flex flex-wrap items-start justify-between gap-6 mb-4">
+                    <div className="flex items-baseline gap-4 sm:gap-6">
+                      <span className="font-display font-bold text-3xl sm:text-4xl text-red shrink-0">
+                        {item.code}
+                      </span>
+                      <h2 className="font-display font-semibold text-xl sm:text-2xl text-red">
+                        {item.title}
+                      </h2>
+                    </div>
+                    <div className="text-left sm:text-right">
+                      <div className="font-display font-semibold text-lg sm:text-xl text-red">
+                        {item.price}
+                      </div>
+                      <div className="font-mono text-xs tracking-[0.1em] text-red/70">
+                        {item.duration}
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="lg:col-span-6">
-                    <h2 className="font-display font-semibold text-2xl sm:text-3xl mb-3 text-red">
-                      {item.title}
-                    </h2>
-                    <p className="text-sm sm:text-base text-red leading-relaxed max-w-md">
-                      {item.desc}
-                    </p>
-                  </div>
+                  <p className="text-sm sm:text-base text-red leading-relaxed max-w-2xl">
+                    {item.desc}
+                  </p>
 
-                  <div className="lg:col-span-3 flex flex-row lg:flex-col gap-2 lg:gap-1 justify-between lg:justify-start lg:items-end lg:text-right">
-                    <span className="font-display font-semibold text-xl sm:text-2xl text-red">
-                      {item.price}
-                    </span>
-                    <span className="font-mono text-xs tracking-[0.1em] text-red/70">
-                      {item.duration}
-                    </span>
-                  </div>
+                  <ServiceDisclosure
+                    detailsLabel={dict.services.detailsLabel}
+                    includesLabel={dict.services.includesLabel}
+                    resultLabel={dict.services.resultLabel}
+                    limitationsLabel={dict.services.limitationsLabel}
+                    includes={item.includes}
+                    result={item.result}
+                    limitations={item.limitations}
+                  />
                 </div>
               </Reveal>
             ))}
 
             <Reveal delay={dict.services.items.length * 60}>
-              <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 py-10 sm:py-14 bg-red/5 -mx-5 px-5 sm:-mx-8 sm:px-8">
-                <div className="lg:col-span-3" />
-
-                <div className="lg:col-span-6">
-                  <h2 className="font-display font-semibold text-2xl sm:text-3xl mb-3 text-red">
+              <div className="py-10 sm:py-14 bg-red/5 -mx-5 px-5 sm:-mx-8 sm:px-8">
+                <div className="flex flex-wrap items-start justify-between gap-6 mb-4">
+                  <h2 className="font-display font-semibold text-xl sm:text-2xl text-red">
                     {dict.services.bundle.title}
                   </h2>
-                  <p className="text-sm sm:text-base text-red leading-relaxed max-w-md">
-                    {dict.services.bundle.desc}
-                  </p>
+                  <div className="text-left sm:text-right">
+                    <div className="font-display font-semibold text-lg sm:text-xl text-red">
+                      {dict.services.bundle.price}
+                    </div>
+                    <div className="font-mono text-xs tracking-[0.1em] text-red/70">
+                      {dict.services.bundle.duration}
+                    </div>
+                    <div className="text-xs text-red/70 leading-snug mt-1 sm:max-w-[16rem]">
+                      {dict.services.bundle.savingsNote}
+                    </div>
+                  </div>
                 </div>
 
-                <div className="lg:col-span-3 flex flex-row lg:flex-col gap-2 lg:gap-1 justify-between lg:justify-start lg:items-end lg:text-right">
-                  <span className="font-display font-semibold text-xl sm:text-2xl text-red">
-                    {dict.services.bundle.price}
-                  </span>
-                  <span className="font-mono text-xs tracking-[0.1em] text-red/70">
-                    {dict.services.bundle.duration}
-                  </span>
-                  <span className="text-xs text-red/70 leading-snug lg:max-w-[14rem]">
-                    {dict.services.bundle.discountNote}
-                  </span>
-                </div>
+                <p className="text-sm sm:text-base text-red leading-relaxed max-w-2xl">
+                  {dict.services.bundle.desc}
+                </p>
+
+                <ServiceDisclosure
+                  detailsLabel={dict.services.detailsLabel}
+                  includesLabel={dict.services.includesLabel}
+                  resultLabel={dict.services.resultLabel}
+                  limitationsLabel={dict.services.limitationsLabel}
+                  includes={dict.services.bundle.includes}
+                  result={dict.services.bundle.result}
+                  limitations={dict.services.bundle.limitations}
+                />
               </div>
             </Reveal>
           </div>
@@ -136,34 +216,47 @@ export default async function ServicesPage({
         <section className="px-5 sm:px-8 pb-10 sm:pb-16">
           <div className="mx-auto max-w-7xl border-t border-line pt-10 sm:pt-14">
             <Reveal>
-              <h2 className="font-display font-semibold text-xl sm:text-2xl mb-4 text-red">
+              <h2 className="font-display font-semibold text-xl sm:text-2xl mb-8 text-red">
                 {dict.services.optionsHeading}
               </h2>
-              <p className="text-sm sm:text-base text-red/85 leading-relaxed max-w-2xl mb-8">
-                {dict.services.optionsIntro}
-              </p>
             </Reveal>
 
             <Reveal delay={60}>
               <div className="max-w-3xl divide-y divide-line border-y border-line">
                 {dict.services.options.map((option) => (
-                  <div
-                    key={option.label}
-                    className="flex items-center justify-between gap-6 py-4"
-                  >
-                    <span className="text-sm text-red leading-relaxed">{option.label}</span>
-                    <span className="font-mono text-xs sm:text-sm text-red whitespace-nowrap">
-                      {option.price}
-                    </span>
+                  <div key={option.label} className="py-6">
+                    <div className="flex flex-wrap items-baseline justify-between gap-4 mb-2">
+                      <h3 className="font-display font-semibold text-base sm:text-lg text-red">
+                        {option.label}
+                      </h3>
+                      <span className="font-mono text-xs sm:text-sm text-red whitespace-nowrap">
+                        {option.price}
+                      </span>
+                    </div>
+                    <p className="text-sm text-red/85 leading-relaxed max-w-2xl">
+                      {option.desc}
+                    </p>
                   </div>
                 ))}
               </div>
             </Reveal>
+          </div>
+        </section>
 
-            <Reveal delay={100}>
-              <p className="text-xs sm:text-sm text-red/70 leading-relaxed max-w-2xl mt-8">
-                {dict.services.exclusion}
-              </p>
+        <section className="px-5 sm:px-8 pb-10 sm:pb-16">
+          <div className="mx-auto max-w-7xl border-t border-line pt-10 sm:pt-14">
+            <Reveal>
+              <h2 className="font-display font-semibold text-xl sm:text-2xl mb-6 text-red">
+                {dict.services.termsHeading}
+              </h2>
+              <ul className="max-w-2xl space-y-3">
+                {dict.services.terms.map((line) => (
+                  <li key={line} className="flex gap-3 text-sm text-red/85 leading-relaxed">
+                    <span aria-hidden="true">—</span>
+                    {line}
+                  </li>
+                ))}
+              </ul>
             </Reveal>
           </div>
         </section>

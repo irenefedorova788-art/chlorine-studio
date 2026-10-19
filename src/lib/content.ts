@@ -16,6 +16,9 @@ export type ServiceItem = {
   desc: string;
   price: string;
   duration: string;
+  includes: string[];
+  result: string;
+  limitations: string[];
 };
 
 export type ServiceBundle = {
@@ -23,12 +26,16 @@ export type ServiceBundle = {
   desc: string;
   price: string;
   duration: string;
-  discountNote: string;
+  includes: string[];
+  result: string;
+  limitations: string[];
+  savingsNote: string;
 };
 
 export type ServiceOption = {
   label: string;
   price: string;
+  desc: string;
 };
 
 export type ProcessStep = {
@@ -78,10 +85,14 @@ export type Dict = {
     intro: string[];
     items: ServiceItem[];
     bundle: ServiceBundle;
+    includesLabel: string;
+    resultLabel: string;
+    limitationsLabel: string;
+    detailsLabel: string;
     optionsHeading: string;
-    optionsIntro: string;
     options: ServiceOption[];
-    exclusion: string;
+    termsHeading: string;
+    terms: string[];
   };
   servicesPage: {
     heading: string;
@@ -150,49 +161,178 @@ export const content: Record<Locale, Dict> = {
         {
           code: "01",
           title: "Аудит исследований",
-          desc: "Аудит того, что у вас уже есть: опросы, интервью, предположения о клиенте. Показываю, что подтверждено фактами, а что — только мнение, которое может не совпадать с реальным поведением аудитории.",
-          price: "25 000 ₽",
+          desc: "Разбираем, что компания уже знает о своих клиентах, на каких данных основаны текущие решения и какие гипотезы пока не подтверждены.",
+          price: "20 000 ₽",
           duration: "3–5 рабочих дней",
+          includes: [
+            "Анализ до 10 файлов или материалов, предоставленных клиентом.",
+            "Разбор существующих опросов, интервью, отзывов и гипотез об аудитории.",
+            "Разделение выводов на подтверждённые данными, требующие дополнительной проверки и пока неизвестные.",
+            "Выявление противоречий и пробелов в имеющихся данных.",
+            "Рекомендации по вопросам, которые необходимо исследовать в первую очередь.",
+            "План дальнейшего исследования с учётом бизнес-задачи.",
+            "Итоговый документ с выводами и рекомендациями.",
+            "Одна онлайн-встреча до 45 минут для обсуждения результатов.",
+          ],
+          result: "Понимание того, на какие выводы уже можно опираться, какие решения преждевременны и какие данные нужно получить дополнительно.",
+          limitations: [
+            "До 6 часов работы.",
+            "Используются материалы клиента и доступные данные.",
+            "Новые интервью, опросы, рекрутинг респондентов и полевые исследования не входят в стоимость.",
+            "Аудит не подтверждает достоверность исходных данных автоматически: оцениваются их качество, ограничения и применимость.",
+          ],
         },
         {
           code: "02",
           title: "Позиционирование и аудитория",
-          desc: "Исследование аудитории и конкурентов, разработка позиционирования: кто ваш клиент, чем вы отличаетесь, почему выбирают вас.",
+          desc: "Исследуем конкурентную среду и потребности аудитории, чтобы определить, для кого работает бренд, в чём его значимые отличия и почему клиент должен выбрать именно его.",
           price: "90 000 ₽",
           duration: "10 рабочих дней",
+          includes: [
+            "Анализ одной категории рынка.",
+            "Кабинетное исследование на основе открытых источников.",
+            "Анализ до 5 прямых и косвенных конкурентов.",
+            "Изучение доступных сайтов, социальных сетей, предложений, меню, цен и отзывов конкурентов.",
+            "Определение одного основного сегмента аудитории и до двух дополнительных сегментов-гипотез.",
+            "Анализ потребностей, мотивов, ситуаций потребления и критериев выбора на основании доступных данных.",
+            "Карта конкурентного позиционирования.",
+            "Определение возможностей для дифференциации бренда.",
+            "Разработка формулировки позиционирования и ценностного предложения.",
+            "Определение оснований для выбора бренда и способов подтвердить его обещания.",
+            "Итоговый документ с выводами и рекомендациями.",
+            "Одна презентация результатов продолжительностью до 60 минут.",
+          ],
+          result: "Документ, который помогает определиться с целевой аудиторией, конкурентными отличиями и направлением развития бренда.",
+          limitations: [
+            "До 24 часов работы.",
+            "Один бренд, одна категория рынка и один основной бизнес-сценарий.",
+            "Используются открытые источники и данные, предоставленные клиентом.",
+            "Количественные опросы, глубинные интервью и другие полевые исследования не входят в базовую стоимость.",
+            "Выводы о мотивах аудитории формулируются с учётом ограничений доступных данных, а не выдаются за доказанные факты без подтверждения.",
+          ],
         },
         {
           code: "03",
           title: "Ядро бренда",
-          desc: "Архетип бренда, ценности, личностные черты, тон голоса — с примерами «как говорим» и «как не говорим».",
-          price: "60 000 ₽",
+          desc: "Определяем характер бренда и принципы, которые помогают сохранять его узнаваемость и последовательность в коммуникации и поведении.",
+          price: "50 000 ₽",
           duration: "7 рабочих дней",
+          includes: [
+            "Формулировка предназначения бренда.",
+            "Определение ключевых ценностей и убеждений.",
+            "Описание характера и личностных черт бренда.",
+            "Формулировка принципов поведения бренда.",
+            "Разработка принципов Tone of Voice.",
+            "Примеры коммуникации: как бренд говорит и как не говорит.",
+            "Примеры применения характера бренда в типичных ситуациях общения с клиентами.",
+            "Итоговый документ с правилами применения ядра бренда.",
+            "Одна встреча для обсуждения и согласования результата.",
+          ],
+          result: "Практическая платформа характера бренда, которой могут пользоваться маркетолог, копирайтер, дизайнер и другие подрядчики.",
+          limitations: [
+            "До 16 часов работы.",
+            "Работа ведётся на основе существующей информации о бренде и его позиционирования.",
+            "Архетип используется как вспомогательный инструмент, если он действительно помогает решить задачу.",
+            "Разработка логотипа, визуальной идентичности, нейминга и полного брендбука не входит в стоимость.",
+            "Полноценное руководство по коммуникации для всех каналов и ситуаций оформляется как отдельный объём работ.",
+          ],
         },
         {
           code: "04",
-          title: "Мессенджинг-фреймворк",
-          desc: "Ключевые сообщения бренда, главное сообщение, адаптация под разные сегменты аудитории.",
-          price: "45 000 ₽",
+          title: "Система сообщений бренда",
+          desc: "Разрабатываем систему ключевых сообщений, которая объясняет ценность бренда, помогает донести его отличия и адаптировать коммуникацию под разные сегменты аудитории.",
+          price: "40 000 ₽",
           duration: "5 рабочих дней",
+          includes: [
+            "Формулировка главного сообщения бренда.",
+            "Разработка до 3 ключевых сообщений.",
+            "Определение аргументов в пользу выбора бренда.",
+            "Формулировка доказательств ключевых обещаний на основе доступных фактов.",
+            "Адаптация сообщений для двух сегментов аудитории.",
+            "Примеры формулировок, заголовков и коротких текстовых сообщений.",
+            "Принципы адаптации для сайта и социальных сетей.",
+            "Итоговая таблица сообщений для дальнейшей работы маркетолога или копирайтера.",
+          ],
+          result: "Структурированная система сообщений, которую можно использовать при подготовке контента, рекламных материалов и коммуникации с аудиторией.",
+          limitations: [
+            "До 12 часов работы.",
+            "Работа основывается на согласованном позиционировании бренда.",
+            "Полное написание сайта, контент-плана, рекламных кампаний и большого количества готовых текстов не входит в стоимость.",
+            "Если позиционирование и ядро бренда не разработаны, их необходимо заказать отдельно или предоставить готовые материалы.",
+          ],
         },
       ],
       bundle: {
         title: "Полная бренд-стратегия",
-        desc: "Аудит исследований + Позиционирование + Ядро бренда + Мессенджинг-фреймворк — один связный документ, который можно сразу передавать в работу.",
-        price: "180 000 ₽",
-        duration: "3–4 недели",
-        discountNote: "Дешевле на 40 000 ₽, чем покупка пакетов по отдельности — 220 000 ₽",
+        desc: "Объединяем исследование рынка и аудитории, позиционирование, характер бренда и систему сообщений в единую стратегию, которой можно руководствоваться при развитии бизнеса и работе с подрядчиками.",
+        price: "170 000 ₽",
+        duration: "15–20 рабочих дней",
+        includes: [
+          "Кабинетное исследование аудитории и конкурентной среды в объёме, описанном в услуге «Позиционирование и аудитория».",
+          "Формулировка позиционирования и ценностного предложения.",
+          "Разработка ядра бренда: предназначение, ценности, характер и принципы поведения.",
+          "Принципы Tone of Voice и примеры коммуникации.",
+          "Разработка системы ключевых сообщений.",
+          "Связь позиционирования, характера и коммуникации в единую систему.",
+          "Рекомендации по применению стратегии в маркетинге и коммуникации.",
+          "Итоговый стратегический документ.",
+          "Отдельная презентация ключевых решений для команды или руководства.",
+          "Вводная стратегическая встреча.",
+          "Итоговая презентация продолжительностью до 90 минут.",
+          "Один консолидированный раунд правок по итоговым материалам.",
+        ],
+        result: "Единая бренд-стратегия с обоснованием ключевых решений и рекомендациями по дальнейшей работе.",
+        limitations: [
+          "До 48 часов суммарной работы.",
+          "Один бренд, одна категория рынка и один основной бизнес-сценарий.",
+          "Используются открытые источники и материалы клиента.",
+          "Полевые исследования, количественные опросы, рекрутинг респондентов, визуальная идентичность, логотип, вёрстка и производство рекламных материалов не входят в стоимость.",
+          "Если необходимы дополнительные исследования или сложная архитектура бренда, объём и стоимость согласовываются отдельно.",
+        ],
+        savingsNote: "Дешевле на 30 000 ₽, чем сумма отдельных услуг.",
       },
+      includesLabel: "В стоимость входит",
+      resultLabel: "Результат для клиента",
+      limitationsLabel: "Ограничения",
+      detailsLabel: "Состав работ",
       optionsHeading: "Дополнительные опции",
-      optionsIntro: "Базовая цена каждого пакета рассчитана на одну компанию, один сегмент аудитории, кабинетное исследование и один раунд правок. Если объём реально больше — доплата фиксированная, не договорная:",
       options: [
-        { label: "Дополнительный сегмент аудитории", price: "15 000 ₽" },
-        { label: "Глубинные интервью с респондентами (3–5 интервью)", price: "20 000 ₽" },
-        { label: "Архитектура бренда (для сети/нескольких точек)", price: "50 000 ₽" },
-        { label: "Срочность (минус 50% от стандартного срока)", price: "+30% к цене пакета" },
-        { label: "Дополнительный раунд правок", price: "10 000 ₽" },
+        {
+          label: "Дополнительный сегмент аудитории",
+          price: "15 000 ₽",
+          desc: "Анализ одного дополнительного сегмента в рамках уже согласованного исследования. Не включает новое полевое исследование или расширение категории рынка.",
+        },
+        {
+          label: "Глубинные интервью",
+          price: "35 000 ₽",
+          desc: "Проведение и анализ 3–5 интервью с представителями целевой аудитории, подготовка выводов и сопоставление результатов с текущими гипотезами. Поиск респондентов, вознаграждения участникам и другие внешние расходы оплачиваются отдельно. До начала работы необходимо согласовать доступность респондентов и формат проведения интервью.",
+        },
+        {
+          label: "Архитектура бренда",
+          price: "от 50 000 ₽",
+          desc: "Разработка логики взаимодействия между основным брендом, суббрендами и отдельными форматами бизнеса. Итоговая стоимость зависит от количества брендов, форматов и сложности их взаимосвязей.",
+        },
+        {
+          label: "Срочность",
+          price: "+30% к стоимости услуги",
+          desc: "Возможна по согласованию с учётом текущей загрузки команды — конкретное сокращение срока обсуждается отдельно.",
+        },
+        {
+          label: "Дополнительный раунд правок",
+          price: "10 000 ₽",
+          desc: "Один дополнительный консолидированный список замечаний в рамках ранее согласованного задания. Новые задачи и изменение исходных требований оцениваются отдельно.",
+        },
       ],
-      exclusion: "Не входит ни в один пакет: визуальная идентичность, логотип, вёрстка — передаём партнёру-дизайнеру.",
+      termsHeading: "Условия работы",
+      terms: [
+        "Базовые цены рассчитаны на один бренд, одну категорию рынка и согласованный объём работ.",
+        "Срок выполнения начинается после оплаты и получения необходимых материалов от клиента.",
+        "В стоимость входит только тот объём, который указан в описании услуги.",
+        "Один раунд правок означает один консолидированный список замечаний от клиента.",
+        "Задержки с предоставлением информации и согласованием могут сдвигать сроки.",
+        "Дополнительные исследования, расходы на респондентов, платные базы данных и внешние подрядчики оплачиваются отдельно, если не включены в согласованный объём.",
+        "Визуальная идентичность, логотип, дизайн-система, вёрстка и производство материалов не входят в стратегические услуги. При необходимости эти работы могут быть организованы с привлечением партнёров.",
+      ],
     },
     servicesPage: {
       heading: "Чем именно я",
@@ -497,49 +637,178 @@ export const content: Record<Locale, Dict> = {
         {
           code: "01",
           title: "Research Audit",
-          desc: "An audit of what you already have: surveys, interviews, assumptions about the customer. I show what's backed by facts and what's just an opinion that might not match real audience behavior.",
-          price: "25,000 ₽",
+          desc: "We go through what the company already knows about its customers, what data current decisions are based on, and which assumptions are still unconfirmed.",
+          price: "20,000 ₽",
           duration: "3–5 business days",
+          includes: [
+            "Review of up to 10 files or materials provided by the client.",
+            "Analysis of existing surveys, interviews, reviews, and audience assumptions.",
+            "Sorting findings into confirmed by data, needing further verification, and still unknown.",
+            "Identifying contradictions and gaps in the existing data.",
+            "Recommendations on which questions need researching first.",
+            "A plan for further research aligned with the business task.",
+            "A final document with findings and recommendations.",
+            "One online meeting, up to 45 minutes, to discuss the results.",
+          ],
+          result: "Clarity on which conclusions can already be relied on, which decisions are premature, and what data still needs to be gathered.",
+          limitations: [
+            "Up to 6 hours of work.",
+            "Uses materials provided by the client and available data.",
+            "New interviews, surveys, respondent recruitment, and field research are not included.",
+            "The audit doesn't automatically confirm the accuracy of the source data: it assesses its quality, limitations, and applicability.",
+          ],
         },
         {
           code: "02",
           title: "Positioning & Audience",
-          desc: "Audience and competitor research, positioning development: who your customer is, what sets you apart, why people choose you.",
+          desc: "We research the competitive landscape and audience needs to define who the brand works for, what meaningfully sets it apart, and why a customer should choose it.",
           price: "90,000 ₽",
           duration: "10 business days",
+          includes: [
+            "Analysis of one market category.",
+            "Desk research based on publicly available sources.",
+            "Analysis of up to 5 direct and indirect competitors.",
+            "Review of competitors' available websites, social media, offers, menus, prices, and reviews.",
+            "Definition of one primary audience segment and up to two additional hypothesis segments.",
+            "Analysis of needs, motives, consumption situations, and choice criteria based on available data.",
+            "A competitive positioning map.",
+            "Identifying opportunities for brand differentiation.",
+            "Developing a positioning statement and value proposition.",
+            "Defining reasons to believe and how to back up the brand's promises.",
+            "A final document with findings and recommendations.",
+            "One results presentation, up to 60 minutes.",
+          ],
+          result: "A document that helps settle on the target audience, competitive differences, and direction for the brand's development.",
+          limitations: [
+            "Up to 24 hours of work.",
+            "One brand, one market category, one primary business scenario.",
+            "Uses public sources and materials provided by the client.",
+            "Quantitative surveys, in-depth interviews, and other field research are not included in the base price.",
+            "Conclusions about audience motives are framed within the limits of the available data, not presented as proven facts without confirmation.",
+          ],
         },
         {
           code: "03",
           title: "Brand Core",
-          desc: "Brand archetype, values, personality traits, tone of voice — with examples of \"how we talk\" and \"how we don't.\"",
-          price: "60,000 ₽",
+          desc: "We define the brand's character and the principles that keep it recognizable and consistent across communication and behavior.",
+          price: "50,000 ₽",
           duration: "7 business days",
+          includes: [
+            "Formulating the brand's purpose.",
+            "Defining core values and beliefs.",
+            "Describing the brand's character and personality traits.",
+            "Formulating the brand's behavioral principles.",
+            "Developing Tone of Voice principles.",
+            "Communication examples: how the brand talks and how it doesn't.",
+            "Examples of applying the brand's character in typical customer-facing situations.",
+            "A final document with rules for applying the brand core.",
+            "One meeting to discuss and sign off on the result.",
+          ],
+          result: "A practical brand-character platform that a marketer, copywriter, designer, or other contractor can actually use.",
+          limitations: [
+            "Up to 16 hours of work.",
+            "Based on existing information about the brand and its positioning.",
+            "An archetype is used only as a supporting tool, when it genuinely helps.",
+            "Logo design, visual identity, naming, and a full brand book are not included.",
+            "A full communication guide for every channel and situation is scoped as separate work.",
+          ],
         },
         {
           code: "04",
-          title: "Messaging Framework",
-          desc: "Key brand messages, the core message, adapted for different audience segments.",
-          price: "45,000 ₽",
+          title: "Brand Messaging System",
+          desc: "We build a system of key messages that explains the brand's value, communicates its differences, and adapts across audience segments.",
+          price: "40,000 ₽",
           duration: "5 business days",
+          includes: [
+            "Formulating the brand's core message.",
+            "Developing up to 3 key messages.",
+            "Defining reasons to choose the brand.",
+            "Formulating proof points for key promises, based on available facts.",
+            "Adapting messages for two audience segments.",
+            "Example phrasing, headlines, and short copy.",
+            "Adaptation principles for the website and social media.",
+            "A final messaging table for the marketer or copywriter to work from.",
+          ],
+          result: "A structured messaging system usable for content, marketing materials, and audience communication.",
+          limitations: [
+            "Up to 12 hours of work.",
+            "Based on an already agreed brand positioning.",
+            "Full website copy, a content plan, ad campaigns, and large volumes of finished copy are not included.",
+            "If positioning and brand core haven't been developed yet, they need to be ordered separately or provided as finished materials.",
+          ],
         },
       ],
       bundle: {
         title: "Full Brand Strategy",
-        desc: "Research Audit + Positioning + Brand Core + Messaging Framework — one connected document, ready to hand straight to the team.",
-        price: "180,000 ₽",
-        duration: "3–4 weeks",
-        discountNote: "40,000 ₽ cheaper than buying the packages separately — 220,000 ₽",
+        desc: "We bring market and audience research, positioning, brand character, and the messaging system together into a single strategy to guide the business and its contractors.",
+        price: "170,000 ₽",
+        duration: "15–20 business days",
+        includes: [
+          "Desk research on audience and competitive landscape at the scope described in Positioning & Audience.",
+          "Positioning statement and value proposition.",
+          "Brand core: purpose, values, character, and behavioral principles.",
+          "Tone of Voice principles and communication examples.",
+          "Development of the key messaging system.",
+          "Connecting positioning, character, and communication into one system.",
+          "Recommendations for applying the strategy in marketing and communication.",
+          "A final strategy document.",
+          "A separate presentation of key decisions for the team or leadership.",
+          "An opening strategy kickoff meeting.",
+          "A final presentation, up to 90 minutes.",
+          "One consolidated round of revisions on the final materials.",
+        ],
+        result: "One brand strategy with the reasoning behind key decisions and recommendations for further work.",
+        limitations: [
+          "Up to 48 hours of total work.",
+          "One brand, one market category, one primary business scenario.",
+          "Uses public sources and materials provided by the client.",
+          "Field research, quantitative surveys, respondent recruitment, visual identity, logo, layout, and production of marketing materials are not included.",
+          "Additional research or complex brand architecture, if needed, is scoped and priced separately.",
+        ],
+        savingsNote: "30,000 ₽ cheaper than the sum of the individual services.",
       },
+      includesLabel: "What's included",
+      resultLabel: "Result for the client",
+      limitationsLabel: "Limitations",
+      detailsLabel: "Scope of work",
       optionsHeading: "Add-on options",
-      optionsIntro: "Each package's base price covers one company, one audience segment, desk research, and one round of revisions. If the real scope is bigger, the add-on is a fixed price, not negotiable:",
       options: [
-        { label: "Additional audience segment", price: "15,000 ₽" },
-        { label: "In-depth interviews with respondents (3–5 interviews)", price: "20,000 ₽" },
-        { label: "Brand architecture (for a chain / multiple locations)", price: "50,000 ₽" },
-        { label: "Rush delivery (minus 50% of standard timeline)", price: "+30% to package price" },
-        { label: "Extra round of revisions", price: "10,000 ₽" },
+        {
+          label: "Additional audience segment",
+          price: "15,000 ₽",
+          desc: "Analysis of one additional segment within the already agreed research. Doesn't include new field research or expanding the market category.",
+        },
+        {
+          label: "In-depth interviews",
+          price: "35,000 ₽",
+          desc: "Conducting and analyzing 3–5 interviews with target audience representatives, drawing conclusions, and comparing results against current hypotheses. Respondent sourcing, incentives, and other external costs are billed separately. Respondent availability and interview format need to be agreed before work starts.",
+        },
+        {
+          label: "Brand architecture",
+          price: "from 50,000 ₽",
+          desc: "Defining how the main brand, sub-brands, and individual business formats relate to one another. Final price depends on the number of brands, formats, and the complexity of their relationships.",
+        },
+        {
+          label: "Rush delivery",
+          price: "+30% to the service price",
+          desc: "Available only once team availability is confirmed and a shorter timeline is agreed. The exact reduction in timeline is discussed separately, not guaranteed in advance.",
+        },
+        {
+          label: "Extra round of revisions",
+          price: "10,000 ₽",
+          desc: "One additional consolidated list of comments within a previously agreed brief. New tasks and changes to the original requirements are scoped separately.",
+        },
       ],
-      exclusion: "Not included in any package: visual identity, logo, layout — handed off to a design partner.",
+      termsHeading: "Terms of work",
+      terms: [
+        "Base prices are calculated for one brand, one market category, and an agreed scope of work.",
+        "The timeline starts after payment and after the client provides the necessary materials.",
+        "The price covers only the scope stated in the service description.",
+        "One round of revisions means one consolidated list of comments from the client.",
+        "Delays in providing information or sign-off can push the timeline back.",
+        "Additional research, respondent costs, paid databases, and outside contractors are billed separately unless included in the agreed scope.",
+        "Visual identity, logo, design system, layout, and production of materials are not part of the strategy services. These can be arranged with partners if needed.",
+      ],
     },
     servicesPage: {
       heading: "What I actually",
