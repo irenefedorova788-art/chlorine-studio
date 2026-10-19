@@ -14,8 +14,21 @@ export type ServiceItem = {
   code: string;
   title: string;
   desc: string;
-  long: string;
-  includes: string[];
+  price: string;
+  duration: string;
+};
+
+export type ServiceBundle = {
+  title: string;
+  desc: string;
+  price: string;
+  duration: string;
+  discountNote: string;
+};
+
+export type ServiceOption = {
+  label: string;
+  price: string;
 };
 
 export type ProcessStep = {
@@ -60,7 +73,16 @@ export type Dict = {
     paragraphs: string[];
     cta: string;
   };
-  services: { heading: string; intro: string[]; items: ServiceItem[] };
+  services: {
+    heading: string;
+    intro: string[];
+    items: ServiceItem[];
+    bundle: ServiceBundle;
+    optionsHeading: string;
+    optionsIntro: string;
+    options: ServiceOption[];
+    exclusion: string;
+  };
   servicesPage: {
     heading: string;
     headingMark: string;
@@ -127,41 +149,50 @@ export const content: Record<Locale, Dict> = {
       items: [
         {
           code: "01",
-          title: "Диагностика позиционирования",
-          desc: "Короткий разбор того, что мешает клиентам вас замечать и запоминать.",
-          long: "Быстрый, сфокусированный разбор: как бренд выглядит и звучит сейчас, где он теряется среди похожих и что конкретно мешает продавать. Формат и стоимость обсуждаем отдельно — это вход, рассчитанный на то, чтобы попробовать без большого решения.",
-          includes: [
-            "Разбор позиционирования и сообщения",
-            "Точки, где бренд теряется среди конкурентов",
-            "Конкретные точки роста",
-            "Короткий формат, без крупного бюджета",
-          ],
+          title: "Аудит исследований",
+          desc: "Аудит того, что у вас уже есть: опросы, интервью, предположения о клиенте. Показываю, что подтверждено фактами, а что — только мнение, которое может не совпадать с реальным поведением аудитории.",
+          price: "25 000 ₽",
+          duration: "3–5 рабочих дней",
         },
         {
           code: "02",
-          title: "Спринт на задачу",
-          desc: "Переупаковка сообщения или позиционирование под запуск — точечно и быстро.",
-          long: "Один конкретный результат за ограниченный срок: переупаковать сообщение, поставить позиционирование под запуск новой линейки или коллекции, разобраться с одним слабым местом в бренде — без пересборки всего с нуля.",
-          includes: [
-            "Одна конкретная задача — один результат",
-            "Переупаковка сообщения или позиционирования",
-            "Подготовка под запуск или коллекцию",
-            "Ограниченный, заранее понятный срок",
-          ],
+          title: "Позиционирование и аудитория",
+          desc: "Исследование аудитории и конкурентов, разработка позиционирования: кто ваш клиент, чем вы отличаетесь, почему выбирают вас.",
+          price: "90 000 ₽",
+          duration: "10 рабочих дней",
         },
         {
           code: "03",
-          title: "Комплексная стратегия",
-          desc: "Полная работа с брендом — по запросу, после первого разговора.",
-          long: "Если после диагностики или спринта понятно, что нужна работа над брендом целиком — от позиционирования до визуальной системы, — собираем это в комплексную стратегию. Не отправная точка, а следующий шаг, когда он на самом деле нужен.",
-          includes: [
-            "Позиционирование и платформа бренда",
-            "Визуальная система и её применение",
-            "Tone of voice и коммуникация",
-            "Формат обсуждается индивидуально",
-          ],
+          title: "Ядро бренда",
+          desc: "Архетип бренда, ценности, личностные черты, тон голоса — с примерами «как говорим» и «как не говорим».",
+          price: "60 000 ₽",
+          duration: "7 рабочих дней",
+        },
+        {
+          code: "04",
+          title: "Мессенджинг-фреймворк",
+          desc: "Ключевые сообщения бренда, главное сообщение, адаптация под разные сегменты аудитории.",
+          price: "45 000 ₽",
+          duration: "5 рабочих дней",
         },
       ],
+      bundle: {
+        title: "Полная бренд-стратегия",
+        desc: "Аудит исследований + Позиционирование + Ядро бренда + Мессенджинг-фреймворк — один связный документ, который можно сразу передавать в работу.",
+        price: "180 000 ₽",
+        duration: "3–4 недели",
+        discountNote: "Дешевле на 40 000 ₽, чем покупка пакетов по отдельности — 220 000 ₽",
+      },
+      optionsHeading: "Дополнительные опции",
+      optionsIntro: "Базовая цена каждого пакета рассчитана на одну компанию, один сегмент аудитории, кабинетное исследование и один раунд правок. Если объём реально больше — доплата фиксированная, не договорная:",
+      options: [
+        { label: "Дополнительный сегмент аудитории", price: "15 000 ₽" },
+        { label: "Глубинные интервью с респондентами (3–5 интервью)", price: "20 000 ₽" },
+        { label: "Архитектура бренда (для сети/нескольких точек)", price: "50 000 ₽" },
+        { label: "Срочность (минус 50% от стандартного срока)", price: "+30% к цене пакета" },
+        { label: "Дополнительный раунд правок", price: "10 000 ₽" },
+      ],
+      exclusion: "Не входит ни в один пакет: визуальная идентичность, логотип, вёрстка — передаём партнёру-дизайнеру.",
     },
     servicesPage: {
       heading: "Чем именно я",
@@ -465,41 +496,50 @@ export const content: Record<Locale, Dict> = {
       items: [
         {
           code: "01",
-          title: "Positioning Diagnostic",
-          desc: "A quick read on what's keeping customers from noticing and remembering you.",
-          long: "A fast, focused read on how the brand looks and sounds today, where it's getting lost among similar ones, and what's actually getting in the way of sales. Format and price are discussed separately — this is an entry point built to try without a big commitment.",
-          includes: [
-            "Positioning and messaging review",
-            "Where the brand gets lost among competitors",
-            "Concrete growth points",
-            "Short format, no large budget",
-          ],
+          title: "Research Audit",
+          desc: "An audit of what you already have: surveys, interviews, assumptions about the customer. I show what's backed by facts and what's just an opinion that might not match real audience behavior.",
+          price: "25,000 ₽",
+          duration: "3–5 business days",
         },
         {
           code: "02",
-          title: "Task Sprint",
-          desc: "Repackaging the message or positioning for a launch — targeted and fast.",
-          long: "One concrete result on a fixed timeline: repackage the message, set positioning for a new line or collection launch, fix one weak spot in the brand — without rebuilding everything from scratch.",
-          includes: [
-            "One specific task — one result",
-            "Message or positioning repackaging",
-            "Prep for a launch or collection",
-            "A fixed, known-upfront timeline",
-          ],
+          title: "Positioning & Audience",
+          desc: "Audience and competitor research, positioning development: who your customer is, what sets you apart, why people choose you.",
+          price: "90,000 ₽",
+          duration: "10 business days",
         },
         {
           code: "03",
-          title: "Full Strategy",
-          desc: "Complete brand work — by request, after a first conversation.",
-          long: "If the diagnostic or sprint shows the brand needs work end to end — from positioning to visual system — we bring it together into a full strategy. Not a starting point, but the next step, when it's actually needed.",
-          includes: [
-            "Positioning and brand platform",
-            "Visual system and its application",
-            "Tone of voice and communication",
-            "Format discussed individually",
-          ],
+          title: "Brand Core",
+          desc: "Brand archetype, values, personality traits, tone of voice — with examples of \"how we talk\" and \"how we don't.\"",
+          price: "60,000 ₽",
+          duration: "7 business days",
+        },
+        {
+          code: "04",
+          title: "Messaging Framework",
+          desc: "Key brand messages, the core message, adapted for different audience segments.",
+          price: "45,000 ₽",
+          duration: "5 business days",
         },
       ],
+      bundle: {
+        title: "Full Brand Strategy",
+        desc: "Research Audit + Positioning + Brand Core + Messaging Framework — one connected document, ready to hand straight to the team.",
+        price: "180,000 ₽",
+        duration: "3–4 weeks",
+        discountNote: "40,000 ₽ cheaper than buying the packages separately — 220,000 ₽",
+      },
+      optionsHeading: "Add-on options",
+      optionsIntro: "Each package's base price covers one company, one audience segment, desk research, and one round of revisions. If the real scope is bigger, the add-on is a fixed price, not negotiable:",
+      options: [
+        { label: "Additional audience segment", price: "15,000 ₽" },
+        { label: "In-depth interviews with respondents (3–5 interviews)", price: "20,000 ₽" },
+        { label: "Brand architecture (for a chain / multiple locations)", price: "50,000 ₽" },
+        { label: "Rush delivery (minus 50% of standard timeline)", price: "+30% to package price" },
+        { label: "Extra round of revisions", price: "10,000 ₽" },
+      ],
+      exclusion: "Not included in any package: visual identity, logo, layout — handed off to a design partner.",
     },
     servicesPage: {
       heading: "What I actually",
