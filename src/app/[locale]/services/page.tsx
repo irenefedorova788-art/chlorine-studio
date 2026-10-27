@@ -27,7 +27,7 @@ function ServiceDisclosure({
 }) {
   return (
     <details className="group mt-5">
-      <summary className="list-none [&::-webkit-details-marker]:hidden cursor-pointer select-none inline-flex items-center gap-2 font-mono text-xs tracking-[0.12em] text-red/80 hover:text-red transition-colors">
+      <summary className="list-none [&::-webkit-details-marker]:hidden cursor-pointer select-none inline-flex items-center gap-2 font-mono text-xs tracking-[0.12em] text-ink-dim hover:text-red transition-colors">
         <span className="inline-flex items-center justify-center w-4 h-4 border border-red/40 text-[10px] leading-none group-open:rotate-45 transition-transform">
           +
         </span>
@@ -35,7 +35,7 @@ function ServiceDisclosure({
       </summary>
       <div className="mt-6 grid sm:grid-cols-3 gap-6 max-w-3xl">
         <div>
-          <p className="font-mono text-[10px] tracking-[0.18em] text-red/60 mb-3">
+          <p className="font-mono text-[10px] tracking-[0.18em] text-ink-dim mb-3">
             {includesLabel.toUpperCase()}
           </p>
           <ul className="space-y-2">
@@ -48,18 +48,18 @@ function ServiceDisclosure({
           </ul>
         </div>
         <div>
-          <p className="font-mono text-[10px] tracking-[0.18em] text-red/60 mb-3">
+          <p className="font-mono text-[10px] tracking-[0.18em] text-ink-dim mb-3">
             {resultLabel.toUpperCase()}
           </p>
           <p className="text-sm text-red leading-relaxed">{result}</p>
         </div>
         <div>
-          <p className="font-mono text-[10px] tracking-[0.18em] text-red/60 mb-3">
+          <p className="font-mono text-[10px] tracking-[0.18em] text-ink-dim mb-3">
             {limitationsLabel.toUpperCase()}
           </p>
           <ul className="space-y-2">
             {limitations.map((line) => (
-              <li key={line} className="flex gap-2 text-sm text-red/85 leading-relaxed">
+              <li key={line} className="flex gap-2 text-sm text-ink-dim leading-relaxed">
                 <span aria-hidden="true">—</span>
                 {line}
               </li>
@@ -153,7 +153,7 @@ export default async function ServicesPage({
                       <div className="font-display font-semibold text-lg sm:text-xl text-red">
                         {item.price}
                       </div>
-                      <div className="font-mono text-xs tracking-[0.1em] text-red/70">
+                      <div className="font-mono text-xs tracking-[0.1em] text-ink-dim">
                         {item.duration}
                       </div>
                     </div>
@@ -186,10 +186,10 @@ export default async function ServicesPage({
                     <div className="font-display font-semibold text-lg sm:text-xl text-red">
                       {dict.services.bundle.price}
                     </div>
-                    <div className="font-mono text-xs tracking-[0.1em] text-red/70">
+                    <div className="font-mono text-xs tracking-[0.1em] text-ink-dim">
                       {dict.services.bundle.duration}
                     </div>
-                    <div className="text-xs text-red/70 leading-snug mt-1 sm:max-w-[16rem]">
+                    <div className="text-xs text-ink-dim leading-snug mt-1 sm:max-w-[16rem]">
                       {dict.services.bundle.savingsNote}
                     </div>
                   </div>
@@ -233,7 +233,7 @@ export default async function ServicesPage({
                         {option.price}
                       </span>
                     </div>
-                    <p className="text-sm text-red/85 leading-relaxed max-w-2xl">
+                    <p className="text-sm text-ink-dim leading-relaxed max-w-2xl">
                       {option.desc}
                     </p>
                   </div>
@@ -251,7 +251,7 @@ export default async function ServicesPage({
               </h2>
               <ul className="max-w-2xl space-y-3">
                 {dict.services.terms.map((line) => (
-                  <li key={line} className="flex gap-3 text-sm text-red/85 leading-relaxed">
+                  <li key={line} className="flex gap-3 text-sm text-ink-dim leading-relaxed">
                     <span aria-hidden="true">—</span>
                     {line}
                   </li>
