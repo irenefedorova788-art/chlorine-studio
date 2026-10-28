@@ -4,10 +4,7 @@
   --bg: #08070a;
   /* Brand signal red — all text runs in this color. */
   --ink: #d6402e;
-  /* Secondary ink for de-emphasized text — a darker, solid red rather than
-     an alpha-faded one, so it keeps 4.5:1+ contrast against the light
-     gradient (and stays above 3:1 even over the gradient's deepest blob). */
-  --ink-dim: #9c2c1c;
+  --ink-dim: #9c968d;
   --line: rgba(241, 236, 226, 0.14);
   --red: #d6402e;
 }

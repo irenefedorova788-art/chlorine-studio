@@ -33,7 +33,7 @@ export function WorkGrid({
             key={cat}
             onClick={() => setActive(cat)}
             className={`text-left whitespace-nowrap font-mono text-[11px] tracking-[0.16em] transition-colors ${
-              active === cat ? "text-red" : "text-ink-dim hover:text-red"
+              active === cat ? "text-red" : "text-red/50 hover:text-red"
             }`}
           >
             {cat.toUpperCase()}
@@ -60,7 +60,7 @@ export function WorkGrid({
                   </p>
                   {!item.hideProjectName && (
                     <>
-                      <p className="font-mono text-[10px] tracking-[0.18em] text-ink-dim mb-1">
+                      <p className="font-mono text-[10px] tracking-[0.18em] text-red/60 mb-1">
                         {projectLabel.toUpperCase()}
                       </p>
                       <p className="text-sm sm:text-base leading-snug text-red">
