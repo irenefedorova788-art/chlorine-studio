@@ -14,7 +14,7 @@ export function About({ dict }: { dict: Dict }) {
         <Reveal delay={80}>
           <div className="space-y-6 max-w-xl">
             {dict.about.bio.map((p, i) => (
-              <p key={i} className="text-base sm:text-lg leading-relaxed text-red/85">
+              <p key={i} className="text-lg sm:text-xl font-medium leading-relaxed text-red/85">
                 {p}
               </p>
             ))}

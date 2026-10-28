@@ -26,7 +26,7 @@ export function Services({ dict, locale }: { dict: Dict; locale: Locale }) {
           <Reveal delay={60}>
             <div className="space-y-6 max-w-xl">
               {dict.services.intro.map((p) => (
-                <p key={p} className="text-sm sm:text-base text-red/85 leading-relaxed">
+                <p key={p} className="text-base sm:text-lg font-medium text-red/85 leading-relaxed">
                   {p}
                 </p>
               ))}

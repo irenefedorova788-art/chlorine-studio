@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { MeshGradient } from "@paper-design/shaders-react";
 
-const BRAND_COLORS = ["#eef5fb", "#c3daf0", "#5b93d3", "#a9c9ea", "#eef5fb", "#c3daf0", "#e8a393"];
+const BRAND_COLORS = ["#eef5fb", "#c3daf0", "#5b93d3", "#a9c9ea", "#eef5fb", "#c3daf0", "#e97063"];
 
 /**
  * Fixed, page-wide backdrop rendered once in the root layout — a slow
