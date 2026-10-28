@@ -7,7 +7,7 @@ export function Cta({ dict }: { dict: Dict }) {
     <section id="contact" className="relative px-5 sm:px-8 py-28 sm:py-40">
       <div className="relative z-10 mx-auto max-w-7xl">
         <Reveal>
-          <h2 className="font-body font-medium leading-[1.3] text-sm sm:text-base lg:text-lg max-w-4xl">
+          <h2 className="font-body font-medium leading-[1.3] text-base sm:text-lg lg:text-xl max-w-4xl">
             <span className="text-red">{dict.cta.line1}</span>
             <br />
             <span className="font-accent italic text-red">{dict.cta.line2}</span>
@@ -20,12 +20,12 @@ export function Cta({ dict }: { dict: Dict }) {
               href={CONTACT.telegram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-red bg-red text-bg font-mono text-xs tracking-[0.14em] px-7 py-4 hover:bg-transparent hover:text-red transition-colors"
+              className="inline-flex items-center gap-2 border border-red bg-red text-bg font-mono text-sm tracking-[0.14em] px-7 py-4 hover:bg-transparent hover:text-red transition-colors"
             >
               {dict.cta.button.toUpperCase()}
               <span aria-hidden="true">→</span>
             </a>
-            <span className="font-mono text-xs text-red">
+            <span className="font-mono text-sm text-red">
               {dict.cta.emailLabel}{" "}
               <a href={`mailto:${CONTACT.email}`} className="underline decoration-line hover:opacity-70 transition-opacity">
                 {CONTACT.email}

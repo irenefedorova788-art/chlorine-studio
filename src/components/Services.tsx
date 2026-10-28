@@ -15,7 +15,7 @@ export function Services({ dict, locale }: { dict: Dict; locale: Locale }) {
             </div>
             <Link
               href={`/${locale}/services`}
-              className="font-mono text-xs text-red underline decoration-line hover:opacity-70 transition-opacity"
+              className="font-mono text-sm text-red underline decoration-line hover:opacity-70 transition-opacity"
             >
               {dict.servicesPage.moreLabel}
             </Link>
@@ -45,7 +45,7 @@ export function Services({ dict, locale }: { dict: Dict; locale: Locale }) {
                   <h3 className="font-display font-semibold text-lg sm:text-xl mb-2 text-red">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-red leading-relaxed max-w-md">{item.desc}</p>
+                  <p className="text-base text-red leading-relaxed max-w-md">{item.desc}</p>
                 </div>
               </Reveal>
             ))}

@@ -15,7 +15,7 @@ export function Work({ dict, locale }: { dict: Dict; locale: Locale }) {
                 {dict.work.heading}
               </h2>
             </div>
-            <div className="flex flex-col items-end gap-2 font-mono text-xs">
+            <div className="flex flex-col items-end gap-2 font-mono text-sm">
               <Link
                 href={`/${locale}/work`}
                 className="text-red underline decoration-line hover:opacity-70 transition-opacity"
