@@ -1,31 +1,36 @@
 "use client";
 
-const HOME_GRADIENT_CSS = "linear-gradient(160deg, #eef5fb 0%, #dbe9f6 55%, #c3daf0 100%)";
+import { useEffect, useState } from "react";
+import { MeshGradient } from "@paper-design/shaders-react";
+
+const BRAND_COLORS = ["#eef5fb", "#c3daf0", "#5b93d3", "#a9c9ea", "#eef5fb", "#c3daf0", "#e8a393"];
 
 /**
- * Fixed, page-wide backdrop rendered once in the root layout — the same
- * light gradient on every page.
+ * Fixed, page-wide backdrop rendered once in the root layout — a slow
+ * drifting mesh gradient in brand colors (same light blues as before, plus
+ * a touch of brand red bleeding in), replacing the two static blurred
+ * circles. Freezes to a single frame under prefers-reduced-motion.
  */
 export function PageBackdrop() {
+  const [reducedMotion, setReducedMotion] = useState(
+    () => typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+  );
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const onChange = () => setReducedMotion(mq.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+
   return (
-    <div className="fixed inset-0 z-0 overflow-hidden" aria-hidden="true" style={{ background: HOME_GRADIENT_CSS }}>
-      <div
-        className="absolute w-[65vmax] h-[65vmax] rounded-full opacity-90"
-        style={{
-          right: "5%",
-          top: "18%",
-          background: "radial-gradient(circle, #5b93d3 0%, transparent 72%)",
-          filter: "blur(90px)",
-        }}
-      />
-      <div
-        className="absolute w-[45vmax] h-[45vmax] rounded-full opacity-60"
-        style={{
-          left: "-10%",
-          bottom: "-15%",
-          background: "radial-gradient(circle, #a9c9ea 0%, transparent 72%)",
-          filter: "blur(90px)",
-        }}
+    <div className="fixed inset-0 z-0 overflow-hidden" aria-hidden="true">
+      <MeshGradient
+        colors={BRAND_COLORS}
+        distortion={0.75}
+        swirl={0.25}
+        speed={reducedMotion ? 0 : 0.3}
+        style={{ width: "100%", height: "100%" }}
       />
     </div>
   );

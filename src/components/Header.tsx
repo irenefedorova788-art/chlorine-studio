@@ -36,7 +36,7 @@ export function Header({
 
   return (
     <>
-      <header className="fixed top-0 inset-x-0 z-[70]">
+      <header className="fixed top-0 inset-x-0 z-[70] backdrop-blur-md bg-[#eef5fb]/45">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 h-16 flex items-center justify-between">
           <Link
             href={`/${locale}`}
