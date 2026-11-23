@@ -59,7 +59,13 @@ export type CaseSection = {
   body: string[];
   /** Public paths to images for this section (e.g. a visual collage). */
   images?: string[];
+  /** Caption shown under the section's images. */
+  caption?: string;
+  /** A pull quote rendered large after the body — the case's key insight. */
+  quote?: string;
 };
+
+export type CaseStat = { value: string; label: string };
 
 export type CaseStudy = {
   slug: string;
@@ -71,6 +77,17 @@ export type CaseStudy = {
   sections: CaseSection[];
   /** Skip the category eyebrow on the case page — used when the role field already says the same thing. */
   hideCategoryEyebrow?: boolean;
+  /** Journal format: story headline shown as the page title instead of the subtitle. */
+  headline?: string;
+  /** Journal format: one-line lead under the headline. */
+  lead?: string;
+  /** Journal format: full-width cover image right after the header. */
+  cover?: { src: string; caption?: string };
+  /** Journal format: big numbers shown after the sections. */
+  stats?: CaseStat[];
+  statsHeading?: string;
+  /** Journal format: closing one-liner — what the case proves. */
+  takeaway?: string;
 };
 
 export type Dict = {
@@ -120,6 +137,9 @@ export type Dict = {
   caseView: {
     back: string;
     roleLabel: string;
+    caseLabel: string;
+    nextLabel: string;
+    yearLabel: string;
   };
   about: {
     heading: string;
@@ -369,8 +389,9 @@ export const content: Record<Locale, Dict> = {
       moreLabel: "Все работы",
       projectLabel: "Проект",
       items: [
-        { category: "Гастрокофейня", title: "СОЙКА НАПЕЛА", year: "2026", slug: "soyka-napela", hideProjectName: true },
-        { category: "Ребрендинг сети", title: "ЛЕПИМ И ВАРИМ", year: "2026", slug: "lepim-i-varim", hideProjectName: true },
+        { category: "Гастрокофейня", title: "СЕЙЧАС САМОЕ ВРЕМЯ", year: "2026", slug: "gastrokofeynya" },
+        { category: "Ребрендинг сети", title: "ВЕРНУТЬ РУКИ В КАДР", year: "2026", slug: "set-domashney-kuhni" },
+        { category: "Аудит и стратегия", title: "КОФЕЙНЯ, КОТОРУЮ ЛЮБЯТ ЗА ЕДУ", year: "2026", slug: "set-kofeen" },
         { category: "Бренд-стратегия", title: "БИСТРО В СПАЛЬНОМ РАЙОНЕ (КОНЦЕПТ)", year: "2026", slug: "bistro-spalny-rayon" },
       ],
     },
@@ -382,122 +403,210 @@ export const content: Record<Locale, Dict> = {
     },
     cases: [
       {
-        slug: "soyka-napela",
+        slug: "gastrokofeynya",
         category: "Гастрокофейня",
-        title: "СОЙКА НАПЕЛА",
-        subtitle: "Кейс",
+        title: "ГАСТРОКОФЕЙНЯ",
+        subtitle: "Как кофейня сместила акцент с символа на момент — и гости начали возвращаться",
+        headline: "Сейчас самое время",
+        lead: "Как кофейня сместила акцент с символа на момент — и гости начали возвращаться",
         year: "2026",
-        role: "Ребрендинг: бренд-стратегия, визуальная айдентика, коммуникация",
+        role: "Операционный менеджер | Перезапуск концепции",
+        cover: { src: "/work/gastrokofeynya/01.jpg", caption: "Зал после перезапуска" },
         sections: [
           {
-            eyebrow: "Бренд",
-            heading: "Бренд",
+            eyebrow: "Задача",
+            heading: "С чего всё началось",
             body: [
-              "«Сойка Напела» — гастрокофейня на Красной Пресне. Проект прошёл через закрытие в 2020 году и смену первоначального формата.",
-              "Перед брендом стояла задача перейти от привычного образа кофейни к более цельному гастрономическому проекту.",
+              "Кофейня пережила закрытие в 2020 году и смену формата — и постепенно начала терять актуальность. Концепция осталась в прошлом, а основная аудитория была старше, чем нужно для роста.",
+              "Задача звучала просто и сложно одновременно: оживить бренд, сохранить узнаваемое название и заново придумать, каким это место может быть сегодня.",
             ],
           },
           {
-            eyebrow: "Проблема",
-            heading: "Проблема",
+            eyebrow: "Исследование",
+            heading: "Сначала — к людям",
             body: [
-              "Проект постепенно терял актуальность и продолжал существовать в рамках концепции, которая уже не соответствовала его развитию. Основная аудитория была преимущественно возрастной, а бренду нужно было привлечь более молодую аудиторию и заново стать для неё актуальным и привлекательным местом.",
-              "Задача: оживить бренд, сохранив его узнаваемое название, но полностью переосмыслив то, каким он может быть сегодня.",
+              "Я проанализировала текущую аудиторию, собрала отзывы на картах и провела опросы — не только среди наших гостей, но и среди посетителей культурного центра по соседству.",
             ],
           },
           {
             eyebrow: "Инсайт",
-            heading: "Инсайт",
+            heading: "Главное открытие",
             body: [
-              "В течение дня меняются настроение, планы и люди рядом — вместе с ними меняется и то, зачем человек приходит в «Сойку». Одно место может сопровождать совершенно разные моменты и сближать людей.",
+              "Выяснилось, что 20% наших гостей уже ходят в культурный центр в 20 минутах от нас. Аудитория пересекалась сама — оставалось её соединить.",
+            ],
+            quote: "В течение дня меняются настроение, планы и люди рядом — а вместе с ними и то, зачем человек приходит. Одно место может сопровождать совершенно разные моменты и сближать людей.",
+          },
+          {
+            eyebrow: "Стратегия",
+            heading: "Гипотеза",
+            body: [
+              "Если перестать держаться за символ и сделать героем момент — «здесь и сейчас», — бренд станет ближе новой аудитории и не потеряет старую.",
             ],
           },
           {
-            eyebrow: "Belief",
-            heading: "Сейчас самое время",
-            body: [],
+            eyebrow: "Концепция",
+            heading: "Как идея стала визуалом",
+            body: [
+              "Я убрала буквальный образ из старой концепции, но сохранила фразу со старой светодиодной вывески — её знали и любили. Она и стала основой нового бренда.",
+              "Вокруг неё пересобрали характер, меню и коммуникацию: напитки с отсылками к фильмам и выставкам, работы художников в зале, редкая музыка.",
+            ],
+            images: ["/work/gastrokofeynya/02.jpg", "/work/gastrokofeynya/03.jpg", "/work/gastrokofeynya/04.jpg"],
+            caption: "Напиток с отсылкой к кино, новое меню, подача",
           },
           {
-            eyebrow: "Концепт",
-            heading: "Концепт",
+            eyebrow: "Производство",
+            heading: "От брифа до зала",
             body: [
-              "Во время ребрендинга убрала образ птицы и ушла от буквального языка старой концепции. Сохранила фразу «сейчас самое время» со старой светодиодной вывески и сделала её основой нового бренда.",
-              "Акцент сместился с птицы на момент — на то, что происходит здесь и сейчас. Вокруг этой идеи пересобрала характер и коммуникацию «Сойки».",
+              "Брифы, съёмки, работа с командой и сервисом под новую концепцию.",
+              "И партнёрство с культурным центром: кросс-промо, обмен билетами и купонами, выставка работ художников прямо в кофейне.",
             ],
-          },
-          {
-            eyebrow: "Визуал",
-            heading: "Визуал",
-            body: [
-              "Первая фотография для будущего коллажа.",
-            ],
-            images: ["/work/soyka-napela/01.jpg"],
+            images: ["/work/gastrokofeynya/05.jpg", "/work/gastrokofeynya/06.jpg"],
+            caption: "Обновлённое пространство",
           },
         ],
+        statsHeading: "Что изменилось",
+        stats: [
+          { value: "5% → 21%", label: "доля повторных гостей" },
+          { value: "4,5 → 4,8", label: "рейтинг на картах — органический рост при большом объёме отзывов" },
+          { value: "20%", label: "пересечение аудиторий с культурным центром" },
+        ],
+        takeaway: "Люди начали возвращаться, а бренд стал понятен новой аудитории и сохранил узнаваемость. Этот кейс — про то, как исследование, креативная стратегия и производство складываются в коммерческий результат.",
       },
       {
-        slug: "lepim-i-varim",
+        slug: "set-domashney-kuhni",
         category: "Ребрендинг сети",
-        title: "ЛЕПИМ И ВАРИМ",
-        subtitle: "Кейс",
+        title: "СЕТЬ КАФЕ ДОМАШНЕЙ КУХНИ",
+        subtitle: "Как франшизная сеть навела порядок в бренде и вспомнила, за что её любят",
+        headline: "Вернуть руки в кадр",
+        lead: "Как франшизная сеть навела порядок в бренде и вспомнила, за что её любят",
         year: "2026",
-        role: "Ребрендинг: бренд-стратегия, визуальная айдентика, стандарт для франшизы",
+        role: "Бренд-маркетолог | Ребрендинг сети",
+        cover: { src: "/work/set-domashney-kuhni/01.jpg", caption: "Арт-объект для обновлённой точки" },
         sections: [
           {
-            eyebrow: "Бренд",
-            heading: "Бренд",
+            eyebrow: "Задача",
+            heading: "С чего всё началось",
             body: [
-              "«Лепим и Варим» — сеть пельменных, выросшая из одной точки в Столешниковом переулке, открытой 15 ноября 2015 года. Самую дорогую улицу Москвы основатель выбрал намеренно: пельменная от неизвестных молодых людей там, где её не ждали, была заявлением сама по себе.",
-              "Отличало проект одно — ручная лепка на виду у гостя. К сегодняшнему дню сеть выросла до 67 точек в России, Беларуси, Казахстане и ОАЭ и с 2018 года развивается по франшизе.",
+              "Сеть росла по франшизе, и у каждой точки постепенно появлялся свой бренд: разные материалы, разная подача, разный голос. Внешнее агентство предлагало свою теорию позиционирования.",
+              "Мне нужно было провести ребрендинг, привести айдентику к одному стандарту — и сначала понять, на чём бренд вообще держится.",
             ],
           },
           {
-            eyebrow: "Проблема",
-            heading: "Проблема",
+            eyebrow: "Исследование",
+            heading: "Карта, интервью, аудит",
             body: [
-              "Сеть росла, а бренд оставался там же, откуда начинал: идеологического сдвига за эти годы так и не произошло.",
-              "Вместе с ростом с точек тихо ушла ручная лепка — то единственное, что делало «Лепим и Варим» собой. Название бренда начинается с глагола, с обещания действия, и это действие перестало происходить.",
-              "Параллельно точки перестали быть похожими друг на друга. Дело было не в разных помещениях и районах: единого регламента вывески не существовало, чётких правил тоже. Точки открывали люди, далёкие от дизайна, — они не видели ошибок и не считали их ошибками. Сверху на всё это наслоился десяток рекламных сообщений, кричащих с каждой поверхности.",
-              "В сумме получилось ощущение неаккуратного места. Уют почти исчез, и держалось всё на одной мысли — на тех самых пельменях, которые помнят все.",
-              "Задача: вернуть бренду облик и действие. Поставить ручную лепку обратно на точки так, чтобы она окупалась, убрать визуальный шум и собрать единый стандарт, который сможет повторить любой партнёр.",
+              "Я построила карту пути клиента по точкам сети, исследовала аудиторию и поговорила с сотрудниками: где болит, где ломаются процессы, кто на самом деле наш гость.",
+              "Параллельно провела аудит брендбука — и нашла конфликт позиционирования.",
+            ],
+            images: ["/work/set-domashney-kuhni/02.jpg", "/work/set-domashney-kuhni/03.jpg"],
+            caption: "Рабочие доски: референсы и выводы исследования",
+          },
+          {
+            eyebrow: "Инсайт",
+            heading: "Главное открытие",
+            body: [
+              "Бренд держался на памяти. Годы случайных вывесок, разного оформления и рекламного шума — а гостя всё равно удерживала мысль о домашней еде, сделанной руками.",
+            ],
+            quote: "Память о домашнем работала вместо доказательства, которого на точке больше не показывали. А это ресурс с ограниченным сроком.",
+          },
+          {
+            eyebrow: "Стратегия",
+            heading: "Решение",
+            body: [
+              "Устранить конфликт позиционирования и вернуть в центр коммуникации ручную работу — то, что отличает сеть от остальных.",
+            ],
+          },
+          {
+            eyebrow: "Концепция",
+            heading: "Как идея стала визуалом",
+            body: [
+              "Новый слоган о домашней еде. Тон коммуникации, который работает везде: в меню, на упаковке, в навигации и на LED-экранах. И точечный редизайн помещения по итогам исследования.",
+            ],
+            images: ["/work/set-domashney-kuhni/04.jpg", "/work/set-domashney-kuhni/05.jpg"],
+            caption: "Референсы редизайна и подачи меню",
+          },
+          {
+            eyebrow: "Производство",
+            heading: "Один голос для всех точек",
+            body: [
+              "Арт-дирекция всех материалов, которые выпускала сеть. Единые бренд-стандарты для франчайзи. Тендеры с архитектурными и дизайн-бюро, наполнение нового сайта и приложения.",
+              "И коллаборации — с ювелирным брендом, кинодистрибьютором и гастрофестивалем.",
+            ],
+          },
+        ],
+        statsHeading: "Что изменилось",
+        stats: [
+          { value: "−72%", label: "расходы на SMM благодаря новому подходу к соцсетям" },
+          { value: "−90%", label: "стоимость пакета моушн-роликов за счёт пересмотра производства" },
+        ],
+        takeaway: "Выводы исследований легли в основу новой маркетинговой стратегии сети. Этот кейс — про системность: как держать в голове десятки точек и приводить их к одному голосу.",
+      },
+      {
+        slug: "set-kofeen",
+        category: "Аудит и стратегия",
+        title: "СЕТЬ КОФЕЕН",
+        subtitle: "Как аудит пяти точек показал, что гости выбирают бренд совсем не за то, что написано в брендбуке",
+        headline: "Кофейня, которую любят за еду",
+        lead: "Как аудит пяти точек показал, что гости выбирают бренд совсем не за то, что написано в брендбуке",
+        year: "2026",
+        role: "Бренд-маркетолог | Аудит и стратегия",
+        cover: { src: "/work/set-kofeen/01.jpg", caption: "Референс: кофейня как место, где есть еда" },
+        sections: [
+          {
+            eyebrow: "Задача",
+            heading: "С чего всё началось",
+            body: [
+              "Крупная сеть кофеен хотела понять, как её позиционирование из брендбука работает в реальной жизни. Задача: провести аудит коммуникации пяти точек и подготовить план на 90 дней.",
+            ],
+          },
+          {
+            eyebrow: "Исследование",
+            heading: "Путь гостя изнутри",
+            body: [
+              "Я пришла на точки как обычный гость и прошла весь путь — от входа до кассы. Разобрала 150+ отзывов на картах и сравнила сеть с 9 конкурентами.",
+              "Проверила брендбук, акции, прикассовую зону, карточки на картах и аккаунты в соцсетях. И сделала рыночный анализ: кофейни, готовая еда, доставка.",
             ],
           },
           {
             eyebrow: "Инсайт",
-            heading: "Инсайт",
+            heading: "Главное открытие",
             body: [
-              "Бренд дожил до нас на памяти. Через годы случайных вывесок, разного оформления и рекламного шума гостя удерживала мысль о тех самых пельменях — тех, что лепили дома. Память о домашнем работала вместо доказательства, которого на точке больше не показывали. Это ресурс с исчерпаемым сроком.",
+              "По пути нашлось и много мелких расхождений: несколько слоганов и версий имени, перегруженная прикассовая зона, противоречивые условия акций, аккаунты с разными логотипами.",
             ],
+            quote: "Бренд оформлен как кофейня, а гости выбирают его за еду, выпечку и команду.",
           },
           {
-            eyebrow: "Belief",
-            heading: "Лепим. Варим. Как дома.",
-            body: [],
-          },
-          {
-            eyebrow: "Концепт",
-            heading: "Концепт",
+            eyebrow: "Стратегия",
+            heading: "Решение",
             body: [
-              "Вернула ручную лепку на точки и собрала её экономику так, чтобы она работала не как витрина, а как часть производства.",
-              "Убрала крик: вместо десятка сообщений, борющихся за внимание, на точке осталось одно — то, что происходит за стеклом.",
-              "Закрепила то, чего у сети не было никогда: регламент вывески, правила оформления точки, единый стиль. Теперь партнёр открывает по документу, а не по своему вкусу, и ошибку видно до того, как она станет вывеской.",
-              "Название снова описывает то, что происходит внутри, — а домашнее ощущение, на котором бренд держался все эти годы, перестало быть только воспоминанием.",
+              "Новое позиционирование: кофе и еда рядом в любой момент дня. Своя роль у каждого формата точки.",
             ],
+            images: ["/work/set-kofeen/02.jpg", "/work/set-kofeen/03.jpg", "/work/set-kofeen/04.jpg"],
+            caption: "Референсы переоформления точек и соцсетей",
           },
           {
-            eyebrow: "Визуал",
-            heading: "Визуал",
+            eyebrow: "План",
+            heading: "90 дней в три шага",
             body: [
-              "Фотографии проекта появятся здесь.",
+              "Навести порядок → запустить пилот → масштабировать. Плюс KPI с базой для замера, чтобы результат можно было честно посчитать.",
             ],
           },
         ],
+        statsHeading: "Итог",
+        stats: [
+          { value: "150+", label: "отзывов разобрано" },
+          { value: "9", label: "конкурентов в сравнении" },
+          { value: "90", label: "дней в пошаговом плане" },
+        ],
+        takeaway: "Сеть получила ясное понимание, за что её выбирают, позиционирование, которое это отражает, и пошаговый план. Этот кейс — про исследование: как найти разрыв между тем, что бренд о себе думает, и тем, что видят гости.",
       },
       {
         slug: "bistro-spalny-rayon",
         category: "Бренд-стратегия",
         title: "БИСТРО В СПАЛЬНОМ РАЙОНЕ (КОНЦЕПТ)",
         subtitle: "Бренд-стратегия и визуальный язык для бистро в спальном районе, подготовленные до открытия",
+        headline: "Центр теперь рядом",
+        lead: "Бренд-стратегия и визуальный язык для бистро в спальном районе, подготовленные до открытия",
         year: "2026",
         role: "Бренд-стратегия, позиционирование на основе исследования, визуальный язык для соцсетей до запуска",
         hideCategoryEyebrow: true,
@@ -580,6 +689,9 @@ export const content: Record<Locale, Dict> = {
     caseView: {
       back: "← Все работы",
       roleLabel: "Формат работы",
+      caseLabel: "Кейс",
+      nextLabel: "Следующий кейс",
+      yearLabel: "Год",
     },
     about: {
       heading: "Обо мне",
@@ -845,8 +957,9 @@ export const content: Record<Locale, Dict> = {
       moreLabel: "All work",
       projectLabel: "Project",
       items: [
-        { category: "Gastro café", title: "SOYKA NAPELA", year: "2026", slug: "soyka-napela", hideProjectName: true },
-        { category: "Chain rebrand", title: "LEPIM I VARIM", year: "2026", slug: "lepim-i-varim", hideProjectName: true },
+        { category: "Gastro café", title: "NOW IS THE TIME", year: "2026", slug: "gastrokofeynya" },
+        { category: "Chain rebrand", title: "HANDS BACK IN THE FRAME", year: "2026", slug: "set-domashney-kuhni" },
+        { category: "Audit & strategy", title: "A COFFEE SHOP LOVED FOR ITS FOOD", year: "2026", slug: "set-kofeen" },
         { category: "Brand strategy", title: "BISTRO IN A SLEEPER DISTRICT (CONCEPT)", year: "2026", slug: "bistro-spalny-rayon" },
       ],
     },
@@ -858,122 +971,210 @@ export const content: Record<Locale, Dict> = {
     },
     cases: [
       {
-        slug: "soyka-napela",
+        slug: "gastrokofeynya",
         category: "Gastro café",
-        title: "SOYKA NAPELA",
-        subtitle: "Case",
+        title: "GASTRO CAFÉ",
+        subtitle: "How a café shifted its focus from a symbol to the moment — and guests started coming back",
+        headline: "Now is the time",
+        lead: "How a café shifted its focus from a symbol to the moment — and guests started coming back",
         year: "2026",
-        role: "Rebrand: brand strategy, visual identity, communication",
+        role: "Operations manager | Concept relaunch",
+        cover: { src: "/work/gastrokofeynya/01.jpg", caption: "The space after the relaunch" },
         sections: [
           {
-            eyebrow: "Brand",
-            heading: "Brand",
+            eyebrow: "Challenge",
+            heading: "Where it started",
             body: [
-              "Soyka Napela is a gastro-café on Krasnaya Presnya. The project went through a closure in 2020 and a change of its original format.",
-              "The brand needed to move from the familiar image of a coffee shop to a more cohesive gastronomic project.",
+              "The café had survived a closure in 2020 and a change of format — and was slowly losing relevance. The concept was stuck in the past, and the core audience was older than growth required.",
+              "The task was simple and hard at once: revive the brand, keep its recognizable name, and reinvent what this place could be today.",
             ],
           },
           {
-            eyebrow: "Problem",
-            heading: "Problem",
+            eyebrow: "Research",
+            heading: "People first",
             body: [
-              "The project was gradually losing relevance, still living inside a concept that no longer matched where it had grown. Its core audience skewed older, and the brand needed to win over a younger audience and become relevant and appealing to them again.",
-              "The task: revive the brand while keeping its recognizable name, but fully rethinking what it could be today.",
+              "I analyzed the current audience, collected map reviews, and ran surveys — not only among our guests but also among visitors of the cultural center next door.",
             ],
           },
           {
             eyebrow: "Insight",
-            heading: "Insight",
+            heading: "The key finding",
             body: [
-              "Mood, plans, and the people around you change over the course of a day — and so does the reason someone comes to Soyka. One place can hold completely different moments and bring people together.",
+              "It turned out 20% of our guests already went to the cultural center 20 minutes away. The audiences overlapped on their own — they just needed connecting.",
             ],
+            quote: "Mood, plans, and the people around you change over the day — and so does the reason someone comes in. One place can hold completely different moments and bring people together.",
           },
           {
-            eyebrow: "Belief",
-            heading: "Now is the time",
-            body: [],
+            eyebrow: "Strategy",
+            heading: "Hypothesis",
+            body: [
+              "If we stop holding on to the symbol and make the moment the hero — here and now — the brand gets closer to a new audience without losing the old one.",
+            ],
           },
           {
             eyebrow: "Concept",
-            heading: "Concept",
+            heading: "How the idea became visual",
             body: [
-              "During the rebrand, removed the bird imagery and moved away from the old concept's literal language. Kept the phrase \"now is the time\" from the old neon sign and made it the foundation of the new brand.",
-              "The focus shifted from the bird to the moment — to what's happening right here, right now. Rebuilt Soyka's character and communication around that idea.",
+              "I removed the literal imagery of the old concept but kept the phrase from the old neon sign — people knew and loved it. It became the foundation of the new brand.",
+              "Character, menu, and communication were rebuilt around it: drinks referencing films and exhibitions, artists' work on the walls, rare music.",
             ],
+            images: ["/work/gastrokofeynya/02.jpg", "/work/gastrokofeynya/03.jpg", "/work/gastrokofeynya/04.jpg"],
+            caption: "A film-inspired drink, the new menu, serving",
           },
           {
-            eyebrow: "Visual",
-            heading: "Visual",
+            eyebrow: "Production",
+            heading: "From brief to floor",
             body: [
-              "First photo for the upcoming collage.",
+              "Briefs, shoots, and work with the team and service around the new concept.",
+              "Plus a partnership with the cultural center: cross-promo, swapped tickets and coupons, and an artists' exhibition right in the café.",
             ],
-            images: ["/work/soyka-napela/01.jpg"],
+            images: ["/work/gastrokofeynya/05.jpg", "/work/gastrokofeynya/06.jpg"],
+            caption: "The updated space",
           },
         ],
+        statsHeading: "What changed",
+        stats: [
+          { value: "5% → 21%", label: "share of returning guests" },
+          { value: "4.5 → 4.8", label: "map rating — organic growth on a large volume of reviews" },
+          { value: "20%", label: "audience overlap with the cultural center" },
+        ],
+        takeaway: "People started coming back, and the brand became clear to a new audience while staying recognizable. This case is about how research, creative strategy, and production add up to a commercial result.",
       },
       {
-        slug: "lepim-i-varim",
+        slug: "set-domashney-kuhni",
         category: "Chain rebrand",
-        title: "LEPIM I VARIM",
-        subtitle: "Case",
+        title: "HOME-STYLE CAFÉ CHAIN",
+        subtitle: "How a franchise chain cleaned up its brand and remembered why people love it",
+        headline: "Hands back in the frame",
+        lead: "How a franchise chain cleaned up its brand and remembered why people love it",
         year: "2026",
-        role: "Rebrand: brand strategy, visual identity, franchise standard",
+        role: "Brand marketer | Chain rebrand",
+        cover: { src: "/work/set-domashney-kuhni/01.jpg", caption: "An art object for the updated locations" },
         sections: [
           {
-            eyebrow: "Brand",
-            heading: "Brand",
+            eyebrow: "Challenge",
+            heading: "Where it started",
             body: [
-              "Lepim i Varim is a dumpling chain that grew from a single spot on Stoleshnikov Lane, opened on November 15, 2015. The founder chose Moscow's most expensive street on purpose: a dumpling joint from unknown young people, somewhere nobody expected one, was a statement in itself.",
-              "One thing set the project apart — hand-shaping dumplings in full view of the guest. Today the chain has grown to 67 locations across Russia, Belarus, Kazakhstan, and the UAE, and has run as a franchise since 2018.",
+              "The chain grew through franchising, and each location slowly developed a brand of its own: different materials, different presentation, a different voice. An outside agency was pushing its own positioning theory.",
+              "I had to run the rebrand, bring the identity to one standard — and first understand what the brand actually stands on.",
             ],
           },
           {
-            eyebrow: "Problem",
-            heading: "Problem",
+            eyebrow: "Research",
+            heading: "Journey map, interviews, audit",
             body: [
-              "The chain grew, but the brand stayed exactly where it started: no ideological shift happened over all these years.",
-              "Hand-shaping quietly disappeared from locations along with the growth — the one thing that made Lepim i Varim itself. The brand's name opens with a verb, a promise of action, and that action stopped happening.",
-              "At the same time, locations stopped resembling each other. It wasn't about different spaces or neighborhoods: there was no unified signage standard, no clear rules at all. Locations were opened by people with no design background — they didn't see the mistakes, or didn't count them as mistakes. On top of that, a dozen promotional messages piled up, shouting from every surface.",
-              "Altogether it read as a careless place. The coziness had nearly vanished, and everything rested on one thing — the dumplings everyone still remembered.",
-              "The task: give the brand back its look and its action. Put hand-shaping back on location in a way that pays for itself, clear out the visual noise, and build one standard any partner could follow.",
+              "I mapped the customer journey across locations, researched the audience, and talked to staff: what hurts, where processes break, who our guest really is.",
+              "In parallel I audited the brand book — and found a positioning conflict.",
+            ],
+            images: ["/work/set-domashney-kuhni/02.jpg", "/work/set-domashney-kuhni/03.jpg"],
+            caption: "Working boards: references and research findings",
+          },
+          {
+            eyebrow: "Insight",
+            heading: "The key finding",
+            body: [
+              "The brand ran on memory. Years of random signage, mismatched decor, and promotional noise — and still guests were held by the thought of home-style food made by hand.",
+            ],
+            quote: "The memory of home did the work the locations no longer proved. And that's a resource with a shelf life.",
+          },
+          {
+            eyebrow: "Strategy",
+            heading: "The decision",
+            body: [
+              "Resolve the positioning conflict and put handwork back at the center of communication — the thing that sets the chain apart.",
+            ],
+          },
+          {
+            eyebrow: "Concept",
+            heading: "How the idea became visual",
+            body: [
+              "A new slogan about home-style food. A tone of voice that works everywhere: menu, packaging, wayfinding, LED screens. And a targeted redesign of the space based on the research.",
+            ],
+            images: ["/work/set-domashney-kuhni/04.jpg", "/work/set-domashney-kuhni/05.jpg"],
+            caption: "Redesign and menu references",
+          },
+          {
+            eyebrow: "Production",
+            heading: "One voice for every location",
+            body: [
+              "Art direction of everything the chain put out. Unified brand standards for franchisees. Tenders with architecture and design studios, content for the new website and app.",
+              "And collaborations — with a jewelry brand, a film distributor, and a food festival.",
+            ],
+          },
+        ],
+        statsHeading: "What changed",
+        stats: [
+          { value: "−72%", label: "SMM spend, thanks to a new approach to social media" },
+          { value: "−90%", label: "cost of a motion video package, by rethinking production" },
+        ],
+        takeaway: "The research findings became the basis of the chain's new marketing strategy. This case is about system thinking: keeping dozens of locations in your head and bringing them to one voice.",
+      },
+      {
+        slug: "set-kofeen",
+        category: "Audit & strategy",
+        title: "COFFEE CHAIN",
+        subtitle: "How an audit of five locations showed guests choose the brand for something the brand book never mentions",
+        headline: "A coffee shop loved for its food",
+        lead: "How an audit of five locations showed guests choose the brand for something the brand book never mentions",
+        year: "2026",
+        role: "Brand marketer | Audit & strategy",
+        cover: { src: "/work/set-kofeen/01.jpg", caption: "Reference: a coffee shop as a place with food" },
+        sections: [
+          {
+            eyebrow: "Challenge",
+            heading: "Where it started",
+            body: [
+              "A large coffee chain wanted to know how its brand-book positioning works in real life. The task: audit communication at five locations and prepare a 90-day plan.",
+            ],
+          },
+          {
+            eyebrow: "Research",
+            heading: "The guest journey from inside",
+            body: [
+              "I visited locations as a regular guest and went through the whole journey — from the door to the till. I went through 150+ map reviews and compared the chain with 9 competitors.",
+              "I checked the brand book, promotions, checkout area, map listings, and social accounts. And ran a market analysis: coffee shops, ready-to-eat food, delivery.",
             ],
           },
           {
             eyebrow: "Insight",
-            heading: "Insight",
+            heading: "The key finding",
             body: [
-              "The brand survived on memory. Through years of random signage, mismatched decor, and promotional noise, what kept the guest was the thought of those dumplings — the kind shaped at home. The memory of home did the work the location no longer proved. That's a resource with a shelf life.",
+              "Along the way came plenty of smaller gaps: several slogans and name versions, an overloaded checkout area, contradictory promo terms, accounts with different logos.",
             ],
+            quote: "The brand is dressed as a coffee shop, but guests choose it for the food, the pastries, and the team.",
           },
           {
-            eyebrow: "Belief",
-            heading: "We shape. We cook. Like home.",
-            body: [],
-          },
-          {
-            eyebrow: "Concept",
-            heading: "Concept",
+            eyebrow: "Strategy",
+            heading: "The decision",
             body: [
-              "Brought hand-shaping back to every location and rebuilt its economics so it worked as part of production, not as a display window.",
-              "Cut the noise: instead of a dozen messages competing for attention, one thing remained at each location — what happens behind the glass.",
-              "Locked down what the chain never had: a signage standard, rules for how a location looks, one consistent style. A partner now opens a location by the book, not by taste, and a mistake gets caught before it becomes signage.",
-              "The name describes what happens inside again — and the feeling of home the brand had run on for all these years stopped being just a memory.",
+              "New positioning: coffee and food close by, at any moment of the day. A distinct role for each location format.",
             ],
+            images: ["/work/set-kofeen/02.jpg", "/work/set-kofeen/03.jpg", "/work/set-kofeen/04.jpg"],
+            caption: "References for redesigning locations and social media",
           },
           {
-            eyebrow: "Visual",
-            heading: "Visual",
+            eyebrow: "Plan",
+            heading: "90 days in three steps",
             body: [
-              "Project photography will go here.",
+              "Clean up → pilot → scale. Plus KPIs with a baseline, so the result can be measured honestly.",
             ],
           },
         ],
+        statsHeading: "Outcome",
+        stats: [
+          { value: "150+", label: "reviews analyzed" },
+          { value: "9", label: "competitors compared" },
+          { value: "90", label: "days in a step-by-step plan" },
+        ],
+        takeaway: "The chain got a clear picture of why people choose it, positioning that reflects it, and a step-by-step plan. This case is about research: finding the gap between what a brand thinks of itself and what guests see.",
       },
       {
         slug: "bistro-spalny-rayon",
         category: "Brand strategy",
         title: "BISTRO IN A SLEEPER DISTRICT (CONCEPT)",
         subtitle: "Brand strategy and visual language for a bistro in a sleeper district, built before it opens",
+        headline: "The city center, next door",
+        lead: "Brand strategy and visual language for a bistro in a sleeper district, built before it opens",
         year: "2026",
         role: "Brand strategy, research-based positioning, visual language for social media pre-launch",
         hideCategoryEyebrow: true,
@@ -1055,6 +1256,9 @@ export const content: Record<Locale, Dict> = {
     ],
     caseView: {
       back: "← All work",
+      caseLabel: "Case",
+      nextLabel: "Next case",
+      yearLabel: "Year",
       roleLabel: "Scope",
     },
     about: {

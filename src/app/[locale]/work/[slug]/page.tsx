@@ -26,8 +26,8 @@ export async function generateMetadata({
   const item = dict.cases.find((c) => c.slug === slug);
   if (!item) return {};
   return {
-    title: `${item.title} · CHLORINE`,
-    description: item.subtitle,
+    title: `${item.headline ?? item.title} · CHLORINE`,
+    description: item.lead ?? item.subtitle,
   };
 }
 
@@ -39,46 +39,55 @@ export default async function CasePage({
   const { locale, slug } = await params;
   if (!locales.includes(locale as Locale)) notFound();
   const dict = content[locale as Locale];
-  const item = dict.cases.find((c) => c.slug === slug);
-  if (!item) notFound();
+  const index = dict.cases.findIndex((c) => c.slug === slug);
+  if (index === -1) notFound();
+  const item = dict.cases[index];
+  const next = dict.cases[(index + 1) % dict.cases.length];
+  const number = String(index + 1).padStart(2, "0");
 
   return (
     <>
       <Grain />
-      <Header dict={dict} locale={locale as Locale} path="/work" />
+      <Header dict={dict} locale={locale as Locale} path={`/work/${slug}`} />
 
       <main className="page-enter">
-        <section className="relative min-h-[70vh] flex items-center px-5 sm:px-8 pt-28 pb-20">
+        {/* Article header */}
+        <section className="relative px-5 sm:px-8 pt-32 sm:pt-40 pb-12 sm:pb-16">
           <div className="relative z-10 mx-auto max-w-7xl w-full">
             <Reveal>
-              <div className="max-w-2xl lg:max-w-xl">
-                <Link
-                  href={`/${locale}/work`}
-                  className="inline-block font-mono text-xs text-red hover:opacity-70 transition-opacity mb-10"
-                >
-                  {dict.caseView.back}
-                </Link>
-                {!item.hideCategoryEyebrow && (
-                  <p className="font-mono text-[11px] tracking-[0.22em] text-red mb-4">
-                    {item.category.toUpperCase()}
-                  </p>
-                )}
-                <p className="font-display font-bold leading-[1.15] tracking-tight text-2xl sm:text-3xl max-w-lg">
-                  {item.subtitle}
+              <Link
+                href={`/${locale}/work`}
+                className="inline-block font-mono text-xs text-red hover:opacity-70 transition-opacity mb-10"
+              >
+                {dict.caseView.back}
+              </Link>
+              <p className="font-mono text-[11px] tracking-[0.22em] text-red mb-6">
+                {`${dict.caseView.caseLabel} ${number}`.toUpperCase()}
+                {!item.hideCategoryEyebrow && ` | ${item.category.toUpperCase()}`}
+              </p>
+              <h1 className="font-display font-extrabold text-red leading-[0.95] tracking-[-0.03em] text-[clamp(2.5rem,7vw,6rem)] max-w-5xl">
+                {item.headline ?? item.subtitle}
+              </h1>
+              {item.lead && (
+                <p className="font-accent italic text-red text-xl sm:text-2xl leading-snug mt-8 max-w-3xl">
+                  {item.lead}
                 </p>
-              </div>
+              )}
             </Reveal>
 
             <Reveal delay={80}>
-              <div className="mt-14 grid sm:grid-cols-2 gap-8 max-w-3xl border-t border-line pt-8">
+              <div className="mt-12 flex flex-wrap gap-x-12 gap-y-4 border-t border-red/40 pt-6 max-w-5xl">
                 <div>
                   <p className="font-mono text-[10px] tracking-[0.18em] text-red mb-2">
                     {dict.caseView.roleLabel.toUpperCase()}
                   </p>
-                  <p className="text-sm text-red leading-snug">{item.role}</p>
+                  <p className="text-base text-red leading-snug font-medium">{item.role}</p>
                 </div>
                 <div>
                   <p className="font-mono text-[10px] tracking-[0.18em] text-red mb-2">
+                    {dict.caseView.yearLabel.toUpperCase()}
+                  </p>
+                  <p className="text-base text-red leading-snug font-medium [font-variant-numeric:lining-nums]">
                     {item.year}
                   </p>
                 </div>
@@ -87,57 +96,152 @@ export default async function CasePage({
           </div>
         </section>
 
-        <section className="px-5 sm:px-8 py-10 sm:py-16">
-          <div className="mx-auto max-w-7xl divide-y divide-line border-t border-line">
-            {item.sections.map((section, i) => {
-              const merged = section.eyebrow.toLowerCase() === section.heading.toLowerCase();
-              return (
-                <Reveal key={section.heading} delay={i * 60}>
-                  <div className="grid sm:grid-cols-[10rem_1fr] gap-x-10 gap-y-3 py-10 sm:py-12">
-                    {merged ? (
-                      <h2 className="font-display font-semibold text-xl sm:text-2xl">
-                        {section.heading}
-                      </h2>
-                    ) : (
-                      <p className="font-mono text-[11px] tracking-[0.18em] text-red">
-                        {section.eyebrow.toUpperCase()}
-                      </p>
-                    )}
-                    <div className="max-w-2xl sm:col-start-2">
-                      {!merged && (
-                        <h2 className="font-display font-semibold text-xl sm:text-2xl mb-4">
-                          {section.heading}
-                        </h2>
-                      )}
-                      <div className="space-y-3">
-                        {section.body.map((p) => (
-                          <p key={p} className="text-sm sm:text-base text-red leading-relaxed">
-                            {p}
-                          </p>
-                        ))}
-                      </div>
+        {/* Cover */}
+        {item.cover && (
+          <section className="px-5 sm:px-8">
+            <Reveal>
+              <figure className="mx-auto max-w-7xl">
+                <div className="relative aspect-[16/9] overflow-hidden">
+                  <Image
+                    src={item.cover.src}
+                    alt={item.cover.caption ?? ""}
+                    fill
+                    priority
+                    sizes="(max-width: 1280px) 100vw, 1280px"
+                    className="object-cover"
+                  />
+                </div>
+                {item.cover.caption && (
+                  <figcaption className="font-accent italic text-sm text-red mt-3">
+                    {item.cover.caption}
+                  </figcaption>
+                )}
+              </figure>
+            </Reveal>
+          </section>
+        )}
+
+        {/* Story */}
+        <article className="px-5 sm:px-8 py-16 sm:py-24">
+          <div className="mx-auto max-w-7xl space-y-16 sm:space-y-24">
+            {item.sections.map((section, i) => (
+              <Reveal key={section.heading} delay={i === 0 ? 0 : 40}>
+                <section className="grid lg:grid-cols-[14rem_1fr] gap-x-12 gap-y-4">
+                  <p className="font-mono text-[11px] tracking-[0.18em] text-red lg:pt-3">
+                    {section.eyebrow.toUpperCase()}
+                  </p>
+                  <div className="max-w-3xl">
+                    <h2 className="font-display font-bold text-red text-2xl sm:text-4xl leading-tight tracking-tight mb-6">
+                      {section.heading}
+                    </h2>
+                    <div className="space-y-4">
+                      {section.body.map((p) => (
+                        <p key={p} className="text-base sm:text-lg text-red leading-relaxed font-medium">
+                          {p}
+                        </p>
+                      ))}
                     </div>
-                    {section.images && section.images.length > 0 && (
-                      <div className="sm:col-start-2 grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-3xl">
+                    {section.quote && (
+                      <blockquote className="mt-10 border-l-2 border-red pl-6 sm:pl-8">
+                        <p className="font-accent italic text-red text-2xl sm:text-3xl leading-snug">
+                          {section.quote}
+                        </p>
+                      </blockquote>
+                    )}
+                  </div>
+                  {section.images && section.images.length > 0 && (
+                    <figure className="lg:col-start-2 mt-6">
+                      <div
+                        className={`grid gap-3 sm:gap-4 ${
+                          section.images.length === 1
+                            ? "grid-cols-1 max-w-3xl"
+                            : section.images.length === 2
+                              ? "grid-cols-2"
+                              : "grid-cols-2 sm:grid-cols-3"
+                        }`}
+                      >
                         {section.images.map((src) => (
-                          <div key={src} className="relative aspect-square overflow-hidden">
+                          <div key={src} className="relative aspect-[4/5] overflow-hidden">
                             <Image
                               src={src}
                               alt=""
                               fill
-                              sizes="(max-width: 640px) 50vw, 300px"
+                              sizes="(max-width: 640px) 50vw, 400px"
                               className="object-cover"
                             />
                           </div>
                         ))}
                       </div>
-                    )}
-                  </div>
-                </Reveal>
-              );
-            })}
+                      {section.caption && (
+                        <figcaption className="font-accent italic text-sm text-red mt-3">
+                          {section.caption}
+                        </figcaption>
+                      )}
+                    </figure>
+                  )}
+                </section>
+              </Reveal>
+            ))}
           </div>
-        </section>
+        </article>
+
+        {/* Results */}
+        {item.stats && item.stats.length > 0 && (
+          <section className="px-5 sm:px-8 pb-16 sm:pb-24">
+            <div className="mx-auto max-w-7xl">
+              <Reveal>
+                {item.statsHeading && (
+                  <p className="font-mono text-[11px] tracking-[0.18em] text-red mb-6">
+                    {item.statsHeading.toUpperCase()}
+                  </p>
+                )}
+                <div className="grid sm:grid-cols-3 gap-8 sm:gap-10 border-t border-red/40 pt-8">
+                  {item.stats.map((s) => (
+                    <div key={s.label}>
+                      <p className="font-display font-extrabold text-red leading-none tracking-[-0.03em] text-[clamp(2.5rem,5vw,4.5rem)] [font-variant-numeric:lining-nums] whitespace-nowrap">
+                        {s.value}
+                      </p>
+                      <p className="text-sm sm:text-base text-red leading-snug font-medium mt-3 max-w-xs">
+                        {s.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        )}
+
+        {item.takeaway && (
+          <section className="px-5 sm:px-8 pb-16 sm:pb-24">
+            <div className="mx-auto max-w-7xl">
+              <Reveal>
+                <p className="font-accent italic text-red text-xl sm:text-2xl leading-snug max-w-3xl lg:ml-[17rem]">
+                  {item.takeaway}
+                </p>
+              </Reveal>
+            </div>
+          </section>
+        )}
+
+        {/* Next case */}
+        {next.slug !== item.slug && (
+          <section className="px-5 sm:px-8 pb-20">
+            <div className="mx-auto max-w-7xl">
+              <Link
+                href={`/${locale}/work/${next.slug}`}
+                className="group block border-t border-b border-red/40 py-8 sm:py-10"
+              >
+                <p className="font-mono text-[11px] tracking-[0.18em] text-red mb-3">
+                  {dict.caseView.nextLabel.toUpperCase()} →
+                </p>
+                <p className="font-display font-extrabold text-red leading-[0.95] tracking-[-0.03em] text-[clamp(1.75rem,4.5vw,3.5rem)] group-hover:translate-x-1 transition-transform">
+                  {next.headline ?? next.subtitle}
+                </p>
+              </Link>
+            </div>
+          </section>
+        )}
 
         <Cta dict={dict} />
       </main>
