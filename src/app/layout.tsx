@@ -5,7 +5,7 @@ import "./globals.css";
 import { PageBackdrop } from "@/components/PageBackdrop";
 
 // One typeface for everything on the site — headings, body, labels, italic
-// emphasis — so the system reads as one deliberate choice. The "CHLORINE"
+// emphasis — so the system reads as one deliberate choice. The site-name
 // wordmark is the sole exception (see peaceSans below).
 const raleway = Raleway({
   subsets: ["latin", "cyrillic"],
@@ -16,7 +16,7 @@ const raleway = Raleway({
 });
 
 // Wordmark-only typeface, self-hosted (SIL OFL) — used just for the
-// "CHLORINE" logotype in the header and footer.
+// site-name logotype in the header and footer.
 const peaceSans = localFont({
   src: "../fonts/peace-sans-latin-400-normal.woff2",
   variable: "--font-peace-sans",
@@ -24,7 +24,7 @@ const peaceSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "CHLORINE",
+  title: "brand marketing by Irina Fedorova",
   description:
     "Independent Creative & Brand Strategist helping ambitious brands turn ideas into distinctive campaigns, visual worlds and AI-powered content.",
 };

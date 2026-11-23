@@ -84,7 +84,7 @@ export async function generateMetadata({
   if (!locales.includes(locale as Locale)) return {};
   const dict = content[locale as Locale];
   return {
-    title: `${dict.nav.services} · CHLORINE`,
+    title: `${dict.nav.services} · Irina Fedorova`,
     description: dict.servicesPage.intro,
   };
 }

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import type { Dict, Locale } from "@/lib/content";
+import { BRAND, type Dict, type Locale } from "@/lib/content";
 import { MenuOverlay } from "./MenuOverlay";
 
 export function Header({
@@ -67,9 +67,9 @@ export function Header({
           <Link
             href={`/${locale}`}
             onClick={() => setOpen(false)}
-            className="font-logo tracking-tight text-lg sm:text-2xl"
+            className="font-logo tracking-tight whitespace-nowrap text-[13px] min-[400px]:text-[15px] sm:text-xl"
           >
-            CHLORINE
+            {BRAND}
           </Link>
 
           <div className="flex items-center gap-4 sm:gap-6">

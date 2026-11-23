@@ -26,7 +26,7 @@ export async function generateMetadata({
   const item = dict.cases.find((c) => c.slug === slug);
   if (!item) return {};
   return {
-    title: `${item.headline ?? item.title} · CHLORINE`,
+    title: `${item.headline ?? item.title} · Irina Fedorova`,
     description: item.lead ?? item.subtitle,
   };
 }

@@ -21,7 +21,7 @@ export async function generateMetadata({
   if (!locales.includes(locale as Locale)) return {};
   const dict = content[locale as Locale];
   return {
-    title: `${dict.nav.process} · CHLORINE`,
+    title: `${dict.nav.process} · Irina Fedorova`,
     description: dict.processPage.intro,
   };
 }

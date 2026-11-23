@@ -2,6 +2,9 @@ export const locales = ["ru", "en"] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = "ru";
 
+/** Site name used in the header, footer and page titles (no trademark yet). */
+export const BRAND = "brand marketing by Irina Fedorova";
+
 export const CONTACT = {
   telegram: "https://t.me/chlorine_marketing",
   telegramLabel: "@chlorine_marketing",
@@ -49,7 +52,7 @@ export type WorkItem = {
   title: string;
   year: string;
   slug?: string;
-  /** Hide the project name on the card — used for CHLORINE itself, since the header logo already names it. */
+  /** Hide the project name on the card — used for the studio itself, since the header logo already names it. */
   hideProjectName?: boolean;
 };
 
@@ -152,7 +155,7 @@ export type Dict = {
 export const content: Record<Locale, Dict> = {
   ru: {
     meta: {
-      title: "CHLORINE — Ирина Фёдорова, независимый бренд-менеджер и арт-директор",
+      title: "brand marketing by Irina Fedorova — Ирина Фёдорова, независимый бренд-менеджер и арт-директор",
       description:
         "Превращаю идеи амбициозных брендов в отличительные кампании и визуальные миры.",
     },
@@ -357,7 +360,7 @@ export const content: Record<Locale, Dict> = {
     servicesPage: {
       heading: "Чем именно я",
       headingMark: "помогаю",
-      intro: "Мир, который требует нового и лучшего, не прощает тех, кто стоит на месте. Характер бренда может стать катализатором перемен — тем, что помогает ему выделиться и продавать увереннее. CHLORINE соединяет точный анализ и творческий подход, чтобы то, каким должен стать ваш бренд, стало ощутимым уже сегодня.",
+      intro: "Мир, который требует нового и лучшего, не прощает тех, кто стоит на месте. Характер бренда может стать катализатором перемен — тем, что помогает ему выделиться и продавать увереннее. Я соединяю точный анализ и творческий подход, чтобы то, каким должен стать ваш бренд, стало ощутимым уже сегодня.",
       back: "← На главную",
       moreLabel: "Подробнее об услугах",
     },
@@ -696,12 +699,10 @@ export const content: Record<Locale, Dict> = {
     about: {
       heading: "Обо мне",
       bio: [
-        "CHLORINE — работа бренд-менеджера Ирины Фёдоровой.",
-        "В переводе с английского — «хлор».",
-        "Находить в них характер, добавлять напряжение, менять ощущение.",
+        "Я — Ирина Фёдорова, бренд-менеджер.",
         "Я пришла в брендинг из бизнеса и увидела, как сильные продукты теряют свою ценность, когда их невозможно отличить от десятков похожих предложений.",
         "Сегодня продукту мало быть хорошим. Ему нужен характер, который проявляется во всём: в том, что бренд говорит, как выглядит и какое ощущение оставляет.",
-        "CHLORINE помогает маленьким независимым брендам с собственным производством — украшениям, одежде, локальным линейкам — избавиться от путаницы в сообщении и говорить о себе так, чтобы это было легче продавать.",
+        "Я помогаю маленьким независимым брендам с собственным производством — украшениям, одежде, локальным линейкам — избавиться от путаницы в сообщении и говорить о себе так, чтобы это было легче продавать.",
       ],
     },
     cta: {
@@ -720,7 +721,7 @@ export const content: Record<Locale, Dict> = {
   },
   en: {
     meta: {
-      title: "CHLORINE — Irina Fedorova, Independent Brand Manager & Art Director",
+      title: "brand marketing by Irina Fedorova — Independent Brand Manager & Art Director",
       description:
         "Independent brand manager and art director helping ambitious brands turn ideas into distinctive campaigns and visual worlds.",
     },
@@ -925,7 +926,7 @@ export const content: Record<Locale, Dict> = {
     servicesPage: {
       heading: "What I actually",
       headingMark: "do",
-      intro: "In a world that rewards distinction, standing still isn't an option. A brand's character can become a catalyst for change — helping it stand out and sell with more confidence. CHLORINE blends sharp analysis and creative instinct to make what your brand should become something people can feel today.",
+      intro: "In a world that rewards distinction, standing still isn't an option. A brand's character can become a catalyst for change — helping it stand out and sell with more confidence. I blend sharp analysis and creative instinct to make what your brand should become something people can feel today.",
       back: "← Back home",
       moreLabel: "More about services",
     },
@@ -1264,11 +1265,10 @@ export const content: Record<Locale, Dict> = {
     about: {
       heading: "About",
       bio: [
-        "CHLORINE is the work of brand manager Irina Fedorova.",
-        "Finding the character inside them. Adding tension. Changing how they feel.",
+        "I'm Irina Fedorova, a brand manager.",
         "I came into branding from business, and watched strong products lose their value the moment they became indistinguishable from a dozen similar offers.",
         "Being good isn't enough for a product today. It needs character — in what the brand says, how it looks, and the feeling it leaves behind.",
-        "CHLORINE helps small independent brands with their own production — jewelry, clothing, local product lines — cut through the confusion in how they talk about themselves, and say it in a way that's easier to sell.",
+        "I help small independent brands with their own production — jewelry, clothing, local product lines — cut through the confusion in how they talk about themselves, and say it in a way that's easier to sell.",
       ],
     },
     cta: {

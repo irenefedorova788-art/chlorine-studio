@@ -1,13 +1,13 @@
 import Link from "next/link";
 import type { Dict, Locale } from "@/lib/content";
-import { CONTACT } from "@/lib/content";
+import { BRAND, CONTACT } from "@/lib/content";
 
 export function Footer({ dict, locale }: { dict: Dict; locale: Locale }) {
   return (
     <footer className="px-5 sm:px-8 py-14 border-t border-line text-red">
       <div className="mx-auto max-w-7xl grid sm:grid-cols-4 gap-10 sm:gap-6">
         <div className="sm:col-span-2">
-          <p className="font-logo text-2xl mb-2">CHLORINE</p>
+          <p className="font-logo text-xl sm:text-2xl mb-2">{BRAND}</p>
           <p className="text-sm">{dict.footer.role}</p>
         </div>
 
@@ -48,7 +48,7 @@ export function Footer({ dict, locale }: { dict: Dict; locale: Locale }) {
       </div>
 
       <div className="mx-auto max-w-7xl mt-12 pt-6 border-t border-line flex flex-wrap items-center justify-between gap-2 font-mono text-[10px] tracking-[0.16em]">
-        <span>© {new Date().getFullYear()} CHLORINE</span>
+        <span>© {new Date().getFullYear()} Irina Fedorova</span>
         <span>{dict.footer.location.toUpperCase()}</span>
       </div>
     </footer>

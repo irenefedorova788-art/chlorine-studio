@@ -22,7 +22,7 @@ export async function generateMetadata({
   if (!locales.includes(locale as Locale)) return {};
   const dict = content[locale as Locale];
   return {
-    title: `${dict.nav.work} · CHLORINE`,
+    title: `${dict.nav.work} · Irina Fedorova`,
     description: dict.workPage.intro,
   };
 }
